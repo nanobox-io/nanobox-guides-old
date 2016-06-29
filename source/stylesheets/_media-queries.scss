@@ -1,0 +1,58 @@
+
+// Upper and Lower Ends
+$sm-upper: "(max-width: 40em)";      /* 640px */
+$md-lower: "(min-width: 40.063em)";  /* 641px */
+$md-upper: "(max-width: 54em)";      /* 864px */
+$lg-lower: "(min-width: 54.063em)";  /* 865px */
+$lg-upper: "(max-width: 90em)";      /* 1440px */
+
+// Specifications
+$screen: only screen !default;
+
+$landscape: $screen and (orientation: landscape) !default;
+$portrait: $screen and (orientation: portrait) !default;
+
+// Ranges
+$small-up: $screen !default;
+$small-only: $screen and $sm-upper !default;
+
+$medium-up: $screen and $md-lower !default;
+$medium-only: $screen and $md-lower and $md-upper !default;
+
+$large-up: $screen and $lg-lower !default;
+$large-only: $screen and $lg-lower and $lg-upper !default;
+
+
+// Styles -------------------------------------------------
+
+
+@media #{$small-up} { }
+@media #{$small-only} {
+
+  body                { font-size: 14px; }
+  #header             {
+    #nbg-logo-link    { display: block; margin: .5em auto 0; text-align: center; }
+    h1                { font-size: 1.75em; padding: .5em 1.5em 2em;  }
+  }
+  .wrapper            { padding-top: 1.5em;
+    #project-search   { position: relative; margin-bottom: 1em; width: 100%; right: 0;}
+    .category h2      { text-align: center; }
+    .flex-container   { justify-content: center; }
+    .project          { margin: .1em 1.5em;
+      img             { width: 60px; }
+    }
+    #no-results       { padding: 1em; font-size: 1.2em; }
+  }
+}
+
+@media #{$medium-up} { }
+@media #{$medium-only} {
+
+  .wrapper          {
+    .flex-container { justify-content: flex-start; }
+  }
+
+}
+
+@media #{$large-up} { }
+@media #{$large-only} { }

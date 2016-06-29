@@ -12,9 +12,10 @@ body                        { position: relative; height: 100%; width: 100%; box
 }
 
 .wrapper                    { position: relative; padding: 3em 1.5em; margin: 0 auto; max-width: 1000px; box-sizing: border-box;
-  #project-search           { position: absolute; right: 1.6em; border: none; padding: .75em;  width: 15em; }
+  #project-search           { position: absolute; right: 1.6em; border: none; padding: .75em;  width: 15em;; box-sizing: border-box; }
+  .flex-container           { display: flex; align-items: flex-start; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; }
   .category                 { transition: opacity .2s, height .2s; }
-  .project                  { display: inline-block; margin: 1.5em 2.5em; text-align: center; color: $base-blue; text-decoration: none; overflow: hidden;
+  .project                  { display: inline-block; margin: 1.5em 2.5em; text-align: center; color: $base-blue; text-decoration: none;
     img                     { width: 75px; }
   }
   #no-results               { display: none; width: 100%; position: absolute; top: 4em; left: 0; font-size: 1.5em; text-align: center; box-sizing: border-box;
@@ -25,3 +26,5 @@ body                        { position: relative; height: 100%; width: 100%; box
     }
   }
 }
+
+@import 'media-queries';

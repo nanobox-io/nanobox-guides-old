@@ -15,20 +15,24 @@ title: Nanobox Guides
     %input#project-search{ :placeholder => 'Search'}
     .category
       %h2 Languages
-      - data.contents.languages.each do |proj|
-        = partial 'project-item', :locals => { 'proj' => proj }
+      .flex-container
+        - data.contents.languages.each do |proj|
+          = partial 'project-item', :locals => { 'proj' => proj }
     .category
       %h2 Frameworks
-      - data.contents.frameworks.each do |proj|
-        = partial 'project-item', :locals => { 'proj' => proj }
+      .flex-container
+        - data.contents.frameworks.each do |proj|
+          = partial 'project-item', :locals => { 'proj' => proj }
     .category
       %h2 CMSs
-      - data.contents.cms.each do |proj|
-        = partial 'project-item', :locals => { 'proj' => proj }
+      .flex-container
+        - data.contents.cms.each do |proj|
+          = partial 'project-item', :locals => { 'proj' => proj }
     .category
       %h2 Services
-      - data.contents.services.each do |proj|
-        = partial 'project-item', :locals => { 'proj' => proj }
+      .flex-container
+        - data.contents.services.each do |proj|
+          = partial 'project-item', :locals => { 'proj' => proj }
     #no-results
       = partial 'svgs/obiwan'
       %p
