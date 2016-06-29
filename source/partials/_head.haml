@@ -1,0 +1,23 @@
+%head
+  %meta{:charset => "utf-8"}/
+  / Always force latest IE rendering engine or request Chrome Frame
+  %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+
+  / Typekit
+  %script{ :src => "https://use.typekit.net/cqd5kth.js" }
+  :javascript
+    try{Typekit.load({ async: true });}catch(e){}
+
+  / Google Analytics
+  :javascript
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-760419-20', 'auto');
+    ga('send', 'pageview');
+
+  %title= current_page.data.title || "Nanobox Docs"
+  = stylesheet_link_tag "styles"
+  = javascript_include_tag  "all"

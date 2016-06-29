@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    = partial 'head-shared'
+    %title= current_page.data.title || "Nanobox Guides"
+    = stylesheet_link_tag "styles"
+    = javascript_include_tag  "all"
+
+  %body
+    = yield

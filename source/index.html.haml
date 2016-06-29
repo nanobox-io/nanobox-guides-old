@@ -1,0 +1,38 @@
+---
+title: Nanobox Guides
+---
+
+#header
+  %a#nbg-logo-link{ :href => '/' }
+    %span.nbg-logo
+      = partial 'svgs/nbg-logo'
+    %span.nbg-text Nanobox Guides
+
+  %h1 Learn how to use popular languages, frameworks, & services on Nanobox
+
+#page-body
+  .wrapper
+    %input#project-search{ :placeholder => 'Search'}
+    .category
+      %h2 Languages
+      - data.contents.languages.each do |proj|
+        = partial 'project-item', :locals => { 'proj' => proj }
+    .category
+      %h2 Frameworks
+      - data.contents.frameworks.each do |proj|
+        = partial 'project-item', :locals => { 'proj' => proj }
+    .category
+      %h2 CMSs
+      - data.contents.cms.each do |proj|
+        = partial 'project-item', :locals => { 'proj' => proj }
+    .category
+      %h2 Services
+      - data.contents.services.each do |proj|
+        = partial 'project-item', :locals => { 'proj' => proj }
+    #no-results
+      = partial 'svgs/obiwan'
+      %p
+        These are not the guides you're looking for.
+        %br
+        %span.small But they can be! See how #{ link_to 'you can contrubute', '/contributing/'}.
+#footer
