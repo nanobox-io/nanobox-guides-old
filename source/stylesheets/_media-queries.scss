@@ -34,14 +34,43 @@ $large-only: $screen and $lg-lower and $lg-upper !default;
     #nbg-logo-link    { display: block; margin: .5em auto 0; text-align: center; }
     h1                { font-size: 1.75em; padding: .5em 1.5em 2em;  }
   }
-  .wrapper            { padding-top: 1.5em;
-    #project-search   { position: relative; margin-bottom: 1em; width: 100%; right: 0;}
+  .wrapper            { padding-top: 1.5em !important;
+    #project-search   { position: relative !important; margin-bottom: 1em; width: 100% !important; right: 0 !important;}
     .category h2      { text-align: center; }
-    .flex-container   { justify-content: center; }
+    .flex-container   { justify-content: center !important; }
     .project          { margin: .1em 1.5em;
       img             { width: 60px; }
     }
     #no-results       { padding: 1em; font-size: 1.2em; }
+  }
+
+  .guide              {
+    #header           { padding: 1em 1.5em;
+      #logo-link      {
+        img           { width: 4em; }
+        .project-title { margin-top: 1.4em !important; }
+      }
+      #nbg-logo-link  { top: 1.7em !important; 
+        .nbg-logo     { margin: 0 !important; }
+        .nbg-text     { display: none; }
+      }
+    }
+    .wrapper          { padding: 1.5em !important; flex-direction: column; @include box-sizing; }
+    #left-nav         { width: 100% !important;
+      #contents       { font-size: 1.1em; line-height: 1.75em;
+        &.closed      { max-height: 0; }
+      }
+      #version-select { display: inline-block; position: absolute; right: 1.5em; }
+      #contents-btn   { display: inline-block; }
+    }
+    .guide-content    { width: 100%; max-width: 100%; margin: 0 !important; font-size: 15px;
+      h1              { margin-top: 0; font-size: 3em; }
+      h2              { font-size: 2.25em; }
+      h3              { font-size: 1.75em; }
+      h4              { font-size: 1.25em; }
+      h5              { font-size: 1em; }
+      h6              { font-size: .9em; }
+    }
   }
 }
 

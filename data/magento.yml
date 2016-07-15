@@ -1,0 +1,7 @@
+name: 'Magento'
+icon: 'magento.svg'
+root: '/magento/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

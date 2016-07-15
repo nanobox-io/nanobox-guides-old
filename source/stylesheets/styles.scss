@@ -1,30 +1,41 @@
-@import 'normalize', 'variables';
+@import 'normalize', 'variables', 'mixins';
 
-body                        { position: relative; height: 100%; width: 100%; box-sizing: border-box; font-family: 'proxima nova', sans-serif; -webkit-font-smoothing: antialiased; background-color: $bkg-grey; }
-#header                     { padding: .5em; background: url('/images/guides-header-bkg.svg');
-  h1                        { padding: 1em 2em 2.5em; margin: 0 auto; max-width: 20em; color: #fff; font-size: 2em; text-align: center; font-weight: normal; }
-  span                      { display: inline-block; }
-  #nbg-logo-link            { color: #fff; opacity: .4; text-decoration: none; transition: opacity .2s;
-    &:hover                 { opacity: .8; }
+html                        { height: 100% }
+body                        { position: relative; min-height: 100%; display: flex; flex-direction: column; @include box-sizing; font-family: 'proxima nova', sans-serif; -webkit-font-smoothing: antialiased; background-color: $bkg-grey; }
+#header                     { padding: .5em;;
+  #nbg-logo-link            { color: #fff; @include opacity(.4); text-decoration: none; @include transition(opacity .2s);
+    &:hover                 { @include opacity(.8); }
     #nbg-logo               { width: 2.5em; }
-    .nbg-text               { margin: .65em 0 0 .3em; letter-spacing: 1px; font-size: 1.1em; vertical-align: top; text-transform: uppercase; }
+    .nbg-text               { margin: .65em 0 0 .3em; letter-spacing: 1px; font-size: .9em;  vertical-align: top; text-transform: uppercase; }
   }
 }
 
-.wrapper                    { position: relative; padding: 3em 1.5em; margin: 0 auto; max-width: 1000px; box-sizing: border-box;
-  #project-search           { position: absolute; right: 1.6em; border: none; padding: .75em;  width: 15em;; box-sizing: border-box; }
-  .flex-container           { display: flex; align-items: flex-start; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; }
-  .category                 { transition: opacity .2s, height .2s; }
-  .project                  { display: inline-block; margin: 1.5em 2.5em; text-align: center; color: $base-blue; text-decoration: none;
-    img                     { width: 75px; }
+#page-body                  { flex: 1; }
+
+a                           { @include transition(color .2s); }
+
+#footer                     { margin-top: 3em; text-align: center; color: $footer-txt; background: $footer-bkg;
+  p                         { width: 100%; line-height: 1.4em;
+    &.made-with-love        { padding: 5em 0 0; margin: 0; font-size: 1.2em; }
+    &.license               { padding: 0 0 7em; margin: 0; font-size: .8em; font-style: italic; }
+    &.contribute            { padding: 2em; margin: 0; background-color: $footer-bkg-dark; @include box-sizing; font-size: .95em; }
   }
-  #no-results               { display: none; width: 100%; position: absolute; top: 4em; left: 0; font-size: 1.5em; text-align: center; box-sizing: border-box;
-    #obiwan                 { width: 80%; max-width: 420px; }
-    p                       { margin: -2em 0 5em; color: $base-blue; line-height: 1.3em;
-      a                     { color: $base-blue; text-decoration: none; border-bottom: 1px dotted $base-blue; }
-      .small                { font-size: .8em; }
+  a                         { text-decoration: none; color: $footer-txt; border-bottom: 1px dotted $footer-txt;
+    &:hover                 { color: $footer-link; }
+  }
+  span                      { vertical-align: middle; }
+  svg#heart                 { width: 15px; fill: $footer-txt; }
+  ul                        { margin-top: 2em; padding: 0; list-style: none;
+    li                      { display: inline-block; padding: .25em 1em; border-right: 1px dotted $footer-txt; font-size: .8em; text-transform: uppercase;
+      &:last-child          { border: none; }
+      a                     { border: none; }
     }
   }
+
 }
+
+@import 'home-page';
+
+@import 'guide';
 
 @import 'media-queries';

@@ -1,0 +1,7 @@
+name: 'Elixir'
+icon: 'elixir.svg'
+root: '/elixir/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

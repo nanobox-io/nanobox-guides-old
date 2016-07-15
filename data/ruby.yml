@@ -1,0 +1,7 @@
+name: 'Ruby'
+icon: 'ruby.svg'
+root: '/ruby/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

@@ -1,0 +1,7 @@
+name: 'Redis'
+icon: 'redis.svg'
+root: '/redis/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

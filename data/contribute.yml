@@ -1,0 +1,17 @@
+name: 'Contributing'
+icon: 'contribute.svg'
+root: '/contribute/'
+
+articles:
+  - name: 'Contributing to the Guides'
+    path: ''
+  - name: 'Running Guides Locally'
+    path: 'running-locally/'
+  - name: 'Adding a New Article'
+    path: 'adding-new-article/'
+  - name: 'Adding a New Project'
+    path: 'adding-new-project/'
+  - name: 'project.yml File'
+    path: 'project-yml/'
+  - name: 'Project Versioning'
+    path: 'project-versioning/'

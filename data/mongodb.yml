@@ -1,0 +1,7 @@
+name: 'MongoDB'
+icon: 'mongodb.svg'
+root: '/mongodb/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

@@ -1,0 +1,7 @@
+name: 'Java'
+icon: 'java.svg'
+root: '/java/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

@@ -1,0 +1,7 @@
+name: 'CakePHP'
+icon: 'cakephp.svg'
+root: '/cakephp/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

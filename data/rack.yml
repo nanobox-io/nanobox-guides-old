@@ -1,0 +1,7 @@
+name: 'Rack'
+icon: 'rack.svg'
+root: '/rack/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

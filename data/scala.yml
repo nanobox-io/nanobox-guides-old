@@ -1,0 +1,7 @@
+name: 'Scala'
+icon: 'scala.svg'
+root: '/scala/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

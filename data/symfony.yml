@@ -1,0 +1,7 @@
+name: 'Symfony'
+icon: 'symfony.svg'
+root: '/symfony/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

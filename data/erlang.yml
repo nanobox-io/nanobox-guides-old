@@ -1,0 +1,7 @@
+name: 'Erlang'
+icon: 'erlang.svg'
+root: '/erlang/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

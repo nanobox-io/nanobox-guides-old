@@ -1,0 +1,7 @@
+name: 'Hugo'
+icon: 'hugo.svg'
+root: '/hugo/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

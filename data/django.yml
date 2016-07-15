@@ -1,0 +1,7 @@
+name: 'Django'
+icon: 'django.svg'
+root: '/django/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

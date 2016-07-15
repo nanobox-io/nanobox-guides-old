@@ -1,0 +1,7 @@
+name: 'Atom'
+icon: 'atom.svg'
+root: '/atom/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

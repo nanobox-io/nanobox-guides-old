@@ -1,0 +1,7 @@
+name: 'Locomotive'
+icon: 'locomotive.svg'
+root: '/locomotive/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

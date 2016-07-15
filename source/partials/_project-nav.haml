@@ -1,0 +1,27 @@
+- project = current_page.data.project
+
+- if data[project].versions
+  - version = getVersion(current_page.url).to_s
+  - default_version = data[project].versions.find { |v| v["default"] = true }.version.to_s
+- else
+  - version = nil
+  - default_version = nil
+
+- if version == default_version
+  - article_path = data[project].root + article.path
+- else
+  - article_path = data[project].root + version + '/' + article.path
+
+%li{ nav_article_active( article_path ) }
+  - if not article.articles
+    %span
+      = partial "svgs/nav-bullet"
+    = link_to article.name, article_path
+
+  - else
+    %span.nav-toggle
+      = partial "svgs/nav-btn"
+    = link_to article.name, article_path
+    %ul
+      - article.articles.each do |article|
+        = partial 'project-nav', :locals => { :article => article }

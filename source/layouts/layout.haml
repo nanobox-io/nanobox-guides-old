@@ -1,10 +1,49 @@
+- project = current_page.data.project
+
 !!!
 %html
   %head
     = partial 'head-shared'
-    %title= current_page.data.title || "Nanobox Guides"
+    - if current_page.data.title
+      %title= current_page.data.title + ' - ' + data[project].name + ' on Nanobox'
     = stylesheet_link_tag "styles"
     = javascript_include_tag  "all"
 
-  %body
-    = yield
+    -# Include Project Specific CSS
+    = stylesheet_link_tag data[project].root+"project-styles"
+
+  %body.guide
+    #header
+      %a#logo-link{ :href => data[project].root  }
+        = image_tag 'icons/'+data[project].icon
+        .project-title
+          %p.name= data[project].name
+          %p.nb on Nanobox
+      = partial 'nbg-logo-link'
+    #page-body
+      .wrapper
+        #left-nav
+          #contents-btn
+            .lines
+          = partial 'version-dropdown'
+
+          %ul#contents.closed
+            - if data[project].versions
+              - version = getVersion(current_page.url)
+              - if version == getDefaultVersion(project)
+                - data[project].articles.each do |article|
+                  = partial 'project-nav', :locals => { :article => article }
+              - else
+                - versionNum = data[project].versions.find { |v| v['version'] == getVersion(current_page.url).to_f }
+                - versionNum.articles.each do |article|
+                  = partial 'project-nav', :locals => { :article => article  }
+            - else
+              - data[project].articles.each do |article|
+                = partial 'project-nav', :locals => { :article => article }
+
+        .guide-content
+          - if current_page.data.title
+            %h1= current_page.data.title
+          = find_and_preserve yield
+
+    = partial 'footer'

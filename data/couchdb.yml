@@ -1,0 +1,7 @@
+name: 'CouchDB'
+icon: 'couchdb.svg'
+root: '/couchdb/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

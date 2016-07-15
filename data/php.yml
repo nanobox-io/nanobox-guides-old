@@ -1,0 +1,7 @@
+name: 'PHP'
+icon: 'php.svg'
+root: '/php/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

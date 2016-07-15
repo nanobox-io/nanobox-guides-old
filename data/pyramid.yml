@@ -1,0 +1,7 @@
+name: 'Pyramid'
+icon: 'pyramid.svg'
+root: '/pyramid/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

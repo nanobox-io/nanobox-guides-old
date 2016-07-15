@@ -1,0 +1,7 @@
+name: 'Flask'
+icon: 'flask.svg'
+root: '/flask/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

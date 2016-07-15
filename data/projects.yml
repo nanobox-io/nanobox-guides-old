@@ -101,7 +101,7 @@ frameworks:
     icon: 'angular.svg'
     link: '/angular/'
     tags: 'nodejs, node.js, angularjs, angular.js'
-  - name: 'Vue'
+  - name: 'Vue.js'
     icon: 'vue.svg'
     link: '/vue/'
     tags: 'nodejs, node.js, vuejs, vue.js'
@@ -117,6 +117,10 @@ frameworks:
     icon: 'pyramid.svg'
     link: '/pyramid/'
     tags: 'python, pyramid'
+  - name: 'Hugo'
+    icon: 'hugo.svg'
+    link: '/hugo/'
+    tags: 'golang, hugo'
 
 cms:
   - name: 'WordPress'

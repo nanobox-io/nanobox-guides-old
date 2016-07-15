@@ -1,0 +1,7 @@
+name: 'Lua'
+icon: 'lua.svg'
+root: '/lua/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

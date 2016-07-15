@@ -1,0 +1,7 @@
+name: 'Middleman'
+icon: 'middleman.svg'
+root: '/middleman/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

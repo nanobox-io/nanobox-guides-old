@@ -1,0 +1,7 @@
+name: 'Rust'
+icon: 'rust.svg'
+root: '/rust/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

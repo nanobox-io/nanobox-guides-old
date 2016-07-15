@@ -1,0 +1,17 @@
+- project = current_page.data.project
+
+- if data[project].versions
+  #version-select
+    %button#version-btn
+      - if /^\/[a-zA-Z0-9]+\/([0-9.]+)\//.match(current_page.url)
+        = /^\/[a-zA-Z0-9]+\/([0-9.]+)\//.match(current_page.url).captures.first
+      - else
+        - default_version = data[project].versions.find { |v| v["default"] = true }.version
+        = default_version
+    %ul#versions
+      - data[project].versions.each do |v|
+        %li
+          - if v.default?
+            = link_to v.version, data[project].root
+          - else
+            = link_to v.version.to_s, data[project].root.to_s + v.version.to_s + '/'

@@ -1,0 +1,7 @@
+name: 'Clojure'
+icon: 'clojure.svg'
+root: '/clojure/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

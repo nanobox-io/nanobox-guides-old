@@ -1,0 +1,7 @@
+name: 'Perl'
+icon: 'perl.svg'
+root: '/perl/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

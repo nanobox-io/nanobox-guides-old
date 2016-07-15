@@ -1,13 +1,10 @@
 ---
 title: Nanobox Guides
+layout: home
 ---
 
 #header
-  %a#nbg-logo-link{ :href => '/' }
-    %span.nbg-logo
-      = partial 'svgs/nbg-logo'
-    %span.nbg-text Nanobox Guides
-
+  = partial 'nbg-logo-link'
   %h1 Learn how to use popular languages, frameworks, & services on Nanobox
 
 #page-body
@@ -16,27 +13,27 @@ title: Nanobox Guides
     .category
       %h2 Languages
       .flex-container
-        - data.contents.languages.each do |proj|
+        - data.projects.languages.each do |proj|
           = partial 'project-item', :locals => { 'proj' => proj }
     .category
       %h2 Frameworks
       .flex-container
-        - data.contents.frameworks.each do |proj|
+        - data.projects.frameworks.each do |proj|
           = partial 'project-item', :locals => { 'proj' => proj }
     .category
       %h2 CMSs
       .flex-container
-        - data.contents.cms.each do |proj|
+        - data.projects.cms.each do |proj|
           = partial 'project-item', :locals => { 'proj' => proj }
     .category
       %h2 Services
       .flex-container
-        - data.contents.services.each do |proj|
+        - data.projects.services.each do |proj|
           = partial 'project-item', :locals => { 'proj' => proj }
     #no-results
       = partial 'svgs/obiwan'
       %p
         These are not the guides you're looking for.
         %br
-        %span.small But they can be! See how #{ link_to 'you can contrubute', '/contributing/'}.
-#footer
+        %span.small But they can be! See how #{ link_to 'you can contrubute', '/contribute/'}.
+= partial 'footer'

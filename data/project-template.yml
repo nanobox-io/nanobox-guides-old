@@ -1,0 +1,50 @@
+# Project Data Template
+# This is only meant to show data structure
+
+# Name of the Language/Framework/CMS/Service
+name: 'PHP'
+
+# Project icon in /source/images/icons/
+icon: 'php.svg'
+
+# Project Root
+root: '/php/'
+
+# List of Articles for the Project
+articles:
+    # Article Name
+  - name: 'Article Name'
+    # Path to article relative to the project root
+    # Index page path should be empty
+    # All other paths should include a trailing slash
+    path: ''
+    # An article can have sub-articles
+    articles:
+      - name: 'Article Name'
+        path: 'dir/article/'
+
+# For guide content specific to versions of project
+# Version should be listed in descending order
+versions:
+  # Version Number
+  - version: 7.0
+    # Specifies whether or not this version is default_version
+    # If it is the default version, it uses the main article list above
+    default: true
+
+  - version: 5.6
+    # Each version has it's own article list
+    # Non-default versions should include their list.
+    articles:
+      - name: 'Article Name'
+        # Versioned article paths
+        # Project root and version directory are implied
+        # Index page path should be empty
+        # All other paths should include a trailing slash
+        path: ''
+        articles:
+          - name: 'Article Name'
+            # Sub article paths need a trailing slash
+            path: 'test/test/'
+          - name: 'Article Name'
+            path: 'test/test/'

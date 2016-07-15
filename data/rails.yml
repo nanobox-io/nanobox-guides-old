@@ -1,0 +1,7 @@
+name: 'Rails'
+icon: 'rails.svg'
+root: '/rails/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

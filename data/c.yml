@@ -1,0 +1,7 @@
+name: 'C / C++'
+icon: 'c.svg'
+root: '/c/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

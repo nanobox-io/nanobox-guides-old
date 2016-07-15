@@ -1,0 +1,7 @@
+name: 'WordPress'
+icon: 'wordpress.svg'
+root: '/wordpress/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

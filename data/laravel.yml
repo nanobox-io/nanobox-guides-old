@@ -1,0 +1,7 @@
+name: 'Laravel'
+icon: 'laravel.svg'
+root: '/laravel/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

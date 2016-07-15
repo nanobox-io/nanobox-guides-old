@@ -1,0 +1,7 @@
+name: 'Lisp'
+icon: 'lisp.svg'
+root: '/lisp/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

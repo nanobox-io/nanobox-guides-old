@@ -1,0 +1,7 @@
+name: 'CodeIgniter'
+icon: 'codeigniter.svg'
+root: '/codeigniter/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

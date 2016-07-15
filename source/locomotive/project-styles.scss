@@ -1,0 +1,52 @@
+// DEFINE PROJECT-SPECIFIC COLORS
+$proj-accent: #4f6bb1;
+$proj-link: #3ba996;
+$proj-link-hover: #1d7566;
+$proj-nav-hl: #3ba996;
+$proj-bkg-fill: #1a517d;
+
+// SET THE HEADER BACKGROUND IMAGE
+#header             { background: url('/images/header-bkgs/locomotive.svg'); background-color: $proj-bkg-fill;}
+
+// THE FOLLOWING APPLY ALL THE PROJECT-SPECIFIC COLORS
+.guide              {
+  #version-btn      { background: $proj-accent; }
+  #contents         {
+    li              {
+      &.active      {
+        & > a,
+        & > a:hover { color: $proj-nav-hl !important; }
+        & > span .nav-bullet rect,
+        & > span .nav-btn-circle path { fill: $proj-nav-hl !important; }
+      }
+      &.buried > span .nav-btn-circle path { fill: $proj-nav-hl !important; }
+      a:hover       { color: $proj-link !important; }
+    }
+    .nav-btn-circle path { fill: $proj-accent; }
+  }
+
+  .guide-content    {
+    h1              { color: $proj-accent; }
+    h2 a            {  }
+    h3 a            { color: $proj-accent; }
+    h4 a            {  }
+    h5 a            { color: $proj-accent; }
+    h6 a            {  }
+    p,li,td         {
+      a             { color: $proj-link;
+        &:hover     { color: $proj-link-hover; }
+      }
+      code          { color: $proj-accent; }
+    }
+    blockquote      { border-color: $proj-accent; }
+    table           {
+      th            { background-color: $proj-accent; }
+    }
+
+    // SYNTAX HIGHLIGHTING (Optional)
+    // Themes can be found in /source/stylesheets/syntax-hl
+
+    @import 'syntax-hl/perldoc';
+
+  }
+}

@@ -1,0 +1,7 @@
+name: 'MySQL'
+icon: 'mysql.svg'
+root: '/mysql/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

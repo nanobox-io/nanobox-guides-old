@@ -32,6 +32,12 @@
 # Helpers
 ###
 
+helpers do
+  def nav_article_active(path)
+    current_page.url == path ? { :class => "active" } : {}
+  end
+end
+
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
@@ -54,6 +60,20 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 set :partials_dir, 'partials'
+
+# Syntax Highlighting
+activate :syntax
+
+# Breatcrumbs
+activate :breadcrumbs
+
+# Pretty URLs
+activate :directory_indexes
+
+# Using Github Flavored Markdown
+set :markdown_engine, :redcarpet
+set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :strikethrough => true, :with_toc_data => true
+
 
 # Build-specific configuration
 configure :build do

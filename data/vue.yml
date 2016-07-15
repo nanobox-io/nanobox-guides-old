@@ -1,0 +1,7 @@
+name: 'Vue.js'
+icon: 'vue.svg'
+root: '/vue/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''
