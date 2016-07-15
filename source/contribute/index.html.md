@@ -31,10 +31,6 @@ Thanks for your interest in contributing to the Nanobox Guides. These guides is 
     git push origin project-content-update
     ```
 
-```bash
-git push origin project-content-update 'test'
-```
-
 6. Create new pull request
 
 ## Contribution Guidelines
@@ -42,4 +38,3 @@ Pull requests must do the following in order to be merged.
 
 1. Match the style of code already existing in the project.
 2. Must not contain any merge conflicts *(Pull and merge master before submitting the pull request)*.
-3. Include tests for the modifications in your commit.

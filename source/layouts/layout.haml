@@ -6,11 +6,12 @@
     = partial 'head-shared'
     - if current_page.data.title
       %title= current_page.data.title + ' - ' + data[project].name + ' on Nanobox'
-    = stylesheet_link_tag "styles"
-    = javascript_include_tag  "all"
+    = stylesheet_link_tag 'styles'
+    = javascript_include_tag  'all'
 
-    -# Include Project Specific CSS
-    = stylesheet_link_tag data[project].root+"project-styles"
+    -# Include Project Specific CSS and favicon
+    = stylesheet_link_tag data[project].root+'project-styles'
+    %link{ :href => data[project].root + 'img/favicon.png', :rel => 'icon', :type => 'image/png' }
 
   %body.guide
     #header

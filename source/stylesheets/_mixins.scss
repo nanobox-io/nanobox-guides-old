@@ -26,6 +26,12 @@
   border-radius: $radius;
 }
 
+@mixin box-shadow($top: 1px, $left: 1px, $blur: 6px, $color: #999, $inset: false) {
+  -webkit-box-shadow: $top $left $blur $color;
+  -moz-box-shadow: $top $left $blur $color;
+  box-shadow: $top $left $blur $color;
+}
+
 @mixin transform ($transforms){
   -webkit-transform: $transforms;
   -moz-transform: $transforms;

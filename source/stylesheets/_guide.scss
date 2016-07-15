@@ -88,7 +88,7 @@
       code            { padding: .4em .6em; background: #fff; font-size: .8em; @include border-radius(.3em); }
     }
     li pre            { font-size: 1em; }
-    img               { max-width: 100%; }
+    img               { max-width: 100%; @include border-radius(.4em); @include box-shadow(); }
     blockquote        { margin: 2em 0; padding: .5em 0 .6em 1.65em; border-left-width: 1px; border-left-style: solid; font-size: 1.1em; font-style: italic; color: $base-txt-lt;
       p:last-child    { margin-bottom: 0; }
     }

@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-project: atom
+project: react
 ---
 
 This is just paragraph text. `This is inline code` sit amet, consectetur adipiscing elit. [This is an inline link](#) am ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
