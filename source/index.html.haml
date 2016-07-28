@@ -11,22 +11,22 @@ layout: home
   .wrapper
     %input#project-search{ :placeholder => 'Search'}
     .category
-      %h2 Languages
+      %h2#languages Languages
       .flex-container
         - data.projects.languages.each do |proj|
           = partial 'project-item', :locals => { 'proj' => proj }
     .category
-      %h2 Frameworks
+      %h2#frameworks Frameworks
       .flex-container
         - data.projects.frameworks.each do |proj|
           = partial 'project-item', :locals => { 'proj' => proj }
     .category
-      %h2 CMSs
+      %h2#cms CMSs
       .flex-container
         - data.projects.cms.each do |proj|
           = partial 'project-item', :locals => { 'proj' => proj }
     .category
-      %h2 Services
+      %h2#services Services
       .flex-container
         - data.projects.services.each do |proj|
           = partial 'project-item', :locals => { 'proj' => proj }

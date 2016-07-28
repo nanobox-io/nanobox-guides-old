@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <meta charset='utf-8'>
+      <!-- Always force latest IE rendering engine or request Chrome Frame -->
+      <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+      <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+      <!-- Typekit -->
+      <script src='https://use.typekit.net/cqd5kth.js'></script>
+      <script>
+        try{Typekit.load({ async: true });}catch(e){}
+      </script>
+      <!-- Google Analytics -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+        ga('create', 'UA-760419-20', 'auto');
+        ga('send', 'pageview');
+      </script>
+    </head>
+    <title>New Relic Settings - PHP on Nanobox</title>
+    <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+    <link href="/php/project-styles.css" rel="stylesheet" type="text/css" />
+    <link href='/php/img/favicon.png' rel='icon' type='image/png'>
+  </head>
+  <body class='guide'>
+    <div id='header'>
+      <a href='/php/' id='logo-link'>
+        <img src="/images/icons/php.svg" />
+        <div class='project-title'>
+          <p class='name'>PHP</p>
+          <p class='nb'>on Nanobox</p>
+        </div>
+      </a>
+      <a href='/' id='nbg-logo-link'>
+        <span class='nbg-logo'>
+          <svg enable-background='new 0 0 38 32' id='nbg-logo' space='preserve' version='1.1' viewbox='0 0 38 32' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+            <polyline fill='none' points='&#x000A;			13.6,13 1.5,19 4.8,24.1 8.2,22.4 11.7,27.5 15.1,25.9 18.5,31 36.1,22.2 32.7,17.1 29.4,18.8 25.8,13.6 22.6,15.2 		' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff'></polyline>
+            <line fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff' x1='15.2' x2='29.3' y1='25.9' y2='18.8'></line>
+            <line fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff' x1='8.2' x2='16.9' y1='22.4' y2='18.1'></line>
+            <path d='&#x000A;		M25.1,8.2c0,5.6-6.3,11.9-6.3,11.9s-6.3-6.3-6.3-11.9c0-3.5,2.8-6.3,6.3-6.3S25.1,4.7,25.1,8.2z' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff'></path>
+            <circle cx='18.8' cy='8.2' fill='none' r='2.6' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff'></circle>
+          </svg>
+        </span>
+        <span class='nbg-text'>Nanobox Guides</span>
+      </a>
+    </div>
+    <div id='page-body'>
+      <div class='wrapper'>
+        <div id='left-nav'>
+          <div id='contents-btn'>
+            <div class='lines'></div>
+          </div>
+          
+          <ul class='closed' id='contents'>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/">Getting Started</a>
+            </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/project-setup/">Project Setup</a>
+            </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/configure/">Configure Your App</a>
+            </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/dev-workflow/">Dev Workflow</a>
+            </li>
+            <li>
+              <span class='nav-toggle'>
+                <svg class='nav-btn' enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-btn-circle'>
+                    <path d='M7,14L7,14c-3.9,0-7-3.1-7-7v0c0-3.9,3.1-7,7-7h0c3.9,0,7,3.1,7,7v0C14,10.9,10.9,14,7,14z'></path>
+                  </g>
+                  <g class='nav-btn-horz'>
+                    <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='4' x2='10' y1='7' y2='7'></line>
+                  </g>
+                  <g class='nav-btn-vert'>
+                    <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke='#FFFFFF' x1='7' x2='7' y1='4' y2='10'></line>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/config/">Config Options</a>
+              <ul>
+                <li>
+                  <span>
+                    <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-bullet'>
+                        <rect x='4.5' y='4.5'></rect>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/start/">Start Commands</a>
+                </li>
+                <li>
+                  <span>
+                    <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-bullet'>
+                        <rect x='4.5' y='4.5'></rect>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/php/">PHP Settings</a>
+                </li>
+                <li>
+                  <span>
+                    <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-bullet'>
+                        <rect x='4.5' y='4.5'></rect>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/php-zend-extensions/">PHP/Zend Extensions</a>
+                </li>
+                <li>
+                  <span class='nav-toggle'>
+                    <svg class='nav-btn' enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-btn-circle'>
+                        <path d='M7,14L7,14c-3.9,0-7-3.1-7-7v0c0-3.9,3.1-7,7-7h0c3.9,0,7,3.1,7,7v0C14,10.9,10.9,14,7,14z'></path>
+                      </g>
+                      <g class='nav-btn-horz'>
+                        <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='4' x2='10' y1='7' y2='7'></line>
+                      </g>
+                      <g class='nav-btn-vert'>
+                        <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke='#FFFFFF' x1='7' x2='7' y1='4' y2='10'></line>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/web-server-settings/">Web Server Settings</a>
+                  <ul>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/web-server-settings/apache/">Apache Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/web-server-settings/nginx/">Nginx Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/web-server-settings/builtin/">Built-In Settings</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class='nav-toggle'>
+                    <svg class='nav-btn' enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-btn-circle'>
+                        <path d='M7,14L7,14c-3.9,0-7-3.1-7-7v0c0-3.9,3.1-7,7-7h0c3.9,0,7,3.1,7,7v0C14,10.9,10.9,14,7,14z'></path>
+                      </g>
+                      <g class='nav-btn-horz'>
+                        <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='4' x2='10' y1='7' y2='7'></line>
+                      </g>
+                      <g class='nav-btn-vert'>
+                        <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke='#FFFFFF' x1='7' x2='7' y1='4' y2='10'></line>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/advanced/">Advanced Config Options</a>
+                  <ul>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/apc/">APC Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/eaccelerator/">eAccelerator Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/geoip/">GeoIP Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/memcache/">Memcache Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/mongo/">Mongo Settings</a>
+                    </li>
+                    <li class='active'>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/new-relic/">New Relic Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/opcache/">Opcache Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/php-fpm/">PHP-FPM Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/xcache/">XCache Settings</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span>
+                    <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-bullet'>
+                        <rect x='4.5' y='4.5'></rect>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/nodejs/">Node.js Settings</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class='guide-content'>
+          <h1>New Relic Settings</h1>
+          <p>The following settings are used to configure the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration">PHP New Relic Agent</a>.</p>
+          
+          <ul>
+          <li><a href="#newrelic_capture_params">newrelic_capture_params</a></li>
+          <li><a href="#newrelic_ignored_params">newrelic_ignored_params</a></li>
+          <li><a href="#newrelic_loglevel">newrelic_loglevel</a></li>
+          <li><a href="#newrelic_framework">newrelic_framework</a></li>
+          <li><a href="#newrelic_framework_drupal_modules">newrelic_framework_drupal_modules</a></li>
+          <li><a href="#newrelic_browser_monitoring_auto_instrument">newrelic_browser_monitoring_auto_instrument</a></li>
+          <li><a href="#newrelic_transaction_tracer_enabled">newrelic_transaction_tracer_enabled</a></li>
+          <li><a href="#newrelic_transaction_tracer_detail">newrelic_transaction_tracer_detail</a></li>
+          <li><a href="#newrelic_transaction_tracer_record_sql">newrelic_transaction_tracer_record_sql</a></li>
+          <li><a href="#newrelic_transaction_tracer_threshold">newrelic_transaction_tracer_threshold</a></li>
+          <li><a href="#newrelic_transaction_tracer_stack_trace_threshold">newrelic_transaction_tracer_stack_trace_threshold</a></li>
+          <li><a href="#newrelic_transaction_tracer_explain_threshold">newrelic_transaction_tracer_explain_threshold</a></li>
+          <li><a href="#newrelic_transaction_tracer_slow_sql">newrelic_transaction_tracer_slow_sql</a></li>
+          <li><a href="#newrelic_transaction_tracer_custom">newrelic_transaction_tracer_custom</a></li>
+          <li><a href="#newrelic_error_collector_enabled">newrelic_error_collector_enabled</a></li>
+          <li><a href="#newrelic_error_collector_record_database_errors">newrelic_error_collector_record_database_errors</a></li>
+          <li><a href="#newrelic_webtransaction_name_files">newrelic_webtransaction_name_files</a></li>
+          <li><a href="#newrelic_webtransaction_name_functions">newrelic_webtransaction_name_functions</a></li>
+          <li><a href="#newrelic_webtransaction_name_remove_trailing_path">newrelic_webtransaction_name_remove_trailing_path</a></li>
+          </ul>
+          
+          <h3 id="newrelic_capture_params">newrelic_capture_params</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-capture_params"><code>newrelic.capture_params</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_capture_params</span><span class="pi">:</span> <span class="s">false</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_ignored_params">newrelic_ignored_params</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-ignored_params"><code>newrelic.ignored_params</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_ignored_params</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_loglevel">newrelic_loglevel</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-loglevel"><code>newrelic.loglevel</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_loglevel</span><span class="pi">:</span> <span class="s1">'</span><span class="s">info'</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_framework">newrelic_framework</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-framework"><code>newrelic.framework</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_framework</span><span class="pi">:</span> <span class="s1">'</span><span class="s">laravel'</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_framework_drupal_modules">newrelic_framework_drupal_modules</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-framework-drupal-modules"><code>newrelic.framework.drupal.modules</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_framework_drupal_modules</span><span class="pi">:</span> <span class="s">true</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_browser_monitoring_auto_instrument">newrelic_browser_monitoring_auto_instrument</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-autorum"><code>newrelic.browser_monitoring_auto_instrument</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_browser_monitoring_auto_instrument</span><span class="pi">:</span> <span class="s">true</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_transaction_tracer_enabled">newrelic_transaction_tracer_enabled</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-enable"><code>newrelic.transaction_tracer.enabled</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_transaction_tracer_enabled</span><span class="pi">:</span> <span class="s">true</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_transaction_tracer_detail">newrelic_transaction_tracer_detail</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-detail"><code>newrelic.transaction_tracer.detail</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_transaction_tracer_detail</span><span class="pi">:</span> <span class="s">1</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_transaction_tracer_record_sql">newrelic_transaction_tracer_record_sql</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-sql"><code>newrelic.transaction_tracer.record_sql</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_transaction_tracer_record_sql</span><span class="pi">:</span> <span class="s1">'</span><span class="s">obfuscated'</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_transaction_tracer_threshold">newrelic_transaction_tracer_threshold</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-threshold"><code>newrelic.transaction_tracer.threshold</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_transaction_tracer_threshold</span><span class="pi">:</span> <span class="s1">'</span><span class="s">apdex_f'</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_transaction_tracer_explain_threshold">newrelic_transaction_tracer_explain_threshold</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-epthreshold"><code>newrelic.transaction_tracer.explain_threshold</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_transaction_tracer_explain_threshold</span><span class="pi">:</span> <span class="s1">'</span><span class="s">500'</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_transaction_tracer_stack_trace_threshold">newrelic_transaction_tracer_stack_trace_threshold</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-stthreshold"><code>newrelic.transaction_tracer.stack_trace_threshold</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_transaction_tracer_stack_trace_threshold</span><span class="pi">:</span> <span class="s1">'</span><span class="s">500'</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_transaction_tracer_slow_sql">newrelic_transaction_tracer_slow_sql</h3>
+          
+          <p>Sets the <a href="hhttps://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-slowsql"><code>newrelic.transaction_tracer.slow_sql</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_transaction_tracer_slow_sql</span><span class="pi">:</span> <span class="s">true</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_transaction_tracer_custom">newrelic_transaction_tracer_custom</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-tt-custom"><code>newrelic.transaction_tracer.custom</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_transaction_tracer_custom</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_error_collector_enabled">newrelic_error_collector_enabled</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-err-enabled"><code>newrelic.error_collector.enabled</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_error_collector_enabled</span><span class="pi">:</span> <span class="s">true</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_error_collector_record_database_errors">newrelic_error_collector_record_database_errors</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-err-db"><code>newrelic.error_collector.record_database_errors</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_error_collector_record_database_errors</span><span class="pi">:</span> <span class="s">true</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_webtransaction_name_files">newrelic_webtransaction_name_files</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-wt-files"><code>newrelic.webtransaction.name.files</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_webtransaction_name_files</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_webtransaction_name_functions">newrelic_webtransaction_name_functions</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-wt-funcs"><code>newrelic.webtransaction.name.functions</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_webtransaction_name_functions</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>&#x000A;</code></pre>
+          
+          <h3 id="newrelic_webtransaction_name_remove_trailing_path">newrelic_webtransaction_name_remove_trailing_path</h3>
+          
+          <p>Sets the <a href="https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-wt-remove-path"><code>newrelic.webtransaction.name_remove_trailing_path</code> setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">newrelic_webtransaction_name_remove_trailing_path</span><span class="pi">:</span> <span class="s">false</span>&#x000A;</code></pre>
+        </div>
+      </div>
+    </div>
+    <div id='footer'>
+      <p class='made-with-love'>
+        Made with
+        <span>
+          <svg enable-background='new 0 0 11 10' id='heart' space='preserve' version='1.1' viewbox='0 0 11 10' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+            <path d='M8.1,0.2C7,0.2,6,0.9,5.7,2c-0.3-1-1.3-1.8-2.4-1.8c-1.4,0-2.6,1.1-2.6,2.6c0,2.6,3,4.1,5,7c2-2.9,5-4.2,5-7&#x000A;	C10.7,1.3,9.5,0.2,8.1,0.2z'></path>
+          </svg>
+        </span>
+        by <a href="https://nanobox.io">Nanobox</a>
+      </p>
+      <p class='license'>
+        under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>
+      </p>
+      <p class='contribute'>
+        Want to contribute to the guides? Checkout our <a href="/contribute/">contribution guidelines</a>.
+      </p>
+    </div>
+  </body>
+</html>

@@ -73,7 +73,7 @@
     }
     h1                { font-size: 3.5em; line-height: 1.1em; }
     h2                { font-size: 2.5em; }
-    h3                { font-size: 2em; }
+    h3                { font-size: 1.85em; }
     h4                { font-size: 1.2em; font-style: italic; }
     h5                { font-size: .95em; text-transform: uppercase; letter-spacing: 1px; }
     h6                { font-size: .95em; font-style: italic; text-transform: uppercase; letter-spacing: 1px; @include opacity(.65); }
@@ -84,7 +84,9 @@
     code              { font-family: monaco, Consolas, "Lucida Console", monospace; }
     pre               { margin-bottom: 2em; padding: 2em; white-space: pre; word-wrap: normal; overflow: scroll; background: #fff; font-family: monaco, Consolas, "Lucida Console", monospace; font-size: .8em; line-height: 1.5em; @include border-radius(.3em); }
     p,li,td           {
-      a               { text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; }
+      a               { text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted;
+        code          { font-style: normal; border-width: 1px; border-style: dotted; }
+      }
       code            { padding: .4em .6em; background: #fff; font-size: .8em; @include border-radius(.3em); }
     }
     li pre            { font-size: 1em; }

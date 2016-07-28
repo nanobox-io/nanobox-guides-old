@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <meta charset='utf-8'>
+      <!-- Always force latest IE rendering engine or request Chrome Frame -->
+      <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+      <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+      <!-- Typekit -->
+      <script src='https://use.typekit.net/cqd5kth.js'></script>
+      <script>
+        try{Typekit.load({ async: true });}catch(e){}
+      </script>
+      <!-- Google Analytics -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+        ga('create', 'UA-760419-20', 'auto');
+        ga('send', 'pageview');
+      </script>
+    </head>
+    <title>Opcache Settings - PHP on Nanobox</title>
+    <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+    <link href="/php/project-styles.css" rel="stylesheet" type="text/css" />
+    <link href='/php/img/favicon.png' rel='icon' type='image/png'>
+  </head>
+  <body class='guide'>
+    <div id='header'>
+      <a href='/php/' id='logo-link'>
+        <img src="/images/icons/php.svg" />
+        <div class='project-title'>
+          <p class='name'>PHP</p>
+          <p class='nb'>on Nanobox</p>
+        </div>
+      </a>
+      <a href='/' id='nbg-logo-link'>
+        <span class='nbg-logo'>
+          <svg enable-background='new 0 0 38 32' id='nbg-logo' space='preserve' version='1.1' viewbox='0 0 38 32' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+            <polyline fill='none' points='&#x000A;			13.6,13 1.5,19 4.8,24.1 8.2,22.4 11.7,27.5 15.1,25.9 18.5,31 36.1,22.2 32.7,17.1 29.4,18.8 25.8,13.6 22.6,15.2 		' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff'></polyline>
+            <line fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff' x1='15.2' x2='29.3' y1='25.9' y2='18.8'></line>
+            <line fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff' x1='8.2' x2='16.9' y1='22.4' y2='18.1'></line>
+            <path d='&#x000A;		M25.1,8.2c0,5.6-6.3,11.9-6.3,11.9s-6.3-6.3-6.3-11.9c0-3.5,2.8-6.3,6.3-6.3S25.1,4.7,25.1,8.2z' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff'></path>
+            <circle cx='18.8' cy='8.2' fill='none' r='2.6' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff'></circle>
+          </svg>
+        </span>
+        <span class='nbg-text'>Nanobox Guides</span>
+      </a>
+    </div>
+    <div id='page-body'>
+      <div class='wrapper'>
+        <div id='left-nav'>
+          <div id='contents-btn'>
+            <div class='lines'></div>
+          </div>
+          
+          <ul class='closed' id='contents'>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/">Getting Started</a>
+            </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/project-setup/">Project Setup</a>
+            </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/configure/">Configure Your App</a>
+            </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/dev-workflow/">Dev Workflow</a>
+            </li>
+            <li>
+              <span class='nav-toggle'>
+                <svg class='nav-btn' enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-btn-circle'>
+                    <path d='M7,14L7,14c-3.9,0-7-3.1-7-7v0c0-3.9,3.1-7,7-7h0c3.9,0,7,3.1,7,7v0C14,10.9,10.9,14,7,14z'></path>
+                  </g>
+                  <g class='nav-btn-horz'>
+                    <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='4' x2='10' y1='7' y2='7'></line>
+                  </g>
+                  <g class='nav-btn-vert'>
+                    <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke='#FFFFFF' x1='7' x2='7' y1='4' y2='10'></line>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/config/">Config Options</a>
+              <ul>
+                <li>
+                  <span>
+                    <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-bullet'>
+                        <rect x='4.5' y='4.5'></rect>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/start/">Start Commands</a>
+                </li>
+                <li>
+                  <span>
+                    <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-bullet'>
+                        <rect x='4.5' y='4.5'></rect>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/php/">PHP Settings</a>
+                </li>
+                <li>
+                  <span>
+                    <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-bullet'>
+                        <rect x='4.5' y='4.5'></rect>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/php-zend-extensions/">PHP/Zend Extensions</a>
+                </li>
+                <li>
+                  <span class='nav-toggle'>
+                    <svg class='nav-btn' enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-btn-circle'>
+                        <path d='M7,14L7,14c-3.9,0-7-3.1-7-7v0c0-3.9,3.1-7,7-7h0c3.9,0,7,3.1,7,7v0C14,10.9,10.9,14,7,14z'></path>
+                      </g>
+                      <g class='nav-btn-horz'>
+                        <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='4' x2='10' y1='7' y2='7'></line>
+                      </g>
+                      <g class='nav-btn-vert'>
+                        <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke='#FFFFFF' x1='7' x2='7' y1='4' y2='10'></line>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/web-server-settings/">Web Server Settings</a>
+                  <ul>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/web-server-settings/apache/">Apache Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/web-server-settings/nginx/">Nginx Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/web-server-settings/builtin/">Built-In Settings</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class='nav-toggle'>
+                    <svg class='nav-btn' enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-btn-circle'>
+                        <path d='M7,14L7,14c-3.9,0-7-3.1-7-7v0c0-3.9,3.1-7,7-7h0c3.9,0,7,3.1,7,7v0C14,10.9,10.9,14,7,14z'></path>
+                      </g>
+                      <g class='nav-btn-horz'>
+                        <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='4' x2='10' y1='7' y2='7'></line>
+                      </g>
+                      <g class='nav-btn-vert'>
+                        <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke='#FFFFFF' x1='7' x2='7' y1='4' y2='10'></line>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/advanced/">Advanced Config Options</a>
+                  <ul>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/apc/">APC Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/eaccelerator/">eAccelerator Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/geoip/">GeoIP Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/memcache/">Memcache Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/mongo/">Mongo Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/new-relic/">New Relic Settings</a>
+                    </li>
+                    <li class='active'>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/opcache/">Opcache Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/php-fpm/">PHP-FPM Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/xcache/">XCache Settings</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span>
+                    <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-bullet'>
+                        <rect x='4.5' y='4.5'></rect>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/nodejs/">Node.js Settings</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class='guide-content'>
+          <h1>Opcache Settings</h1>
+          <p>The following settings are used to configure the OPcache PHP byte-code caching engine.</p>
+          
+          <ul>
+          <li><a href="#opcache_memory_consumption">opcache_memory_consumption</a></li>
+          <li><a href="#opcache_validate_timestamps">opcache_validate_timestamps</a></li>
+          <li><a href="#opcache_revalidate_freq">opcache_revalidate_freq</a></li>
+          <li><a href="#opcache_revalidate_path">opcache_revalidate_path</a></li>
+          <li><a href="#opcache_save_comments">opcache_save_comments</a></li>
+          <li><a href="#opcache_load_comments">opcache_load_comments</a></li>
+          <li><a href="#opcache_enable_file_override">opcache_enable_file_override</a></li>
+          <li><a href="#opcache_optimization_level">opcache_optimization_level</a></li>
+          <li><a href="#opcache_inherited_hack">opcache_inherited_hack</a></li>
+          <li><a href="#opcache_dups_fix">opcache_dups_fix</a></li>
+          <li><a href="#opcache_blacklist_filename">opcache_blacklist_filename</a></li>
+          </ul>
+          
+          <h3 id="opcache_memory_consumption">opcache_memory_consumption</h3>
+          
+          <p>Sets the <a href="http://php.net/manual/en/opcache.configuration.php#ini.opcache.memory-consumption"><code>opcache.memory_consumption</code> PHP setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">opcache_memory_consumption</span><span class="pi">:</span> <span class="s">64</span>&#x000A;</code></pre>
+          
+          <h3 id="opcache_validate_timestamps">opcache_validate_timestamps</h3>
+          
+          <p>Sets the <a href="http://php.net/manual/en/opcache.configuration.php#ini.opcache.validate-timestamps"><code>opcache.validate_timestamps</code> PHP setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">opcache_validate_timestamps</span><span class="pi">:</span> <span class="s">1</span>&#x000A;</code></pre>
+          
+          <h3 id="opcache_revalidate_freq">opcache_revalidate_freq</h3>
+          
+          <p>Sets the <a href="http://php.net/manual/en/opcache.configuration.php#ini.opcache.revalidate-freq"><code>opcache.revalidate_freq</code> PHP setting</a></p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">opcache_revalidate_freq</span><span class="pi">:</span> <span class="s">2</span>&#x000A;</code></pre>
+          
+          <h3 id="opcache_revalidate_path">opcache_revalidate_path</h3>
+          
+          <p>Sets the <a href="http://php.net/manual/en/opcache.configuration.php#ini.opcache.revalidate-path"><code>opcache.revalidate_path</code> PHP setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">opcache_revalidate_path</span><span class="pi">:</span> <span class="s">0</span>&#x000A;</code></pre>
+          
+          <h3 id="opcache_save_comments">opcache_save_comments</h3>
+          
+          <p>Sets the <a href="http://php.net/manual/en/opcache.configuration.php#ini.opcache.save-comments"><code>opcache.save_comments</code> PHP setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">opcache_save_comments</span><span class="pi">:</span> <span class="s">1</span>&#x000A;</code></pre>
+          
+          <h3 id="opcache_load_comments">opcache_load_comments</h3>
+          
+          <p>Sets the <a href="http://php.net/manual/en/opcache.configuration.php#ini.opcache.load-comments"><code>opcache_load_comments</code> PHP setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">opcache_load_comments</span><span class="pi">:</span> <span class="s">1</span>&#x000A;</code></pre>
+          
+          <h3 id="opcache_enable_file_override">opcache_enable_file_override</h3>
+          
+          <p>Sets the <a href="http://php.net/manual/en/opcache.configuration.php#ini.opcache.enable-file-override"><code>opcache.enable_file_override</code> PHP
+          setting</a>.
+          <code>yaml&#x000A;code.build:&#x000A;  config:&#x000A;    opcache_enable_file_override: 0</code></p>
+          
+          <h3 id="opcache_optimization_level">opcache_optimization_level</h3>
+          
+          <p>Sets the <a href="http://php.net/manual/en/opcache.configuration.php#ini.opcache.optimization-level"><code>opcache.optimization_level</code> PHP setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">opcache_optimization_level</span><span class="pi">:</span> <span class="s1">'</span><span class="s">0xffffffff'</span>&#x000A;</code></pre>
+          
+          <h3 id="opcache_inherited_hack">opcache_inherited_hack</h3>
+          
+          <p>Sets the <a href="http://php.net/manual/en/opcache.configuration.php#ini.opcache.inherited-hack"><code>opcache.inherited_hack</code> PHP setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">opcache_inherited_hack</span><span class="pi">:</span> <span class="s">1</span>&#x000A;</code></pre>
+          
+          <h3 id="opcache_dups_fix">opcache_dups_fix</h3>
+          
+          <p>Sets the <a href="http://php.net/manual/en/opcache.configuration.php#ini.opcache.dups-fix"><code>opcache.dups_fix</code> PHP setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">opcache_dups_fix</span><span class="pi">:</span> <span class="s">0</span>&#x000A;</code></pre>
+          
+          <h3 id="opcache_blacklist_filename">opcache_blacklist_filename</h3>
+          
+          <p>Sets the <a href="http://php.net/manual/en/opcache.configuration.php#ini.opcache.blacklist-filename"><code>opcache.blacklist_filename</code> PHP setting</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">opcache_blacklist_filename</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>&#x000A;</code></pre>
+        </div>
+      </div>
+    </div>
+    <div id='footer'>
+      <p class='made-with-love'>
+        Made with
+        <span>
+          <svg enable-background='new 0 0 11 10' id='heart' space='preserve' version='1.1' viewbox='0 0 11 10' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+            <path d='M8.1,0.2C7,0.2,6,0.9,5.7,2c-0.3-1-1.3-1.8-2.4-1.8c-1.4,0-2.6,1.1-2.6,2.6c0,2.6,3,4.1,5,7c2-2.9,5-4.2,5-7&#x000A;	C10.7,1.3,9.5,0.2,8.1,0.2z'></path>
+          </svg>
+        </span>
+        by <a href="https://nanobox.io">Nanobox</a>
+      </p>
+      <p class='license'>
+        under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>
+      </p>
+      <p class='contribute'>
+        Want to contribute to the guides? Checkout our <a href="/contribute/">contribution guidelines</a>.
+      </p>
+    </div>
+  </body>
+</html>

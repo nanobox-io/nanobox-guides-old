@@ -35,6 +35,7 @@ $proj-bkg-fill: #a28415;
     p,li,td         {
       a             { color: $proj-link;
         &:hover     { color: $proj-link-hover; }
+        code        { border-color: $proj-link; }
       }
       code          { color: $proj-accent; }
     }

@@ -34,6 +34,7 @@ $proj-nav-hl: #b94242;
     p,li,td         {
       a             { color: $proj-link;
         &:hover     { color: $proj-link-hover; }
+        code        { border-color: $proj-link; }
       }
       code          { color: $proj-accent; }
     }

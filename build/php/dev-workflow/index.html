@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <meta charset='utf-8'>
+      <!-- Always force latest IE rendering engine or request Chrome Frame -->
+      <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+      <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+      <!-- Typekit -->
+      <script src='https://use.typekit.net/cqd5kth.js'></script>
+      <script>
+        try{Typekit.load({ async: true });}catch(e){}
+      </script>
+      <!-- Google Analytics -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+        ga('create', 'UA-760419-20', 'auto');
+        ga('send', 'pageview');
+      </script>
+    </head>
+    <title>Dev Workflow - PHP on Nanobox</title>
+    <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+    <link href="/php/project-styles.css" rel="stylesheet" type="text/css" />
+    <link href='/php/img/favicon.png' rel='icon' type='image/png'>
+  </head>
+  <body class='guide'>
+    <div id='header'>
+      <a href='/php/' id='logo-link'>
+        <img src="/images/icons/php.svg" />
+        <div class='project-title'>
+          <p class='name'>PHP</p>
+          <p class='nb'>on Nanobox</p>
+        </div>
+      </a>
+      <a href='/' id='nbg-logo-link'>
+        <span class='nbg-logo'>
+          <svg enable-background='new 0 0 38 32' id='nbg-logo' space='preserve' version='1.1' viewbox='0 0 38 32' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+            <polyline fill='none' points='&#x000A;			13.6,13 1.5,19 4.8,24.1 8.2,22.4 11.7,27.5 15.1,25.9 18.5,31 36.1,22.2 32.7,17.1 29.4,18.8 25.8,13.6 22.6,15.2 		' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff'></polyline>
+            <line fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff' x1='15.2' x2='29.3' y1='25.9' y2='18.8'></line>
+            <line fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff' x1='8.2' x2='16.9' y1='22.4' y2='18.1'></line>
+            <path d='&#x000A;		M25.1,8.2c0,5.6-6.3,11.9-6.3,11.9s-6.3-6.3-6.3-11.9c0-3.5,2.8-6.3,6.3-6.3S25.1,4.7,25.1,8.2z' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff'></path>
+            <circle cx='18.8' cy='8.2' fill='none' r='2.6' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='1.5' stroke='#ffffff'></circle>
+          </svg>
+        </span>
+        <span class='nbg-text'>Nanobox Guides</span>
+      </a>
+    </div>
+    <div id='page-body'>
+      <div class='wrapper'>
+        <div id='left-nav'>
+          <div id='contents-btn'>
+            <div class='lines'></div>
+          </div>
+          
+          <ul class='closed' id='contents'>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/">Getting Started</a>
+            </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/project-setup/">Project Setup</a>
+            </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/configure/">Configure Your App</a>
+            </li>
+            <li class='active'>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/dev-workflow/">Dev Workflow</a>
+            </li>
+            <li>
+              <span class='nav-toggle'>
+                <svg class='nav-btn' enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-btn-circle'>
+                    <path d='M7,14L7,14c-3.9,0-7-3.1-7-7v0c0-3.9,3.1-7,7-7h0c3.9,0,7,3.1,7,7v0C14,10.9,10.9,14,7,14z'></path>
+                  </g>
+                  <g class='nav-btn-horz'>
+                    <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='4' x2='10' y1='7' y2='7'></line>
+                  </g>
+                  <g class='nav-btn-vert'>
+                    <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke='#FFFFFF' x1='7' x2='7' y1='4' y2='10'></line>
+                  </g>
+                </svg>
+              </span>
+              <a href="/php/config/">Config Options</a>
+              <ul>
+                <li>
+                  <span>
+                    <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-bullet'>
+                        <rect x='4.5' y='4.5'></rect>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/start/">Start Commands</a>
+                </li>
+                <li>
+                  <span>
+                    <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-bullet'>
+                        <rect x='4.5' y='4.5'></rect>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/php/">PHP Settings</a>
+                </li>
+                <li>
+                  <span>
+                    <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-bullet'>
+                        <rect x='4.5' y='4.5'></rect>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/php-zend-extensions/">PHP/Zend Extensions</a>
+                </li>
+                <li>
+                  <span class='nav-toggle'>
+                    <svg class='nav-btn' enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-btn-circle'>
+                        <path d='M7,14L7,14c-3.9,0-7-3.1-7-7v0c0-3.9,3.1-7,7-7h0c3.9,0,7,3.1,7,7v0C14,10.9,10.9,14,7,14z'></path>
+                      </g>
+                      <g class='nav-btn-horz'>
+                        <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='4' x2='10' y1='7' y2='7'></line>
+                      </g>
+                      <g class='nav-btn-vert'>
+                        <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke='#FFFFFF' x1='7' x2='7' y1='4' y2='10'></line>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/web-server-settings/">Web Server Settings</a>
+                  <ul>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/web-server-settings/apache/">Apache Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/web-server-settings/nginx/">Nginx Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/web-server-settings/builtin/">Built-In Settings</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class='nav-toggle'>
+                    <svg class='nav-btn' enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-btn-circle'>
+                        <path d='M7,14L7,14c-3.9,0-7-3.1-7-7v0c0-3.9,3.1-7,7-7h0c3.9,0,7,3.1,7,7v0C14,10.9,10.9,14,7,14z'></path>
+                      </g>
+                      <g class='nav-btn-horz'>
+                        <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='4' x2='10' y1='7' y2='7'></line>
+                      </g>
+                      <g class='nav-btn-vert'>
+                        <line fill='none' stroke-linecap='round' stroke-miterlimit='10' stroke='#FFFFFF' x1='7' x2='7' y1='4' y2='10'></line>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/advanced/">Advanced Config Options</a>
+                  <ul>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/apc/">APC Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/eaccelerator/">eAccelerator Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/geoip/">GeoIP Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/memcache/">Memcache Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/mongo/">Mongo Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/new-relic/">New Relic Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/opcache/">Opcache Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/php-fpm/">PHP-FPM Settings</a>
+                    </li>
+                    <li>
+                      <span>
+                        <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                          <g class='nav-bullet'>
+                            <rect x='4.5' y='4.5'></rect>
+                          </g>
+                        </svg>
+                      </span>
+                      <a href="/php/config/advanced/xcache/">XCache Settings</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span>
+                    <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                      <g class='nav-bullet'>
+                        <rect x='4.5' y='4.5'></rect>
+                      </g>
+                    </svg>
+                  </span>
+                  <a href="/php/config/nodejs/">Node.js Settings</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class='guide-content'>
+          <h1>Dev Workflow</h1>
+          <h2 id="develop-in-your-dev-platform">Develop in Your Dev Platform</h2>
+          
+          <p>The Nanobox CLI provides a local development platform that allows you to develop your code in a local, virtualized environment identical to your production environment. To start your your dev platform along with your app&#39;s data components, run the following <strong>inside your project root</strong>.</p>
+          
+          <h4 id="start-your-dev-platform-amp-data-components">Start Your Dev Platform &amp; Data Components</h4>
+          <pre class="highlight shell"><code><span class="gp">$ </span>nanobox dev up&#x000A;</code></pre>
+          
+          <h3 id="console-into-your-dev-platform">Console Into Your Dev Platform</h3>
+          
+          <p>When the dev platform is started, all data components are provisioned and started, but web and worker processes are not. To start these, console into dev platform using the <code>console</code> command:</p>
+          <pre class="highlight shell"><code><span class="gp">$ </span>nanobox dev console&#x000A;</code></pre>
+          
+          <p>Once consoled in, you can run dependency managers such as <a href="https://getcomposer.org">Composer</a> and start your web and worker process. When it comes to starting your web/worker processes, you have two options. You can either manually run each of the <code>start</code> commands, or you can use the <code>dev run</code> command. This will run all your start commands for you.</p>
+          
+          <h4 id="starting-web-worker-processes">Starting Web/Worker Processes</h4>
+          <pre class="highlight shell"><code><span class="c"># Manually starting web/worker processes</span>&#x000A;<span class="gp">$ </span>/data/sbin/httpd -DNO_DETACH&#x000A;<span class="gp">$ </span>php workers/jobs.php&#x000A;&#x000A;<span class="c"># Starting all web/worker processes</span>&#x000A;<span class="gp">$ </span>nanobox dev run&#x000A;</code></pre>
+          
+          <h3 id="craft-some-code">Craft Some Code</h3>
+          
+          <p>With your dev platform running and webs/workers started, you&#39;re ready to develop code. When running a dev platform, your local codebase is mounted into your Nanobox VM. Any changes locally will be reflected in your virtualized app.</p>
+          
+          <h2 id="start-your-sim-platform">Start Your Sim Platform</h2>
+          
+          <p>Once your code is at a point where you&#39;re ready to test it, you can deploy it into a local simulated platform. The Nanobox CLI&#39;s <code>sim</code> command manages the simulated environment. Running the following command will start your sim platform, generate a deployable build package, deploy the package into the simulated environment, then provision and start all app components. This will perfectly simulate a production deploy:</p>
+          
+          <h4 id="start-your-sim-platform-amp-app-components">Start Your Sim Platform &amp; App Components</h4>
+          <pre class="highlight shell"><code><span class="gp">$ </span>nanobox sim up&#x000A;</code></pre>
+          
+          <p>When running a sim platform, your local code isn&#39;t mounted into your VM, so to apply any changes to your code, you&#39;ll need to generate a new build and deploy that build into your sim platform:</p>
+          <pre class="highlight shell"><code><span class="c"># Generate a new build</span>&#x000A;<span class="gp">$ </span>nanobox build&#x000A;&#x000A;<span class="c"># Deploy the build into your sim platform</span>&#x000A;<span class="gp">$ </span>nanobox sim deploy&#x000A;</code></pre>
+          
+          <h2 id="deploy-to-production">Deploy to Production</h2>
+          
+          <p>Once everything is tested locally, you&#39;re ready to deploy to production.</p>
+          
+          <h4 id="deploying-to-production">Deploying to Production</h4>
+          <pre class="highlight shell"><code><span class="gp">$ </span>nanobox deploy&#x000A;</code></pre>
+          
+          <p>If you haven&#39;t already, you&#39;ll need to <a href="https://docs.nanobox.io/cli/link/">link your local codebase to your production app</a>.</p>
+        </div>
+      </div>
+    </div>
+    <div id='footer'>
+      <p class='made-with-love'>
+        Made with
+        <span>
+          <svg enable-background='new 0 0 11 10' id='heart' space='preserve' version='1.1' viewbox='0 0 11 10' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+            <path d='M8.1,0.2C7,0.2,6,0.9,5.7,2c-0.3-1-1.3-1.8-2.4-1.8c-1.4,0-2.6,1.1-2.6,2.6c0,2.6,3,4.1,5,7c2-2.9,5-4.2,5-7&#x000A;	C10.7,1.3,9.5,0.2,8.1,0.2z'></path>
+          </svg>
+        </span>
+        by <a href="https://nanobox.io">Nanobox</a>
+      </p>
+      <p class='license'>
+        under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>
+      </p>
+      <p class='contribute'>
+        Want to contribute to the guides? Checkout our <a href="/contribute/">contribution guidelines</a>.
+      </p>
+    </div>
+  </body>
+</html>
