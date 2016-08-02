@@ -22,7 +22,7 @@
         ga('send', 'pageview');
       </script>
     </head>
-    <title>Getting Started - Ruby on Nanobox</title>
+    <title>Project Setup - Ruby on Nanobox</title>
     <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />
     <script src="/javascripts/all.js" type="text/javascript"></script>
     <link href="/ruby/project-styles.css" rel="stylesheet" type="text/css" />
@@ -58,7 +58,7 @@
           </div>
           
           <ul class='closed' id='contents'>
-            <li class='active'>
+            <li>
               <span>
                 <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
                   <g class='nav-bullet'>
@@ -68,7 +68,7 @@
               </span>
               <a href="/ruby/">Getting Started</a>
             </li>
-            <li>
+            <li class='active'>
               <span>
                 <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
                   <g class='nav-bullet'>
@@ -101,27 +101,53 @@
           </ul>
         </div>
         <div class='guide-content'>
-          <h1>Getting Started</h1>
-          <p>Getting a Ruby app up and running on Nanobox can be done in a few simple steps.</p>
+          <h1>Project Setup</h1>
+          <p>To setup your app, you need a <a href="https://docs.nanobox.io/app-config/boxfile/">boxfile.yml</a> and to determine what your app needs.</p>
           
-          <h2 id="install-nanobox">Install Nanobox</h2>
+          <h2 id="what-does-your-app-need">What Does Your App Need?</h2>
           
-          <p>If you haven&#39;t already, <a href="https://nanobox.io/download">download and install Nanobox</a>. Nanobox enables you to create virtualized, local development environments identical to production environments deployed through Nanobox.</p>
+          <p>Simple enough. What does your app need? Most Ruby apps will need a web server and some type of database. On Nanobox, these are referred to as &quot;app components&quot;. There are three types of components:</p>
           
-          <h2 id="create-a-boxfile-yml">Create a boxfile.yml</h2>
+          <ul>
+          <li><p><strong><em>web:</em></strong><br>
+          Web components include the Ruby runtime environment and have ports exposed to the external network making them publicly accessible.</p></li>
+          <li><p><strong><em>worker:</em></strong><br>
+          Worker components include the Ruby runtime environment, but are meant for running background processes and do not connect with the external network.</p></li>
+          <li><p><strong><em>data:</em></strong><br>
+          Data components handle application data. They can range anywhere in function from a database to a job queue.</p></li>
+          </ul>
           
-          <p>The first step to using Nanobox is to create a file named <code>boxfile.yml</code> in the root of your project. The <a href="https://docs.nanobox.io/app-config/boxfile/">boxfile.yml</a> houses all configuration for Nanobox apps.</p>
+          <h3 id="specify-your-components">Specify Your Components</h3>
           
-          <h3 id="specify-the-ruby-engine">Specify the Ruby Engine</h3>
+          <p>Components are specified in your boxfile.yml. When specifying a component, you need the component type and a unique identifier (uid):</p>
+          <pre class="highlight yaml"><code><span class="c1"># Pattern</span>&#x000A;<span class="s">type.uid</span>&#x000A;&#x000A;<span class="c1"># Example</span>&#x000A;<span class="s">web.site</span>&#x000A;</code></pre>
           
-          <p>&quot;Engines&quot; build your code&#39;s runtime environment and expose runtime configuration options. Nanobox provides an official Ruby engine. Engines are specified in the <a href="https://docs.nanobox.io/app-config/boxfile/code-build/"><code>code.build</code></a> of your boxfile.yml.</p>
+          <p>If your app were to need a web server and a PostgresSQL database, your boxfile.yml would include something like the following:</p>
+          <pre class="highlight yaml"><code><span class="s">web.site</span><span class="pi">:</span>&#x000A;  <span class="s">start</span><span class="pi">:</span>&#x000A;    <span class="s">puma</span><span class="pi">:</span> <span class="s1">'</span><span class="s">bin/puma</span><span class="nv"> </span><span class="s">app.rb'</span>&#x000A;&#x000A;<span class="s">data.postgres</span><span class="pi">:</span>&#x000A;  <span class="s">image</span><span class="pi">:</span> <span class="s">postgresql</span>&#x000A;</code></pre>
           
-          <p>To use the official Nanobox PHP engine, specify <code>ruby</code> as your <code>engine</code>:</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">engine</span><span class="pi">:</span> <span class="s">ruby</span>&#x000A;</code></pre>
+          <h4 id="web-amp-worker-components">Web &amp; Worker Components</h4>
           
-          <h2 id="setup-your-project">Setup Your Project</h2>
+          <p>Web and worker components each require a <code>start</code> config. This is the command used to start the web/worker process.</p>
           
-          <p>With the PHP engine specified, you&#39;re ready to setup your project. The <a href="./project-setup/">Project Setup</a> doc walks through this process.</p>
+          <h4 id="data-components">Data Components</h4>
+          
+          <p>Data components require an <code>image</code> config. Images build and configure your data services. They are essentially Docker images that include scripts unique to Nanobox. You can find all <a href="https://hub.docker.com/r/nanobox/">official Nanobox images on Docker Hub</a>. There are also <a href="/#services">guides for each official data service</a>.</p>
+          
+          <h2 id="use-environment-variables-for-service-connections">Use Environment Variables for Service Connections</h2>
+          
+          <p>When using Nanobox, projects are meant to be both portable and secure. For your project to be both, use environment variables in all data service connections.</p>
+          
+          <p>When data components are provisioned, we generate unique connection credentials for the service. If the same codebase is used for two separate apps, the database connection credentials will be different for each each app. This encourages the recommended security practices of not hard-coding connection credentials in your codebase.</p>
+          
+          <h3 id="boxfile-amp-connection-example">Boxfile &amp; Connection Example</h3>
+          
+          <p>The following <code>boxfile.yml</code> specifies a Ruby web service with a PostgresSQL database:</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">engine</span><span class="pi">:</span> <span class="s">ruby</span>&#x000A;&#x000A;<span class="s">web.site</span><span class="pi">:</span>&#x000A;  <span class="s">start</span><span class="pi">:</span>&#x000A;    <span class="s">puma</span><span class="pi">:</span> <span class="s1">'</span><span class="s">bin/puma</span><span class="nv"> </span><span class="s">app.rb'</span>&#x000A;&#x000A;    <span class="s">data.db</span><span class="pi">:</span>&#x000A;      <span class="s">image</span><span class="pi">:</span> <span class="s">postgresql</span>&#x000A;</code></pre>
+          
+          <p>The following <code>config/database.yml</code> uses the <a href="https://docs.nanobox.io/app-config/environment-variables/#auto-generated-environment-variables">auto-generated environment variables</a> to populate the connection credentials.</p>
+          <pre class="highlight yaml"><code><span class="s">production</span><span class="pi">:</span>&#x000A;  <span class="s">adapter</span><span class="pi">:</span> <span class="s">postgresql</span>&#x000A;  <span class="s">encoding</span><span class="pi">:</span> <span class="s">unicode</span>&#x000A;  <span class="s">database</span><span class="pi">:</span> <span class="s">&lt;%= ENV['DATA_DB_NAME'] %&gt;</span>&#x000A;  <span class="s">pool</span><span class="pi">:</span> <span class="s">5</span>&#x000A;  <span class="s">username</span><span class="pi">:</span> <span class="s">&lt;%= ENV['DATA_DB_USER'] %&gt;</span>&#x000A;  <span class="s">password</span><span class="pi">:</span> <span class="s">&lt;%= ENV['DATA_DB_PASS'] %&gt;</span>&#x000A;</code></pre>
+          
+          <p>By using the environment variables to populate connection credentials, this codebase would work out-of-the-box when deployed to a Nanobox app. It also keeps you have having to commit sensitive information to your codebase. For more information about environment variables, view the <a href="https://docs.nanobox.io/app-config/environment-variables/">Environment Variables documentation</a>.</p>
         </div>
       </div>
     </div>

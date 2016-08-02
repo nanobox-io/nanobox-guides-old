@@ -328,7 +328,7 @@
           <p>When the dev platform is started, all data components are provisioned and started, but web and worker processes are not. To start these, console into dev platform using the <code>console</code> command:</p>
           <pre class="highlight shell"><code><span class="gp">$ </span>nanobox dev console&#x000A;</code></pre>
           
-          <p>Once consoled in, you can run dependency managers such as <a href="https://getcomposer.org">Composer</a> and start your web and worker process. When it comes to starting your web/worker processes, you have two options. You can either manually run each of the <code>start</code> commands, or you can use the <code>dev run</code> command. This will run all your start commands for you.</p>
+          <p>Once consoled in, you can run dependency managers such as <a href="https://getcomposer.org">Composer</a> and start your web and worker process. When it comes to starting your web/worker processes, you have two options. You can either manually run each of the <code>start</code> commands, or you can use the <code>dev run</code> command (outsite of your dev console). This will run all your start commands for you.</p>
           
           <h4 id="starting-web-worker-processes">Starting Web/Worker Processes</h4>
           <pre class="highlight shell"><code><span class="c"># Manually starting web/worker processes</span>&#x000A;<span class="gp">$ </span>/data/sbin/httpd -DNO_DETACH&#x000A;<span class="gp">$ </span>php workers/jobs.php&#x000A;&#x000A;<span class="c"># Starting all web/worker processes</span>&#x000A;<span class="gp">$ </span>nanobox dev run&#x000A;</code></pre>

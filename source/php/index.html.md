@@ -3,7 +3,7 @@ title: Getting Started
 project: php
 ---
 
-Getting a PHP app up and running on Nanobox can be done in a few simple steps. These guides walk through .
+Getting a PHP app up and running on Nanobox can be done in a few simple steps.
 
 ## Install Nanobox
 If you haven't already, [download and install Nanobox](https://nanobox.io/download). Nanobox enables you to create virtualized, local development environments identical to production environments deployed through Nanobox.
