@@ -33,7 +33,7 @@ If your app were to need a web server and a PostgresSQL database, your boxfile.y
 ```yaml
 web.site:
   start:
-    puma: 'bin/puma app.rb'
+    puma: 'bundle exec puma app.rb'
 
 data.postgres:
   image: postgresql
