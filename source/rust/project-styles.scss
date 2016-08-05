@@ -3,59 +3,17 @@ $proj-accent: #376598;
 $proj-link: #2989e0;
 $proj-link-hover: #376598;
 $proj-nav-hl: #2989e0;
+
 $proj-bkg-fill: #204867;
+$proj-bkg-svg: url('/images/header-bkgs/rust.svg');
 
-// SET THE HEADER BACKGROUND IMAGE
-#header             { background: url('/images/header-bkgs/rust.svg'); background-color: $proj-bkg-fill;}
+$proj-footer-lt: #376598;
+$proj-footer-dk: #204867;
+$proj-footer-txt: #c7d6e6;
 
-// THE FOLLOWING APPLY ALL THE PROJECT-SPECIFIC COLORS
-.guide              {
-  #version-btn      { background: $proj-accent; }
-  #contents         {
-    li              {
-      &.active      {
-        & > a,
-        & > a:hover { color: $proj-nav-hl !important; }
-        & > span .nav-bullet rect,
-        & > span .nav-btn-circle path { fill: $proj-nav-hl !important; }
-      }
-      &.buried > span .nav-btn-circle path { fill: $proj-nav-hl !important; }
-      a:hover       { color: $proj-link !important; }
-    }
-    .nav-btn-circle path { fill: $proj-accent; }
-  }
+// SYNTAX HIGHLIGHTING (Optional)
+// Themes can be found in /source/stylesheets/syntax-hl
+@import 'syntax-hl/github';
 
-  .guide-content    {
-    h1              { color: $proj-accent; }
-    h2 a            {  }
-    h3 a            { color: $proj-accent; }
-    h4 a            {  }
-    h5 a            { color: $proj-accent; }
-    h6 a            {  }
-    p,li,td         {
-      a             { color: $proj-link;
-        &:hover     { color: $proj-link-hover; }
-        code        { border-color: $proj-link; }
-      }
-      code          { color: $proj-accent; }
-    }
-    blockquote      { border-color: $proj-accent; }
-    table           {
-      th            { background-color: $proj-accent; }
-    }
-
-    #pagination     {
-      a             { background: $proj-accent;
-        &:before    { background: $proj-accent; }
-        &.prev:after{ border-color: transparent $proj-accent transparent transparent; }
-        &.next:after{ border-color: transparent transparent transparent $proj-accent; }
-      }
-    }
-
-    // SYNTAX HIGHLIGHTING (Optional)
-    // Themes can be found in /source/stylesheets/syntax-hl
-
-    @import 'syntax-hl/github';
-
-  }
-}
+// GLOBAL PROJECT STYLES
+@import 'project-global';
