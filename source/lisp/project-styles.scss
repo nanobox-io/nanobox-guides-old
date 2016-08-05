@@ -44,6 +44,14 @@ $proj-bkg-fill: #363f63;
       th            { background-color: $proj-accent; }
     }
 
+    #pagination     {
+      a             { background: $proj-accent;
+        &:before    { background: $proj-accent; }
+        &.prev:after{ border-color: transparent $proj-accent transparent transparent; }
+        &.next:after{ border-color: transparent transparent transparent $proj-accent; }
+      }
+    }
+
     // SYNTAX HIGHLIGHTING (Optional)
     // Themes can be found in /source/stylesheets/syntax-hl
 

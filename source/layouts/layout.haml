@@ -30,12 +30,12 @@
 
           %ul#contents.closed
             - if data[project].versions
-              - version = getVersion(current_page.url)
-              - if version == getDefaultVersion(project)
+              - nav_version = getVersion(current_page.url)
+              - if nav_version == getDefaultVersion(project)
                 - data[project].articles.each do |article|
                   = partial 'project-nav', :locals => { :article => article }
               - else
-                - versionNum = data[project].versions.find { |v| v['version'] == getVersion(current_page.url).to_f }
+                - versionNum = data[project].versions.find { |v| v['version'] == getVersion(current_page.url) }
                 - versionNum.articles.each do |article|
                   = partial 'project-nav', :locals => { :article => article  }
             - else
@@ -46,5 +46,7 @@
           - if current_page.data.title
             %h1= current_page.data.title
           = find_and_preserve yield
+
+          = partial 'pagination'
 
     = partial 'footer'

@@ -1,8 +1,8 @@
 - project = current_page.data.project
 
 - if data[project].versions
-  - version = getVersion(current_page.url).to_s
-  - default_version = data[project].versions.find { |v| v["default"] = true }.version.to_s
+  - version = getVersion(current_page.url)
+  - default_version = getDefaultVersion(project)
 - else
   - version = nil
   - default_version = nil

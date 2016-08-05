@@ -1,0 +1,36 @@
+- project = current_page.data.project
+
+#pagination
+  - if data[project].versions
+
+    - link_version = getVersion(current_page.url)
+    - link_default_version = getDefaultVersion(project)
+    - prev_article = version_get_prev_article(current_page.url)
+    - next_article = version_get_next_article(current_page.url)
+
+    - if link_version == link_default_version
+      - if prev_article
+        = link_to data[project].root + prev_article[:path], name: prev_article[:name], class: "prev" do
+          = partial "svgs/left-arrow"
+      - if next_article
+        = link_to data[project].root + next_article[:path], name: next_article[:name], class: "next" do
+          = partial "svgs/right-arrow"
+
+    - else
+      - if prev_article
+        = link_to data[project].root + link_version + '/' + prev_article[:path], name: prev_article[:name], class: "prev" do
+          = partial "svgs/left-arrow"
+      - if next_article
+        = link_to data[project].root + link_version + '/' + next_article[:path], name: next_article[:name], class: "next" do
+          = partial "svgs/right-arrow"
+
+  - else
+    - prev_article = get_prev_article(current_page.url)
+    - if prev_article
+      = link_to data[project].root + prev_article[:path], name: prev_article[:name], class: "prev" do
+        = partial "svgs/left-arrow"
+    -#
+    - next_article = get_next_article(current_page.url)
+    - if next_article
+      = link_to data[project].root + next_article[:path], name: next_article[:name], class: "next" do
+        = partial "svgs/right-arrow"

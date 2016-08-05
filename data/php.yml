@@ -17,7 +17,7 @@ articles:
       - name: 'Start Commands'
         path: 'config/start/'
       - name: 'PHP Settings'
-        path: 'config/php/'
+        path: 'config/php-settings/'
       - name: 'PHP/Zend Extensions'
         path: 'config/php-zend-extensions/'
       - name: 'Web Server Settings'
