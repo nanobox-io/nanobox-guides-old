@@ -1,18 +1,18 @@
 ---
 title: Project Setup
-project: ruby
+project: nodejs
 ---
 
 To setup your app, you need a [boxfile.yml](https://docs.nanobox.io/app-config/boxfile/) and to determine what your app needs.
 
 ## What Does Your App Need?
-Simple enough. What does your app need? Most Ruby apps will need a web server and some type of database. On Nanobox, these are referred to as "app components". There are three types of components:
+Simple enough. What does your app need? Most Node.js apps will need a web server and some type of database. On Nanobox, these are referred to as "app components". There are three types of components:
 
 - ***web:***  
-  Web components include the Ruby runtime environment and have ports exposed to the external network making them publicly accessible.
+  Web components include the Node.js runtime environment and have ports exposed to the external network making them publicly accessible.
 
 - ***worker:***  
-  Worker components include the Ruby runtime environment, but are meant for running background processes and do not connect with the external network.
+  Worker components include the Node.js runtime environment, but are meant for running background processes and do not connect with the external network.
 
 - ***data:***  
   Data components handle application data. They can range anywhere in function from a database to a job queue.
@@ -32,8 +32,7 @@ If your app were to need a web server and a PostgresSQL database, your boxfile.y
 
 ```yaml
 web.site:
-  start:
-    puma: 'bundle exec puma app.rb'
+  start: 'node server.js'
 
 data.postgres:
   image: postgresql
@@ -51,15 +50,15 @@ When using Nanobox, projects are meant to be both portable and secure. For your 
 When data components are provisioned, we generate unique connection credentials for the service. If the same codebase is used for two separate apps, the database connection credentials will be different for each each app. This encourages the recommended security practices of not hard-coding connection credentials in your codebase.
 
 ### Boxfile & Connection Example
-The following `boxfile.yml` specifies a Ruby web service with a PostgresSQL database:
+The following `boxfile.yml` specifies a Node.js web service with a PostgresSQL database:
 
 ```yaml
 code.build:
-  engine: ruby
+  engine: node.js
 
 web.site:
   start:
-    puma: 'bin/puma app.rb'
+    puma: 'node server.js'
 
 data.db:
   image: postgresql

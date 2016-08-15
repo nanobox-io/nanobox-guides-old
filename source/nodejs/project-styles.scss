@@ -11,9 +11,9 @@ $proj-footer-lt: #2c2b27;
 $proj-footer-dk: #649640;
 $proj-footer-txt: #fff;
 
-// SYNTAX HIGHLIGHTING (Optional)
-// Themes can be found in /source/stylesheets/syntax-hl
-@import 'syntax-hl/friendly';
-
 // GLOBAL PROJECT STYLES
 @import 'project-global';
+
+// SYNTAX HIGHLIGHTING (Optional)
+// Themes can be found in /source/stylesheets/syntax-hl
+@import 'syntax-hl/monokai';

@@ -14,7 +14,7 @@ The first step to using Nanobox is to create a file named `boxfile.yml` in the r
 ### Specify the Ruby Engine
 "Engines" build your code's runtime environment and expose runtime configuration options. Nanobox provides an official Ruby engine. Engines are specified in the [`code.build`](https://docs.nanobox.io/app-config/boxfile/code-build/) of your boxfile.yml.
 
-To use the official Nanobox PHP engine, specify `ruby` as your `engine`:
+To use the official Nanobox Ruby engine, specify `ruby` as your `engine`:
 
 ```yaml
 code.build:
@@ -22,4 +22,4 @@ code.build:
 ```
 
 ## Setup Your Project
-With the PHP engine specified, you're ready to setup your project. The [Project Setup](./project-setup/) doc walks through this process.
+With the Ruby engine specified, you're ready to setup your project. The [Project Setup](./project-setup/) doc walks through this process.

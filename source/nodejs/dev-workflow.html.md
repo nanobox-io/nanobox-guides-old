@@ -1,6 +1,6 @@
 ---
 title: Dev Workflow
-project: ruby
+project: nodejs
 ---
 
 ## Develop in Your Dev Platform
@@ -18,14 +18,14 @@ When the dev platform is started, all data components are provisioned and starte
 $ nanobox dev console
 ```
 
-Once consoled in, you can run dependency managers such as [Bundler](http://bundler.io/) and start your web and worker process. When it comes to starting your web/worker processes, you have two options. You can either manually run each of the `start` commands, or you can use the `dev run` command (oustide of your dev console). This will run all your start commands for you.
+Once consoled in, you can run dependency managers such as [npm](https://www.npmjs.com/) and start your web and worker process. When it comes to starting your web/worker processes, you have two options. You can either manually run each of the `start` commands, or you can use the `dev run` command (oustide of your dev console). This will run all your start commands for you.
 
 #### Starting Web/Worker Processes
 ```bash
-$ bin/puma config.ru
-$ rb workers/jobs.rb
+$ node server.js
+$ node worker.js
 
-# Starting all web/worker processes
+# Starting all web/worker processes (outside of your dev console)
 $ nanobox dev run
 ```
 
@@ -46,7 +46,7 @@ When running a sim platform, your local code isn't mounted into your VM, so to a
 # Generate a new build
 $ nanobox build
 
-# Deploy the build into your sim platform (outside of your dev console)
+# Deploy the build into your sim platform
 $ nanobox sim deploy
 ```
 

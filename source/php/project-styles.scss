@@ -11,9 +11,9 @@ $proj-footer-lt: #635a94;
 $proj-footer-dk: #473f75;
 $proj-footer-txt: #cac4e8;
 
+// GLOBAL PROJECT STYLES
+@import 'project-global';
+
 // SYNTAX HIGHLIGHTING (Optional)
 // Themes can be found in /source/stylesheets/syntax-hl
 @import 'syntax-hl/manni';
-
-// GLOBAL PROJECT STYLES
-@import 'project-global';

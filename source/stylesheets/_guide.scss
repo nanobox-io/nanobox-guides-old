@@ -82,7 +82,7 @@
       ul, ol          { padding-left: 1.25em; }
     }
     code              { font-family: monaco, Consolas, "Lucida Console", monospace; }
-    pre               { margin-bottom: 2em; padding: 2em; white-space: pre; word-wrap: normal; overflow: scroll; background: #fff; font-family: monaco, Consolas, "Lucida Console", monospace; font-size: .8em; line-height: 1.5em; @include border-radius(.3em); }
+    pre               { margin-bottom: 2em; padding: 2em; white-space: pre; word-wrap: normal; overflow: scroll;  font-family: monaco, Consolas, "Lucida Console", monospace; font-size: .8em; line-height: 1.5em; @include border-radius(.3em); }
     p,li,td           {
       a               { text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted;
         code          { font-style: normal; border-width: 1px; border-style: dotted; }
@@ -139,9 +139,6 @@
       }
       svg             { width: 1.5em; height: 1.5em; }
     }
-
-    // SYNTAX HIGHLIGHTING
-    @import 'syntax-hl/default';
   }
 
 }
