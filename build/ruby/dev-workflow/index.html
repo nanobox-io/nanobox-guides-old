@@ -108,17 +108,14 @@
           
           <h4 id="start-your-dev-platform-amp-data-components">Start Your Dev Platform &amp; Data Components</h4>
           <pre class="highlight shell"><code><span class="gp">$ </span>nanobox dev up&#x000A;</code></pre>
-          
           <h3 id="console-into-your-dev-platform">Console Into Your Dev Platform</h3>
           
           <p>When the dev platform is started, all data components are provisioned and started, but web and worker processes are not. To start these, console into dev platform using the <code>console</code> command:</p>
           <pre class="highlight shell"><code><span class="gp">$ </span>nanobox dev console&#x000A;</code></pre>
-          
-          <p>Once consoled in, you can run dependency managers such as <a href="https://getcomposer.org">Composer</a> and start your web and worker process. When it comes to starting your web/worker processes, you have two options. You can either manually run each of the <code>start</code> commands, or you can use the <code>dev run</code> command (oustide of your dev console). This will run all your start commands for you.</p>
+          <p>Once consoled in, you can run dependency managers such as <a href="http://bundler.io/">Bundler</a> and start your web and worker process. When it comes to starting your web/worker processes, you have two options. You can either manually run each of the <code>start</code> commands, or you can use the <code>dev run</code> command (oustide of your dev console). This will run all your start commands for you.</p>
           
           <h4 id="starting-web-worker-processes">Starting Web/Worker Processes</h4>
           <pre class="highlight shell"><code><span class="gp">$ </span>bin/puma config.ru&#x000A;<span class="gp">$ </span>rb workers/jobs.rb&#x000A;&#x000A;<span class="c"># Starting all web/worker processes</span>&#x000A;<span class="gp">$ </span>nanobox dev run&#x000A;</code></pre>
-          
           <h3 id="craft-some-code">Craft Some Code</h3>
           
           <p>With your dev platform running and webs/workers started, you&#39;re ready to develop code. When running a dev platform, your local codebase is mounted into your Nanobox VM. Any changes locally will be reflected in your virtualized app.</p>
@@ -129,17 +126,14 @@
           
           <h4 id="start-your-sim-platform-amp-app-components">Start Your Sim Platform &amp; App Components</h4>
           <pre class="highlight shell"><code><span class="gp">$ </span>nanobox sim up&#x000A;</code></pre>
-          
           <p>When running a sim platform, your local code isn&#39;t mounted into your VM, so to apply any changes to your code, you&#39;ll need to generate a new build and deploy that build into your sim platform:</p>
-          <pre class="highlight shell"><code><span class="c"># Generate a new build</span>&#x000A;<span class="gp">$ </span>nanobox build&#x000A;&#x000A;<span class="c"># Deploy the build into your sim platform</span>&#x000A;<span class="gp">$ </span>nanobox sim deploy&#x000A;</code></pre>
-          
+          <pre class="highlight shell"><code><span class="c"># Generate a new build</span>&#x000A;<span class="gp">$ </span>nanobox build&#x000A;&#x000A;<span class="c"># Deploy the build into your sim platform (outside of your dev console)</span>&#x000A;<span class="gp">$ </span>nanobox sim deploy&#x000A;</code></pre>
           <h2 id="deploy-to-production">Deploy to Production</h2>
           
           <p>Once everything is tested locally, you&#39;re ready to deploy to production.</p>
           
           <h4 id="deploying-to-production">Deploying to Production</h4>
           <pre class="highlight shell"><code><span class="gp">$ </span>nanobox deploy&#x000A;</code></pre>
-          
           <p>If you haven&#39;t already, you&#39;ll need to <a href="https://docs.nanobox.io/cli/link/">link your local codebase to your production app</a>.</p>
           <div id='pagination'>
             <a name="Configure Your App" class="prev" href="/ruby/configure/"><svg enable-background='new 0 0 23 23' id='left-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>

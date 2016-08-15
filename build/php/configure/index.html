@@ -319,8 +319,7 @@
           <p>All app/engine configuration is all handled in your boxfile.yml. The PHP engine exposes many config options, which are specified in the <code>code.build &gt; config</code> section of your boxfile.yml. This is where you specify everything from your PHP version and PHP extensions, to web server settings. This guide covers to most used configs, but all the available config options are available in the <a href="../config/">Config Options</a> guides.</p>
           
           <h4 id="overview-of-basic-boxfile-yml-configuration-options">Overview of Basic boxfile.yml Configuration Options</h4>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="c1"># PHP Settings</span>&#x000A;    <span class="s">runtime</span><span class="pi">:</span> <span class="s1">'</span><span class="s">php-5.6'</span>&#x000A;    <span class="s">extensions</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">curl</span>&#x000A;      <span class="pi">-</span> <span class="s">gd</span>&#x000A;      <span class="pi">-</span> <span class="s">mbstring</span>&#x000A;      <span class="pi">-</span> <span class="s">pdo_mysql</span>&#x000A;    <span class="s">zend_extensions</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">ioncube_loader</span>&#x000A;      <span class="pi">-</span> <span class="s">opcache</span>&#x000A;    <span class="s">max_execution_time</span><span class="pi">:</span> <span class="s">30</span>&#x000A;    <span class="s">max_input_time</span><span class="pi">:</span> <span class="s">30</span>&#x000A;    <span class="s">error_reporting</span><span class="pi">:</span> <span class="s">E_ALL</span>&#x000A;    <span class="s">display_errors</span><span class="pi">:</span> <span class="s1">'</span><span class="s">stderr'</span>&#x000A;    <span class="s">post_max_size</span><span class="pi">:</span> <span class="s1">'</span><span class="s">8M'</span>&#x000A;    <span class="s">upload_max_filesize</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2M'</span>&#x000A;    <span class="s">file_uploads</span><span class="pi">:</span> <span class="s">true</span>&#x000A;&#x000A;    <span class="c1"># Web Server Settings</span>&#x000A;    <span class="s">webserver</span><span class="pi">:</span> <span class="s1">'</span><span class="s">apache'</span>&#x000A;&#x000A;    <span class="c1"># Apache Settings</span>&#x000A;    <span class="s">apache_document_root</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/'</span>&#x000A;    <span class="s">apache_php_interpreter</span><span class="pi">:</span> <span class="s">fpm</span>&#x000A;    <span class="s">apache_access_log</span><span class="pi">:</span> <span class="s">false</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="c1"># PHP Settings</span>&#x000A;    <span class="na">runtime</span><span class="pi">:</span> <span class="s1">'</span><span class="s">php-5.6'</span>&#x000A;    <span class="na">extensions</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">curl</span>&#x000A;      <span class="pi">-</span> <span class="s">gd</span>&#x000A;      <span class="pi">-</span> <span class="s">mbstring</span>&#x000A;      <span class="pi">-</span> <span class="s">pdo_mysql</span>&#x000A;    <span class="na">zend_extensions</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">ioncube_loader</span>&#x000A;      <span class="pi">-</span> <span class="s">opcache</span>&#x000A;    <span class="na">max_execution_time</span><span class="pi">:</span> <span class="s">30</span>&#x000A;    <span class="na">max_input_time</span><span class="pi">:</span> <span class="s">30</span>&#x000A;    <span class="na">error_reporting</span><span class="pi">:</span> <span class="s">E_ALL</span>&#x000A;    <span class="na">display_errors</span><span class="pi">:</span> <span class="s1">'</span><span class="s">stderr'</span>&#x000A;    <span class="na">post_max_size</span><span class="pi">:</span> <span class="s1">'</span><span class="s">8M'</span>&#x000A;    <span class="na">upload_max_filesize</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2M'</span>&#x000A;    <span class="na">file_uploads</span><span class="pi">:</span> <span class="s">true</span>&#x000A;&#x000A;    <span class="c1"># Web Server Settings</span>&#x000A;    <span class="na">webserver</span><span class="pi">:</span> <span class="s1">'</span><span class="s">apache'</span>&#x000A;&#x000A;    <span class="c1"># Apache Settings</span>&#x000A;    <span class="na">apache_document_root</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/'</span>&#x000A;    <span class="na">apache_php_interpreter</span><span class="pi">:</span> <span class="s">fpm</span>&#x000A;    <span class="na">apache_access_log</span><span class="pi">:</span> <span class="s">false</span>&#x000A;</code></pre>
           <h5 id="quick-links">Quick Links</h5>
           
           <p><a href="#web-server-settings">Web Server Settings</a><br>
@@ -344,8 +343,7 @@
           <li>nginx</li>
           <li>builtin <em>(<a href="http://php.net/manual/en/features.commandline.webserver.php">PHP&#39;s built-in web server</a> available in 5.4+)</em></li>
           </ul>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">webserver</span><span class="pi">:</span> <span class="s1">'</span><span class="s">apache'</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">webserver</span><span class="pi">:</span> <span class="s1">'</span><span class="s">apache'</span>&#x000A;</code></pre>
           <p><em>Web server specific settings are available in the following guides:</em></p>
           
           <p><a href="../config/web-server-settings/apache/">Apache Settings</a><br>
@@ -381,58 +379,47 @@
           <li>php-5.6</li>
           <li>php-7.0</li>
           </ul>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">runtime</span><span class="pi">:</span> <span class="s1">'</span><span class="s">php-5.6'</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">runtime</span><span class="pi">:</span> <span class="s1">'</span><span class="s">php-5.6'</span>&#x000A;</code></pre>
           <h3 id="extensions">extensions</h3>
           
           <p>Specifies what PHP extensions should be included in your app&#39;s environment. To see what PHP extensions are available, view the <a href="../config/php-zend-extensions/#php-extensions">full list of available PHP extensions</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">extensions</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">curl</span>&#x000A;      <span class="pi">-</span> <span class="s">gd</span>&#x000A;      <span class="pi">-</span> <span class="s">mbstring</span>&#x000A;      <span class="pi">-</span> <span class="s">pdo_mysql</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">extensions</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">curl</span>&#x000A;      <span class="pi">-</span> <span class="s">gd</span>&#x000A;      <span class="pi">-</span> <span class="s">mbstring</span>&#x000A;      <span class="pi">-</span> <span class="s">pdo_mysql</span>&#x000A;</code></pre>
           <h3 id="zend_extensions">zend_extensions</h3>
           
           <p>Specifies what Zend extensions should be included in your app&#39;s environment. To see what Zend extensions are available, view the <a href="../config/php-zend-extensions/#zend-extensions">Zend Extensions section of the PHP extensions list</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">zend_extensions</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">ioncube_loader</span>&#x000A;      <span class="pi">-</span> <span class="s">opcache</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">zend_extensions</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">ioncube_loader</span>&#x000A;      <span class="pi">-</span> <span class="s">opcache</span>&#x000A;</code></pre>
           <h3 id="max_execution_time">max_execution_time</h3>
           
           <p>Sets the <a href="http://www.php.net/manual/en/info.configuration.php#ini.max-execution-time"><code>max_execution_time</code> PHP setting</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">max_execution_time</span><span class="pi">:</span> <span class="s">30</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">max_execution_time</span><span class="pi">:</span> <span class="s">30</span>&#x000A;</code></pre>
           <h3 id="max_input_time">max_input_time</h3>
           
           <p>Sets the <a href="http://www.php.net/manual/en/info.configuration.php#ini.max-input-time"><code>max_input_time</code> PHP setting</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">max_input_time</span><span class="pi">:</span> <span class="s">60</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">max_input_time</span><span class="pi">:</span> <span class="s">60</span>&#x000A;</code></pre>
           <h3 id="error_reporting">error_reporting</h3>
           
           <p>Sets the <a href="http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting"><code>error_reporting</code> PHP setting</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">error_reporting</span><span class="pi">:</span> <span class="s">E_ALL</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">error_reporting</span><span class="pi">:</span> <span class="s">E_ALL</span>&#x000A;</code></pre>
           <h3 id="display_errors">display_errors</h3>
           
           <p>Sets the <a href="http://us3.php.net/manual/en/errorfunc.configuration.php#ini.display-errors"><code>display_errors</code> PHP setting</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">display_errors</span><span class="pi">:</span> <span class="s1">'</span><span class="s">stderr'</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">display_errors</span><span class="pi">:</span> <span class="s1">'</span><span class="s">stderr'</span>&#x000A;</code></pre>
           <h3 id="post_max_size">post_max_size</h3>
           
           <p>Sets the <a href="http://www.php.net/manual/en/ini.core.php#ini.post-max-size"><code>post_max_size</code> PHP setting</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">post_max_size</span><span class="pi">:</span> <span class="s1">'</span><span class="s">8M'</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">post_max_size</span><span class="pi">:</span> <span class="s1">'</span><span class="s">8M'</span>&#x000A;</code></pre>
           <h3 id="upload_max_filesize">upload_max_filesize</h3>
           
           <p>Sets the <a href="http://php.net/manual/en/ini.core.php#ini.upload-max-filesize"><code>upload_max_filesize</code> PHP setting</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">upload\_max\_filesize</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2M'</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="s">upload\_max\_filesize</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2M'</span>&#x000A;</code></pre>
           <h3 id="file_uploads">file_uploads</h3>
           
           <p>Sets the <a href="http://php.net/manual/en/ini.core.php#ini.file-uploads"><code>file_uploads</code> PHP setting</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">file_uploads</span><span class="pi">:</span> <span class="s">true</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">file_uploads</span><span class="pi">:</span> <span class="s">true</span>&#x000A;</code></pre>
           <h3 id="date_timezone">date_timezone</h3>
           
           <p>Sets the <a href="http://php.net/manual/en/datetime.configuration.php#ini.date.timezone"><code>date.timezone</code> PHP setting</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">date_timezone</span><span class="pi">:</span> <span class="s1">'</span><span class="s">US/central'</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">date_timezone</span><span class="pi">:</span> <span class="s1">'</span><span class="s">US/central'</span>&#x000A;</code></pre>
           <h2 id="apache-settings">Apache Settings</h2>
           
           <p>The following settings are used to configure Apache. These only apply when using <code>apache</code> as your <code>webserver</code>.</p>
@@ -450,12 +437,11 @@
           <li>fpm <em>(default)</em></li>
           <li>mod_php</li>
           </ul>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_php_interpreter</span><span class="pi">:</span> <span class="s">fpm</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">apache_php_interpreter</span><span class="pi">:</span> <span class="s">fpm</span>&#x000A;</code></pre>
           <h3 id="apache_access_log">apache_access_log</h3>
           
           <p>Enables or disables the Apache Access log.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_access_log</span><span class="pi">:</span> <span class="s">false</span>&#x000A;</code></pre>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">apache_access_log</span><span class="pi">:</span> <span class="s">false</span>&#x000A;</code></pre>
           <div id='pagination'>
             <a name="Project Setup" class="prev" href="/php/project-setup/"><svg enable-background='new 0 0 23 23' id='left-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
               <polyline fill='none' points='&#x000A;		10.6,20.4 1.7,11.5 10.6,2.6 	' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF'></polyline>

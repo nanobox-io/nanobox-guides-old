@@ -340,18 +340,15 @@
           <p>The public root of your web application. For instance, if you like to house your app in <code>/public</code> for security or organizational purposes, you can specify that here. The default is the <code>/</code>.</p>
           
           <p><strong>Note:</strong> If both this setting and the <a href="../#document_root">global <code>document_root</code></a> are set, the <code>apache_document_root</code> will take precedence.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_document_root</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/'</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">apache_document_root</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/'</span>&#x000A;</code></pre>
           <h3 id="apache_index_list">apache_index_list</h3>
           
           <p>When a path is not specified in the url, these files are served in order in which they&#39;re listed.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_index_list</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">index.php</span>&#x000A;      <span class="pi">-</span> <span class="s">index.html</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">apache_index_list</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">index.php</span>&#x000A;      <span class="pi">-</span> <span class="s">index.html</span>&#x000A;</code></pre>
           <h3 id="apache_default_gateway">apache_default_gateway</h3>
           
           <p>When a path is not specified in the url, this files is served. <em>This is similar to <a href="#apache_index_list"><code>apache_index_list</code></a> except it only accepts a single argument.</em></p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_default_gateway</span><span class="pi">:</span> <span class="s2">"</span><span class="s">index.php"</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">apache_default_gateway</span><span class="pi">:</span> <span class="s2">"</span><span class="s">index.php"</span>&#x000A;</code></pre>
           <h3 id="apache_php_interpreter">apache_php_interpreter</h3>
           
           <p>Specify which PHP interpreter you would like Apache to use.</p>
@@ -360,47 +357,39 @@
           <li>php_fpm <em>(default)</em></li>
           <li>mod_php</li>
           </ul>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_php_interpreter</span><span class="pi">:</span> <span class="s">php_fpm</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">apache_php_interpreter</span><span class="pi">:</span> <span class="s">php_fpm</span>&#x000A;</code></pre>
           <h3 id="apache_modules">apache_modules</h3>
           
           <p>Specify which Apache modules to enable or disable. View the <a href="https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/apache-modules.md">full list of available Apache Modules</a>. By default, all modules are enabled.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_modules</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_modules</span>&#x000A;</code></pre>
           <h3 id="apache_max_spares">apache_max_spares</h3>
           
           <p>Sets Apaches <a href="http://httpd.apache.org/docs/2.2/mod/prefork.html#maxspareservers"><code>MaxSpareServers</code> directive</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_max_spares</span><span class="pi">:</span> <span class="s">10</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">apache_max_spares</span><span class="pi">:</span> <span class="s">10</span>&#x000A;</code></pre>
           <h3 id="apache_max_clients">apache_max_clients</h3>
           
           <p>Sets Apache&#39;s <a href="http://httpd.apache.org/docs/2.2/mod/mpm_common.html#maxclients"><code>MaxClients</code> directive</a>. <strong>Note:</strong> This configuration must be less than or equal to the <a href="#apache_server_limit"><code>apache_server_limit</code></a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;<span class="s">config</span><span class="pi">:</span>&#x000A;<span class="s">apache_max_clients</span><span class="pi">:</span> <span class="s">128</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;<span class="na">config</span><span class="pi">:</span>&#x000A;<span class="na">apache_max_clients</span><span class="pi">:</span> <span class="s">128</span>&#x000A;</code></pre>
           <h3 id="apache_server_limit">apache_server_limit</h3>
           
           <p>Sets Apaches <a href="http://httpd.apache.org/docs/2.2/mod/mpm_common.html#serverlimit"><code>ServerLimit</code> directive</a>. <strong>Note:</strong> This configuration must be greater than or equal to the <a href="#apache_max_clients"><code>apache_max_clients</code></a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_server_limit</span><span class="pi">:</span> <span class="s">128</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">apache_server_limit</span><span class="pi">:</span> <span class="s">128</span>&#x000A;</code></pre>
           <h3 id="apache_max_requests">apache_max_requests</h3>
           
           <p>Sets Apache&#39;s <a href="http://httpd.apache.org/docs/2.2/mod/mpm_common.html#maxrequestsperchild"><code>MaxRequestsPerChild</code> directive</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_max_requests</span><span class="pi">:</span> <span class="s">10000</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">apache_max_requests</span><span class="pi">:</span> <span class="s">10000</span>&#x000A;</code></pre>
           <h3 id="apache_static_expire">apache_static_expire</h3>
           
           <p>Adds far future expires to your header, setting the number of seconds static assets are cached. By default, static asset caching is not enabled. We only recommend using this directive on apps whose static assets do not change often.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_static_expire</span><span class="pi">:</span> <span class="s">86400</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">apache_static_expire</span><span class="pi">:</span> <span class="s">86400</span>&#x000A;</code></pre>
           <h3 id="apache_log_level">apache_log_level</h3>
           
           <p>Sets Apache&#39;s <a href="http://httpd.apache.org/docs/2.2/mod/core.html#loglevel"><code>LogLevel</code> directive</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_log_level</span><span class="pi">:</span> <span class="s">warn</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">apache_log_level</span><span class="pi">:</span> <span class="s">warn</span>&#x000A;</code></pre>
           <h3 id="apache_access_log">apache_access_log</h3>
           
           <p>Enables or disables the Apache Access log.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">apache_access_log</span><span class="pi">:</span> <span class="s">false</span>&#x000A;</code></pre>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">apache_access_log</span><span class="pi">:</span> <span class="s">false</span>&#x000A;</code></pre>
           <div id='pagination'>
             <a name="Web Server Settings" class="prev" href="/php/config/web-server-settings/"><svg enable-background='new 0 0 23 23' id='left-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
               <polyline fill='none' points='&#x000A;		10.6,20.4 1.7,11.5 10.6,2.6 	' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF'></polyline>

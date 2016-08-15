@@ -328,22 +328,19 @@
           <h3 id="php_fpm_events_mechanism">php_fpm_events_mechanism</h3>
           
           <p>Sets <code>events.mechanism</code> setting in the <code>php-fpm.conf</code> which specifies the events mechanism FPM will use. More information is available in <a href="http://php.net/manual/en/install.fpm.configuration.php#events-mechanism">PHP&#39;s documentation</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">php_fpm_events_mechanism</span><span class="pi">:</span> <span class="s1">'</span><span class="s">epoll'</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">php_fpm_events_mechanism</span><span class="pi">:</span> <span class="s1">'</span><span class="s">epoll'</span>&#x000A;</code></pre>
           <h3 id="php_fpm_max_children">php_fpm_max_children</h3>
           
           <p>Sets the maximum number of child processes that can be created by PHP.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">php_fpm_max_children</span><span class="pi">:</span> <span class="s">20</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">php_fpm_max_children</span><span class="pi">:</span> <span class="s">20</span>&#x000A;</code></pre>
           <h3 id="php_fpm_max_spare_servers">php_fpm_max_spare_servers</h3>
           
           <p>The desired maximum number of idle server processes.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">php_fpm_max_spare_servers</span><span class="pi">:</span> <span class="s">1</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">php_fpm_max_spare_servers</span><span class="pi">:</span> <span class="s">1</span>&#x000A;</code></pre>
           <h3 id="php_fpm_max_requests">php_fpm_max_requests</h3>
           
           <p>Sets the number of requests each child process should execute before respawning. This can be useful to work around memory leaks in 3rd party libraries.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">php_fpm_max_requests</span><span class="pi">:</span> <span class="s">128</span>&#x000A;</code></pre>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">php_fpm_max_requests</span><span class="pi">:</span> <span class="s">128</span>&#x000A;</code></pre>
           <div id='pagination'>
             <a name="Opcache Settings" class="prev" href="/php/config/advanced/opcache/"><svg enable-background='new 0 0 23 23' id='left-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
               <polyline fill='none' points='&#x000A;		10.6,20.4 1.7,11.5 10.6,2.6 	' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF'></polyline>

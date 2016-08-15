@@ -329,17 +329,15 @@
           <p>The public root of your web application. For instance, if you like to house your app in <code>/public</code> for security or organizational purposes, you can specify that here. The default is the <code>/</code>.</p>
           
           <p><strong>Note:</strong> If both this setting and the <a href="../#document_root">global <code>document_root</code></a> are set, the <code>nginx_document_root</code> will take precedence.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">nginx_document_root</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/'</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">nginx_document_root</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/'</span>&#x000A;</code></pre>
           <h3 id="nginx_index_list">nginx_index_list</h3>
           
           <p>When a path is not specified in the url, these files are served in order in which they&#39;re listed.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">nginx_index_list</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">index.php</span>&#x000A;      <span class="pi">-</span> <span class="s">index.html</span>&#x000A;</code></pre>
-          
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">nginx_index_list</span><span class="pi">:</span>&#x000A;      <span class="pi">-</span> <span class="s">index.php</span>&#x000A;      <span class="pi">-</span> <span class="s">index.html</span>&#x000A;</code></pre>
           <h3 id="nginx_default_gateway">nginx_default_gateway</h3>
           
           <p>When a path is not specified in the url, this files is served. <em>This is similar to <a href="#nginx_index_list"><code>nginx_index_list</code></a> except it only accepts a single argument.</em></p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="s">config</span><span class="pi">:</span>&#x000A;    <span class="s">nginx_default_gateway</span><span class="pi">:</span> <span class="s1">'</span><span class="s">index.php'</span>&#x000A;</code></pre>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">nginx_default_gateway</span><span class="pi">:</span> <span class="s1">'</span><span class="s">index.php'</span>&#x000A;</code></pre>
           <div id='pagination'>
             <a name="Apache Settings" class="prev" href="/php/config/web-server-settings/apache/"><svg enable-background='new 0 0 23 23' id='left-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
               <polyline fill='none' points='&#x000A;		10.6,20.4 1.7,11.5 10.6,2.6 	' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF'></polyline>
