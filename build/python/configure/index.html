@@ -22,18 +22,18 @@
         ga('send', 'pageview');
       </script>
     </head>
-    <title>Configure Your App - Ruby on Nanobox</title>
+    <title>Configure Your App - Python on Nanobox</title>
     <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />
     <script src="/javascripts/all.js" type="text/javascript"></script>
-    <link href="/ruby/project-styles.css" rel="stylesheet" type="text/css" />
-    <link href='/ruby/img/favicon.png' rel='icon' type='image/png'>
+    <link href="/python/project-styles.css" rel="stylesheet" type="text/css" />
+    <link href='/python/img/favicon.png' rel='icon' type='image/png'>
   </head>
   <body class='guide'>
     <div id='header'>
-      <a href='/ruby/' id='logo-link'>
-        <img src="/images/icons/ruby.svg" />
+      <a href='/python/' id='logo-link'>
+        <img src="/images/icons/python.svg" />
         <div class='project-title'>
-          <p class='name'>Ruby</p>
+          <p class='name'>Python</p>
           <p class='nb'>on Nanobox</p>
         </div>
       </a>
@@ -66,7 +66,7 @@
                   </g>
                 </svg>
               </span>
-              <a href="/ruby/">Getting Started</a>
+              <a href="/python/">Getting Started</a>
             </li>
             <li>
               <span>
@@ -76,7 +76,7 @@
                   </g>
                 </svg>
               </span>
-              <a href="/ruby/project-setup/">Project Setup</a>
+              <a href="/python/project-setup/">Project Setup</a>
             </li>
             <li class='active'>
               <span>
@@ -86,7 +86,7 @@
                   </g>
                 </svg>
               </span>
-              <a href="/ruby/configure/">Configure Your App</a>
+              <a href="/python/configure/">Configure Your App</a>
             </li>
             <li>
               <span>
@@ -96,67 +96,61 @@
                   </g>
                 </svg>
               </span>
-              <a href="/ruby/dev-workflow/">Dev Workflow</a>
+              <a href="/python/dev-workflow/">Dev Workflow</a>
             </li>
           </ul>
         </div>
         <div class='guide-content'>
           <h1>Configure Your App</h1>
-          <p>All app/engine configuration is all handled in your boxfile.yml. The Ruby engine exposes config options, which are specified in the <code>code.build &gt; config</code> section of your boxfile.yml.</p>
+          <p>All app/engine configuration is all handled in your boxfile.yml. The Python engine exposes config options, which are specified in the <code>code.build &gt; config</code> section of your boxfile.yml.</p>
           
           <h4 id="overview-of-boxfile-yml-configuration-options">Overview of boxfile.yml Configuration Options</h4>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="c1"># Ruby Settings</span>&#x000A;    <span class="na">runtime</span><span class="pi">:</span> <span class="s">ruby-2.3</span>&#x000A;&#x000A;    <span class="c1"># Node.js Settings</span>&#x000A;    <span class="na">nodejs_runtime</span><span class="pi">:</span> <span class="s">nodejs-6.2</span>&#x000A;</code></pre>
-          <h3 id="ruby-settings">Ruby Settings</h3>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="c1"># Python Settings</span>&#x000A;    <span class="na">runtime</span><span class="pi">:</span> <span class="s">python27</span>&#x000A;&#x000A;    <span class="c1"># Node.js Settings</span>&#x000A;    <span class="na">nodejs_runtime</span><span class="pi">:</span> <span class="s">nodejs-4.4</span>&#x000A;</code></pre>
+          <h3 id="python-settings">Python Settings</h3>
           
-          <p>Very little Ruby configuration is required when using the <a href="https://github.com/nanobox-io/nanobox-engine-ruby">Ruby engine</a> and is only necessary if you need to deviate from the defaults.</p>
+          <p>Very little Python configuration is required when using the <a href="https://github.com/nanobox-io/nanobox-engine-python">Python engine</a> and is only necessary if you need to deviate from the defaults.</p>
           
           <h4 id="runtime">runtime</h4>
           
-          <p>Specifies which Ruby runtime and version to use. The following runtimes are available:</p>
+          <p>Specifies which Python runtime and version to use. The following runtimes are available:</p>
           
           <ul>
-          <li>ruby-1.9</li>
-          <li>ruby-2.0</li>
-          <li>ruby-2.1</li>
-          <li>ruby-2.2</li>
-          <li>ruby-2.3 <em>(default)</em></li>
-          <li>jruby-1.6</li>
-          <li>jruby-1.7</li>
-          <li>jruby-9.0</li>
+          <li>python27 <em>(default)</em></li>
+          <li>python34</li>
           </ul>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">runtime</span><span class="pi">:</span> <span class="s1">'</span><span class="s">ruby-2.3'</span>&#x000A;</code></pre>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">runtime</span><span class="pi">:</span> <span class="s1">'</span><span class="s">python27'</span>&#x000A;</code></pre>
           <h3 id="node-js-settings">Node.js Settings</h3>
           
-          <p>Many Ruby applications utilize Node.js tools for things such as dependency management or static asset compilation. If the engine finds a <code>packages.json</code> in your codebase, it assumes you&#39;re using <a href="https://www.npmjs.com/">npm</a> and will automatically install Node.js and run <code>npm install</code> during your builds. This engine allows you to specify which Node.js runtime you&#39;d like to include in your environment.</p>
+          <p>Many Python applications utilize Node.js tools for things such as dependency management or static asset compilation. If the engine finds a <code>packages.json</code> in your codebase, it assumes you&#39;re using <a href="https://www.npmjs.com/">npm</a> and will automatically install Node.js and run <code>npm install</code> during your builds. This engine allows you to specify which Node.js runtime you&#39;d like to include in your environment.</p>
           
           <h4 id="nodejs_runtime">nodejs_runtime:</h4>
           
           <p>Specifies which Node.js runtime and version to use. The available options can be found in the <a href="https://github.com/nanobox-io/nanobox-engine-nodejs#runtime">Node.js engine</a>.</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">nodejs_runtime</span><span class="pi">:</span> <span class="s">nodejs-6.2</span>&#x000A;</code></pre>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">nodejs_runtime</span><span class="pi">:</span> <span class="s">nodejs-4.4</span>&#x000A;</code></pre>
           <h2 id="configure-your-web-server">Configure Your Web Server</h2>
           
-          <p>Whatever web server you decided to use with your Ruby app is up to you. Just be sure to the web server gem in your Gemfile and a config file for the server in your codebase.</p>
+          <p>Whatever web server you decided to use with your Python app is up to you. Just be sure to include the server package in your codebase.</p>
           
-          <p>For example, if you were to use <a href="https://github.com/puma/puma">Puma</a> as your web server, you&#39;d include the <code>puma</code> gem in your Gemfile and a <code>app.ru</code> somewhere in your codebase.</p>
-          
+          <p>For example, if you were to use <a href="http://gunicorn.org">Gunicorn</a> as your web server, you&#39;d install it by doing the following:</p>
+          <pre class="highlight shell"><code><span class="c"># Start your dev platform</span>&#x000A;<span class="gp">$ </span>nanobox dev start&#x000A;&#x000A;<span class="c"># Console into your dev platform</span>&#x000A;<span class="gp">$ </span>nanobox dev console&#x000A;&#x000A;<span class="c"># Install Gunicorn using Pip</span>&#x000A;<span class="gp">$ </span>pip install gunicorn&#x000A;&#x000A;<span class="c"># Update your requirements.txt</span>&#x000A;<span class="gp">$ </span>pip freeze &gt; requirements.txt&#x000A;</code></pre>
           <h4 id="your-web-server-must-listen-on-port-8080">Your Web Server Must Listen on Port 8080</h4>
           
-          <p>In your web server configuration file, make sure the server listens on port 8080 for HTTP/HTTPS requests. All HTTP/HTTPS requests are forwarded to port 8080. This cannot be changed.</p>
+          <p>In your web server configuration, make sure the server listens on port 8080 for HTTP/HTTPS requests. All HTTP/HTTPS requests are forwarded to port 8080. This cannot be changed.</p>
           
           <h3 id="provide-a-start-command">Provide a Start Command</h3>
           
           <p>Every web component needs a start command that starts the web server. This is specified in your boxfile.yml.</p>
-          <pre class="highlight yaml"><code><span class="s">web.site</span><span class="pi">:</span>&#x000A;  <span class="na">start</span><span class="pi">:</span> <span class="s1">'</span><span class="s">bundle</span><span class="nv"> </span><span class="s">exec</span><span class="nv"> </span><span class="s">puma</span><span class="nv"> </span><span class="s">app.ru'</span>&#x000A;</code></pre>
+          <pre class="highlight yaml"><code><span class="s">web.site</span><span class="pi">:</span>&#x000A;  <span class="na">start</span><span class="pi">:</span> <span class="s1">'</span><span class="s">gunicorn</span><span class="nv"> </span><span class="s">my-app:app'</span>&#x000A;</code></pre>
           <h2 id="other-boxfile-yml-options">Other boxfile.yml Options</h2>
           
-          <p>There are many other configuration options available in the boxfile.yml that are not unique to the Ruby engine. These are all covered in the <a href="https://docs.nanobox.io/app-config/boxfile/">boxfile.yml documentation</a>.</p>
+          <p>There are many other configuration options available in the boxfile.yml that are not unique to the Python engine. These are all covered in the <a href="https://docs.nanobox.io/app-config/boxfile/">boxfile.yml documentation</a>.</p>
           <div id='pagination'>
-            <a name="Project Setup" class="prev" href="/ruby/project-setup/"><svg enable-background='new 0 0 23 23' id='left-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+            <a name="Project Setup" class="prev" href="/python/project-setup/"><svg enable-background='new 0 0 23 23' id='left-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
               <polyline fill='none' points='&#x000A;		10.6,20.4 1.7,11.5 10.6,2.6 	' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF'></polyline>
               <line fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='1.7' x2='21.7' y1='11.5' y2='11.5'></line>
             </svg>
             </a>
-            <a name="Dev Workflow" class="next" href="/ruby/dev-workflow/"><svg enable-background='new 0 0 23 23' id='right-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+            <a name="Dev Workflow" class="next" href="/python/dev-workflow/"><svg enable-background='new 0 0 23 23' id='right-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
               <polyline fill='none' points='&#x000A;		12.7,2.6 21.7,11.5 12.7,20.4 	' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF'></polyline>
               <line fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='21.7' x2='1.7' y1='11.5' y2='11.5'></line>
             </svg>

@@ -1,6 +1,6 @@
 ---
 title: Dev Workflow
-project: ruby
+project: python
 ---
 
 ## Develop in Your Dev Platform
@@ -22,10 +22,10 @@ Once consoled in, you can run dependency managers such as [Bundler](http://bundl
 
 #### Starting Web/Worker Processes
 ```bash
-$ bin/puma config.ru
-$ rb workers/jobs.rb
+$ gunicorn my-app:app
+$ rq worker high normal low
 
-# Starting all web/worker processes (outside of your dev console)
+# Starting all web/worker (outside of your dev console)
 $ nanobox dev run
 ```
 
@@ -46,7 +46,7 @@ When running a sim platform, your local code isn't mounted into your VM, so to a
 # Generate a new build
 $ nanobox build
 
-# Deploy the build into your sim platform
+# Deploy the build into your sim platform (outside of your dev console)
 $ nanobox sim deploy
 ```
 

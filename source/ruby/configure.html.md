@@ -55,7 +55,7 @@ Whatever web server you decided to use with your Ruby app is up to you. Just be 
 For example, if you were to use [Puma](https://github.com/puma/puma) as your web server, you'd include the `puma` gem in your Gemfile and a `app.ru` somewhere in your codebase.
 
 #### Your Web Server Must Listen on Port 8080
-In your web server configuration file, make sure the server listens on port 8080 for http/https requests. All HTTP/HTTPS requests are forwarded to port 8080. This cannot be changed.
+In your web server configuration file, make sure the server listens on port 8080 for HTTP/HTTPS requests. All HTTP/HTTPS requests are forwarded to port 8080. This cannot be changed.
 
 ### Provide a Start Command
 Every web component needs a start command that starts the web server. This is specified in your boxfile.yml.
@@ -66,4 +66,4 @@ web.site:
 ```
 
 ## Other boxfile.yml Options
-There are many other configuration options available in the boxfile.yml that are not unique to the Ruby engine. These are all covered in the [boxfile.yml documentation](https://docs.nanobox.io/app-config/boxfile/)
+There are many other configuration options available in the boxfile.yml that are not unique to the Ruby engine. These are all covered in the [boxfile.yml documentation](https://docs.nanobox.io/app-config/boxfile/).
