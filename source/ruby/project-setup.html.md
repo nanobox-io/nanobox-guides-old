@@ -28,7 +28,7 @@ type.uid
 web.site
 ```
 
-If your app were to need a web server and a PostgresSQL database, your boxfile.yml would include something like the following:
+If your app were to need a web server and a PostgreSQL database, your boxfile.yml would include something like the following:
 
 ```yaml
 web.site:
@@ -51,7 +51,7 @@ When using Nanobox, projects are meant to be both portable and secure. For your 
 When data components are provisioned, we generate unique connection credentials for the service. If the same codebase is used for two separate apps, the database connection credentials will be different for each each app. This encourages the recommended security practices of not hard-coding connection credentials in your codebase.
 
 ### Boxfile & Connection Example
-The following `boxfile.yml` specifies a Ruby web service with a PostgresSQL database:
+The following `boxfile.yml` specifies a Ruby web service with a PostgreSQL database:
 
 ```yaml
 code.build:

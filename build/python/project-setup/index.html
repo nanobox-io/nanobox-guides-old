@@ -121,7 +121,7 @@
           
           <p>Components are specified in your boxfile.yml. When specifying a component, you need the component type and a unique identifier (uid):</p>
           <pre class="highlight yaml"><code><span class="c1"># Pattern</span>&#x000A;<span class="s">type.uid</span>&#x000A;&#x000A;<span class="c1"># Example</span>&#x000A;<span class="s">web.site</span>&#x000A;</code></pre>
-          <p>If your app were to need a Python component running a <a href="http://gunicorn.org">Gunicorn</a> web server and a PostgresSQL database, your boxfile.yml would include something like the following:</p>
+          <p>If your app were to need a Python component running a <a href="http://gunicorn.org">Gunicorn</a> web server and a PostgreSQL database, your boxfile.yml would include something like the following:</p>
           <pre class="highlight yaml"><code><span class="s">web.site</span><span class="pi">:</span>&#x000A;  <span class="na">start</span><span class="pi">:</span>&#x000A;    <span class="na">gunicorn</span><span class="pi">:</span> <span class="s1">'</span><span class="s">gunicorn</span><span class="nv"> </span><span class="s">my-app:app'</span>&#x000A;&#x000A;<span class="s">data.postgres</span><span class="pi">:</span>&#x000A;  <span class="na">image</span><span class="pi">:</span> <span class="s">postgresql</span>&#x000A;</code></pre>
           <h4 id="web-amp-worker-components">Web &amp; Worker Components</h4>
           

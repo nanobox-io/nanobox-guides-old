@@ -28,7 +28,7 @@ type.uid
 web.site
 ```
 
-If your app were to need a Python component running a [Gunicorn](http://gunicorn.org) web server and a PostgresSQL database, your boxfile.yml would include something like the following:
+If your app were to need a Python component running a [Gunicorn](http://gunicorn.org) web server and a PostgreSQL database, your boxfile.yml would include something like the following:
 
 ```yaml
 web.site:

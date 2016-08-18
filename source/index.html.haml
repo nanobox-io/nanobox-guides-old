@@ -10,26 +10,30 @@ layout: home
 #page-body
   .wrapper
     %input#project-search{ :placeholder => 'Search'}
-    .category
-      %h2#languages Languages
-      .flex-container
-        - data.projects.languages.each do |proj|
-          = partial 'project-item', :locals => { 'proj' => proj }
-    .category
-      %h2#frameworks Frameworks
-      .flex-container
-        - data.projects.frameworks.each do |proj|
-          = partial 'project-item', :locals => { 'proj' => proj }
-    .category
-      %h2#cms CMSs
-      .flex-container
-        - data.projects.cms.each do |proj|
-          = partial 'project-item', :locals => { 'proj' => proj }
-    .category
-      %h2#services Services
-      .flex-container
-        - data.projects.services.each do |proj|
-          = partial 'project-item', :locals => { 'proj' => proj }
+    - if data.projects.languages
+      .category
+        %h2#languages Languages
+        .flex-container
+          - data.projects.languages.each do |proj|
+            = partial 'project-item', :locals => { 'proj' => proj }
+    - if data.projects.frameworks
+      .category
+        %h2#frameworks Frameworks
+        .flex-container
+          - data.projects.frameworks.each do |proj|
+            = partial 'project-item', :locals => { 'proj' => proj }
+    - if data.projects.cms
+      .category
+        %h2#cms CMSs
+        .flex-container
+          - data.projects.cms.each do |proj|
+            = partial 'project-item', :locals => { 'proj' => proj }
+    - if data.projects.services
+      .category
+        %h2#services Services
+        .flex-container
+          - data.projects.services.each do |proj|
+            = partial 'project-item', :locals => { 'proj' => proj }
     #no-results
       = partial 'svgs/obiwan'
       %p

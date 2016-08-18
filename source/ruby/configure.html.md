@@ -46,7 +46,7 @@ Specifies which Node.js runtime and version to use. The available options can be
 ```yaml
 code.build:
   config:
-    nodejs_runtime: nodejs-6.2
+    nodejs_runtime: nodejs-4.4
 ```
 
 ## Configure Your Web Server

@@ -18,7 +18,7 @@ When the dev platform is started, all data components are provisioned and starte
 $ nanobox dev console
 ```
 
-Once consoled in, you can run dependency managers such as [Bundler](http://bundler.io/) and start your web and worker process. When it comes to starting your web/worker processes, you have two options. You can either manually run each of the `start` commands, or you can use the `dev run` command (oustide of your dev console). This will run all your start commands for you.
+Once consoled in, you can run load dependencies with [pip](https://pypi.python.org/pypi/pip) and start your web and worker process. When it comes to starting your web/worker processes, you have two options. You can either manually run each of the `start` commands, or you can use the `dev run` command (oustide of your dev console). This will run all your start commands for you.
 
 #### Starting Web/Worker Processes
 ```bash

@@ -68,109 +68,65 @@
               </span>
               <a href="/java/">Getting Started</a>
             </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/java/project-setup/">Project Setup</a>
+            </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/java/configure/">Configure Your App</a>
+            </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/java/dev-workflow/">Dev Workflow</a>
+            </li>
           </ul>
         </div>
         <div class='guide-content'>
           <h1>Getting Started</h1>
-          <p>This is just paragraph text. <code>This is inline code</code> sit amet, consectetur adipiscing elit. <a href="#">This is an inline link</a> am ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.</p>
+          <p>Getting a Java app up and running on Nanobox can be done in a few simple steps.</p>
           
-          <p>Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.</p>
+          <h2 id="install-nanobox">Install Nanobox</h2>
           
-          <h2 id="h2-title">H2 Title</h2>
+          <p>If you haven&#39;t already, <a href="https://nanobox.io/download">download and install Nanobox</a>. Nanobox enables you to create virtualized, local development environments identical to production environments deployed through Nanobox.</p>
           
-          <p>This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.</p>
+          <h2 id="create-a-boxfile-yml">Create a boxfile.yml</h2>
           
-          <p>Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.</p>
+          <p>The first step to using Nanobox is to create a file named <code>boxfile.yml</code> in the root of your project. The <a href="https://docs.nanobox.io/app-config/boxfile/">boxfile.yml</a> houses all configuration for Nanobox apps.</p>
           
-          <h3 id="h3-title">H3 Title</h3>
+          <h3 id="specify-the-java-engine">Specify the Java Engine</h3>
           
-          <p>This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.</p>
+          <p>&quot;Engines&quot; build your code&#39;s runtime environment and expose runtime configuration options. Nanobox provides an official Java engine. Engines are specified in the <a href="https://docs.nanobox.io/app-config/boxfile/code-build/"><code>code.build</code></a> of your boxfile.yml.</p>
           
-          <p>Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.</p>
+          <p>To use the official Nanobox Java engine, specify <code>java</code> as your <code>engine</code>:</p>
+          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">engine</span><span class="pi">:</span> <span class="s">java</span>&#x000A;</code></pre>
+          <h2 id="setup-your-project">Setup Your Project</h2>
           
-          <h4 id="h4-title">H4 Title</h4>
-          
-          <p>This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.</p>
-          
-          <p>Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.</p>
-          
-          <h5 id="h5-title">H5 Title</h5>
-          
-          <p>This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.</p>
-          
-          <p>Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.</p>
-          
-          <h6 id="h6-title">H6 Title</h6>
-          
-          <p>This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.</p>
-          
-          <p>Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.</p>
-          
-          <p>This is <em>italicized</em></p>
-          
-          <p>This is <strong>bold</strong></p>
-          
-          <p>This is <del>strikethrough</del></p>
-          
-          <p>This is text with <a href="https://pagodabox.io">an inline link</a></p>
-          
-          <ol>
-          <li>This is the 1st item in an ordered list</li>
-          <li>This is the 2nd item in an ordered list</li>
-          <li>This is the 3rd item in an ordered list</li>
-          </ol>
-          
-          <ul>
-          <li>This is an unordered list</li>
-          <li>This is an unordered list</li>
-          <li>This is an unordered list</li>
-          </ul>
-          
-          <p>Below is an image:</p>
-          
-          <p><img title="This is an image" alt="This is an Image" src="https://trello-attachments.s3.amazonaws.com/554b82df5e12ddf95313a8fe/381x198/e61e0a3ff391c11f24f10dfc8f88e770/upload_2015-05-07_at_9.26.24_am.png" /></p>
-          <pre class="highlight plaintext"><code>This is a code block using a &lt;pre&gt; tag&#x000A;</code></pre><pre class="highlight yaml"><code><span class="c1"># This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting</span>&#x000A;&#x000A;<span class="na">web1</span><span class="pi">:</span>&#x000A;  <span class="na">type</span><span class="pi">:</span> <span class="s">php</span>&#x000A;  <span class="na">version</span><span class="pi">:</span> <span class="s">5.6</span>&#x000A;</code></pre><pre class="highlight php"><code><span class="cp">&lt;?php</span> <span class="nb">phpinfo</span><span class="p">()</span>&#x000A;&#x000A;  <span class="k">if</span> <span class="p">(</span><span class="nx">App</span><span class="o">::</span><span class="na">environment</span><span class="p">(</span><span class="s1">'local'</span><span class="p">))</span> <span class="p">{</span>&#x000A;      <span class="c1">// The environment is local&#x000A;</span>  <span class="p">}</span>&#x000A;&#x000A;  <span class="k">if</span> <span class="p">(</span><span class="nx">App</span><span class="o">::</span><span class="na">environment</span><span class="p">(</span><span class="s1">'local'</span><span class="p">,</span> <span class="s1">'staging'</span><span class="p">))</span> <span class="p">{</span>&#x000A;      <span class="c1">// The environment is either local OR staging...&#x000A;</span>  <span class="p">}</span>&#x000A;<span class="cp">?&gt;</span>&#x000A;</code></pre>
-          <p>This is text with <code>inline code</code></p>
-          
-          <table><thead>
-          <tr>
-          <th style="text-align: left">Tables</th>
-          <th style="text-align: center">Are</th>
-          <th style="text-align: right">Cool</th>
-          </tr>
-          </thead><tbody>
-          <tr>
-          <td style="text-align: left">col 3 is</td>
-          <td style="text-align: center">right-aligned</td>
-          <td style="text-align: right">$1600</td>
-          </tr>
-          <tr>
-          <td style="text-align: left">col 2 is</td>
-          <td style="text-align: center">centered</td>
-          <td style="text-align: right">$12</td>
-          </tr>
-          <tr>
-          <td style="text-align: left"><a href="#">zebra stripes</a></td>
-          <td style="text-align: center">are neat</td>
-          <td style="text-align: right">$1</td>
-          </tr>
-          <tr>
-          <td style="text-align: left"><code>zebra stripes</code></td>
-          <td style="text-align: center">are neat</td>
-          <td style="text-align: right">$1</td>
-          </tr>
-          </tbody></table>
-          
-          <blockquote>
-          <p>This is blockquote that is very long and should wrap, but I guess we&#39;ll see, just because I don&#39;t know how wide this thing is.</p>
-          </blockquote>
-          
-          <p>Below is a horizontal rule</p>
-          
-          <hr>
-          
-          <p>Above is a horiztonal rule</p>
+          <p>With the Java engine specified, you&#39;re ready to setup your project. The <a href="./project-setup/">Project Setup</a> doc walks through this process.</p>
           <div id='pagination'>
+            <a name="Project Setup" class="next" href="/java/project-setup/"><svg enable-background='new 0 0 23 23' id='right-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+              <polyline fill='none' points='&#x000A;		12.7,2.6 21.7,11.5 12.7,20.4 	' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF'></polyline>
+              <line fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='21.7' x2='1.7' y1='11.5' y2='11.5'></line>
+            </svg>
+            </a>
           </div>
         </div>
       </div>
