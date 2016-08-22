@@ -22,18 +22,18 @@
         ga('send', 'pageview');
       </script>
     </head>
-    <title>Getting Started - Clojure on Nanobox</title>
+    <title>Connecting to PostgreSQL - PostgreSQL on Nanobox</title>
     <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />
     <script src="/javascripts/all.js" type="text/javascript"></script>
-    <link href="/clojure/project-styles.css" rel="stylesheet" type="text/css" />
-    <link href='/clojure/img/favicon.png' rel='icon' type='image/png'>
+    <link href="/postgresql/project-styles.css" rel="stylesheet" type="text/css" />
+    <link href='/postgresql/img/favicon.png' rel='icon' type='image/png'>
   </head>
   <body class='guide'>
     <div id='header'>
-      <a href='/clojure/' id='logo-link'>
-        <img src="/images/icons/clojure.svg" />
+      <a href='/postgresql/' id='logo-link'>
+        <img src="/images/icons/postgres.svg" />
         <div class='project-title'>
-          <p class='name'>Clojure</p>
+          <p class='name'>PostgreSQL</p>
           <p class='nb'>on Nanobox</p>
         </div>
       </a>
@@ -58,6 +58,16 @@
           </div>
           
           <ul class='closed' id='contents'>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/postgresql/">Getting Started</a>
+            </li>
             <li class='active'>
               <span>
                 <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
@@ -66,7 +76,7 @@
                   </g>
                 </svg>
               </span>
-              <a href="/clojure/">Getting Started</a>
+              <a href="/postgresql/connect/">Connecting to PostgreSQL</a>
             </li>
             <li>
               <span>
@@ -76,7 +86,7 @@
                   </g>
                 </svg>
               </span>
-              <a href="/clojure/project-setup/">Project Setup</a>
+              <a href="/postgresql/configure/">Configuring PostgreSQL</a>
             </li>
             <li>
               <span>
@@ -86,43 +96,35 @@
                   </g>
                 </svg>
               </span>
-              <a href="/clojure/configure/">Configure Your App</a>
-            </li>
-            <li>
-              <span>
-                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
-                  <g class='nav-bullet'>
-                    <rect x='4.5' y='4.5'></rect>
-                  </g>
-                </svg>
-              </span>
-              <a href="/clojure/dev-workflow/">Dev Workflow</a>
+              <a href="/postgresql/manage/">Managing Data</a>
             </li>
           </ul>
         </div>
         <div class='guide-content'>
-          <h1>Getting Started</h1>
-          <p>Getting a Clojure app up and running on Nanobox can be done in a few simple steps.</p>
+          <h1>Connecting to PostgreSQL</h1>
+          <p>When using Nanobox, projects are meant to be both portable and secure. In order for your project to be both, you should use environment variables in your PostgreSQL connections.</p>
           
-          <h2 id="install-nanobox">Install Nanobox</h2>
+          <p>When data components are provisioned, Nanobox generates unique connection credentials for the service. These connection credentials are different for each environment your app is deployed into (dev, sim, and production). Using environment variables allows your code to be portable and secure, keeping connection credentials out of your codebase.</p>
           
-          <p>If you haven&#39;t already, <a href="https://nanobox.io/download">download and install Nanobox</a>. Nanobox enables you to create virtualized, local development environments identical to production environments deployed through Nanobox.</p>
+          <h2 id="auto-generated-environment-variables">Auto-Generated Environment Variables</h2>
           
-          <h2 id="create-a-boxfile-yml">Create a boxfile.yml</h2>
+          <p>Secure connections to your PostreSQL db require a host, port, name, user, and password. Whenever your data component is provisioned, Nanobox automatically generates an environment variable for the host, name, user, and password.</p>
           
-          <p>The first step to using Nanobox is to create a file named <code>boxfile.yml</code> in the root of your project. The <a href="https://docs.nanobox.io/app-config/boxfile/">boxfile.yml</a> houses all configuration for Nanobox apps.</p>
+          <p><em>The port will always be the default Postgres port, <code>5432</code>.</em></p>
           
-          <h3 id="specify-the-clojure-engine">Specify the Clojure Engine</h3>
+          <h3 id="variable-naming-convention">Variable Naming Convention</h3>
           
-          <p>&quot;Engines&quot; build your code&#39;s runtime environment and expose runtime configuration options. Nanobox provides an official Clojure engine. Engines are specified in the <a href="https://docs.nanobox.io/app-config/boxfile/code-build/"><code>code.build</code></a> of your boxfile.yml.</p>
-          
-          <p>To use the official Nanobox Clojure engine, specify <code>clojure</code> as your <code>engine</code>:</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">engine</span><span class="pi">:</span> <span class="s">clojure</span>&#x000A;</code></pre>
-          <h2 id="setup-your-project">Setup Your Project</h2>
-          
-          <p>With the Clojure engine specified, you&#39;re ready to setup your project. The <a href="./project-setup/">Project Setup</a> doc walks through this process.</p>
+          <p>Environment variable names/keys are generated using the ID of the Postgres component in your boxfile.yml - data.db, data.whatever, etc. Letters are capitalized and special characters are replaced with underscores. For example:</p>
+          <pre class="highlight yaml"><code><span class="s">data.db       =&gt; DATA_DB</span>&#x000A;<span class="s">data.postgres =&gt; DATA_POSTGRES</span>&#x000A;<span class="s">data.cthulu   =&gt; DATA_CTHULU</span>&#x000A;</code></pre>
+          <p>Using this convention, environment variables for each required credential are generated.</p>
+          <pre class="highlight yaml"><code><span class="c1"># Component ID</span>&#x000A;<span class="s">data.db</span>&#x000A;&#x000A;<span class="c1"># Auto-Generated Environment Variables</span>&#x000A;<span class="s">DATA_DB_HOST</span>&#x000A;<span class="s">DATA_DB_USER</span>&#x000A;<span class="s">DATA_DB_PASS</span>&#x000A;<span class="s">DATA_DB_NAME</span>&#x000A;</code></pre>
           <div id='pagination'>
-            <a name="Project Setup" class="next" href="/clojure/project-setup/"><svg enable-background='new 0 0 23 23' id='right-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+            <a name="Getting Started" class="prev" href="/postgresql/"><svg enable-background='new 0 0 23 23' id='left-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+              <polyline fill='none' points='&#x000A;		10.6,20.4 1.7,11.5 10.6,2.6 	' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF'></polyline>
+              <line fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='1.7' x2='21.7' y1='11.5' y2='11.5'></line>
+            </svg>
+            </a>
+            <a name="Configuring PostgreSQL" class="next" href="/postgresql/configure/"><svg enable-background='new 0 0 23 23' id='right-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
               <polyline fill='none' points='&#x000A;		12.7,2.6 21.7,11.5 12.7,20.4 	' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF'></polyline>
               <line fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='21.7' x2='1.7' y1='11.5' y2='11.5'></line>
             </svg>

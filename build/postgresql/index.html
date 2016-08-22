@@ -22,18 +22,18 @@
         ga('send', 'pageview');
       </script>
     </head>
-    <title>Getting Started - Clojure on Nanobox</title>
+    <title>Getting Started - PostgreSQL on Nanobox</title>
     <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />
     <script src="/javascripts/all.js" type="text/javascript"></script>
-    <link href="/clojure/project-styles.css" rel="stylesheet" type="text/css" />
-    <link href='/clojure/img/favicon.png' rel='icon' type='image/png'>
+    <link href="/postgresql/project-styles.css" rel="stylesheet" type="text/css" />
+    <link href='/postgresql/img/favicon.png' rel='icon' type='image/png'>
   </head>
   <body class='guide'>
     <div id='header'>
-      <a href='/clojure/' id='logo-link'>
-        <img src="/images/icons/clojure.svg" />
+      <a href='/postgresql/' id='logo-link'>
+        <img src="/images/icons/postgres.svg" />
         <div class='project-title'>
-          <p class='name'>Clojure</p>
+          <p class='name'>PostgreSQL</p>
           <p class='nb'>on Nanobox</p>
         </div>
       </a>
@@ -66,7 +66,7 @@
                   </g>
                 </svg>
               </span>
-              <a href="/clojure/">Getting Started</a>
+              <a href="/postgresql/">Getting Started</a>
             </li>
             <li>
               <span>
@@ -76,7 +76,7 @@
                   </g>
                 </svg>
               </span>
-              <a href="/clojure/project-setup/">Project Setup</a>
+              <a href="/postgresql/connect/">Connecting to PostgreSQL</a>
             </li>
             <li>
               <span>
@@ -86,7 +86,7 @@
                   </g>
                 </svg>
               </span>
-              <a href="/clojure/configure/">Configure Your App</a>
+              <a href="/postgresql/configure/">Configuring PostgreSQL</a>
             </li>
             <li>
               <span>
@@ -96,33 +96,53 @@
                   </g>
                 </svg>
               </span>
-              <a href="/clojure/dev-workflow/">Dev Workflow</a>
+              <a href="/postgresql/manage/">Managing Data</a>
             </li>
           </ul>
         </div>
         <div class='guide-content'>
           <h1>Getting Started</h1>
-          <p>Getting a Clojure app up and running on Nanobox can be done in a few simple steps.</p>
+          <p>Nanobox makes adding, configuring, and managing a PostgreSQL database really simple. These guides will walk through creating, configuring and managing your PostgreSQL database on Nanobox.</p>
           
-          <h2 id="install-nanobox">Install Nanobox</h2>
+          <h2 id="add-a-postgresql-data-component-to-your-boxfile-yml">Add a PostgreSQL Data Component to Your boxfile.yml</h2>
           
-          <p>If you haven&#39;t already, <a href="https://nanobox.io/download">download and install Nanobox</a>. Nanobox enables you to create virtualized, local development environments identical to production environments deployed through Nanobox.</p>
+          <p>When using Nanobox, all your app&#39;s needs and config options are defined in your <a href="https://docs.nanobox.io/app-config/boxfile/">boxfile.yml</a>, a yaml config file housed in the root of your project. Inside the boxfile.yml, you specify &quot;components&quot; - things such as web servers, workers, and databases.</p>
           
-          <h2 id="create-a-boxfile-yml">Create a boxfile.yml</h2>
+          <p>To add a Postgres database to your app, add a data component to your boxfile.yml with the <code>image</code> set to <code>nanobox/postgresql</code>.</p>
+          <pre class="highlight yaml"><code><span class="s">data.db</span><span class="pi">:</span>&#x000A;  <span class="na">image</span><span class="pi">:</span> <span class="s">nanobox/postgresql</span>&#x000A;</code></pre>
+          <p><em>For purposes of this guide, we&#39;ll use</em> <code>data.db</code> <em>as the component ID.</em> &quot;<code>db</code>&quot; <em>is a unique identifier and can be whatever you&#39;d like. More information about component IDs is available in the <a href="https://docs.nanobox.io/app-config/boxfile/#component-ids">boxfile.yml documentation</a>.</em></p>
           
-          <p>The first step to using Nanobox is to create a file named <code>boxfile.yml</code> in the root of your project. The <a href="https://docs.nanobox.io/app-config/boxfile/">boxfile.yml</a> houses all configuration for Nanobox apps.</p>
+          <h4 id="helpful-links">Helpful Links</h4>
           
-          <h3 id="specify-the-clojure-engine">Specify the Clojure Engine</h3>
+          <p><a href="https://docs.nanobox.io/app-config/boxfile/data/">Data Components</a><br>
+          <a href="https://docs.nanobox.io/images/">What is a Nanobox image?</a></p>
           
-          <p>&quot;Engines&quot; build your code&#39;s runtime environment and expose runtime configuration options. Nanobox provides an official Clojure engine. Engines are specified in the <a href="https://docs.nanobox.io/app-config/boxfile/code-build/"><code>code.build</code></a> of your boxfile.yml.</p>
+          <h3 id="specify-config-options">Specify Config Options</h3>
           
-          <p>To use the official Nanobox Clojure engine, specify <code>clojure</code> as your <code>engine</code>:</p>
-          <pre class="highlight yaml"><code><span class="s">code.build</span><span class="pi">:</span>&#x000A;  <span class="na">engine</span><span class="pi">:</span> <span class="s">clojure</span>&#x000A;</code></pre>
-          <h2 id="setup-your-project">Setup Your Project</h2>
+          <p>The PostgreSQL image exposes configuration options in the boxfile.yml. These options are nested under the <code>config</code> section of your data component. For all the available configuration options, view the <a href="./configure/">configuration guide</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">data.db</span><span class="pi">:</span>&#x000A;  <span class="na">image</span><span class="pi">:</span> <span class="s">nanobox/postgresql</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">version</span><span class="pi">:</span> <span class="s">9.4</span>&#x000A;</code></pre>
+          <h2 id="create-a-new-build">Create a New Build</h2>
           
-          <p>With the Clojure engine specified, you&#39;re ready to setup your project. The <a href="./project-setup/">Project Setup</a> doc walks through this process.</p>
+          <p>With your PostgreSQL component included in your boxfile.yml, you&#39;re ready to create a new build. In the build process, your app&#39;s code is compiled into a deployable build package. All the necessary information to provision your Postgres db is included in the package.</p>
+          <pre class="highlight shell"><code><span class="gp">$ </span>nanobox build&#x000A;</code></pre>
+          <h2 id="deploy-your-build">Deploy Your Build</h2>
+          
+          <p>Once your build is ready, you can deploy it into your dev, sim, or production platform(s). In the deploy process your PostgreSQL database will be created. More information about dev and sim environments is available in the <a href="https://new-nanobox-docs.gopagoda.io/local-dev/dev-sim/">Local Development documentation</a>.</p>
+          
+          <h3 id="deploying-to-dev-amp-sim">Deploying to Dev &amp; Sim</h3>
+          
+          <p>In order to deploy to dev and sim platforms, they must be running first. If they aren&#39;t running, each can be started using the <code>start</code> command.</p>
+          
+          <h4 id="starting-amp-deploying-to-dev">Starting &amp; Deploying to Dev</h4>
+          <pre class="highlight shell"><code><span class="c"># Start your dev platform</span>&#x000A;<span class="gp">$ </span>nanobox dev start&#x000A;&#x000A;<span class="c"># Deploy to your dev platform</span>&#x000A;<span class="gp">$ </span>nanobox dev deploy&#x000A;</code></pre>
+          <h4 id="starting-amp-deploying-to-sim">Starting &amp; Deploying to Sim</h4>
+          <pre class="highlight shell"><code><span class="c"># Start your sim platform</span>&#x000A;<span class="gp">$ </span>nanobox sim start&#x000A;&#x000A;<span class="c"># Deploy to your sim platform</span>&#x000A;<span class="gp">$ </span>nanobox sim deploy&#x000A;</code></pre>
+          <h3 id="deploying-to-production">Deploying to Production</h3>
+          
+          <p>To deploy to your production platform and create your PostgreSQL database, run the following:</p>
+          <pre class="highlight plaintext"><code>$ nanobox deploy&#x000A;</code></pre>
           <div id='pagination'>
-            <a name="Project Setup" class="next" href="/clojure/project-setup/"><svg enable-background='new 0 0 23 23' id='right-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+            <a name="Connecting to PostgreSQL" class="next" href="/postgresql/connect/"><svg enable-background='new 0 0 23 23' id='right-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
               <polyline fill='none' points='&#x000A;		12.7,2.6 21.7,11.5 12.7,20.4 	' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF'></polyline>
               <line fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='21.7' x2='1.7' y1='11.5' y2='11.5'></line>
             </svg>

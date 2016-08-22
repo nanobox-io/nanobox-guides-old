@@ -1,7 +1,0 @@
-name: 'PostgreSQL'
-icon: 'postgres.svg'
-root: '/postgres/'
-
-articles:
-  - name: 'Getting Started'
-    path: ''

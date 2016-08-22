@@ -1,18 +1,18 @@
 ---
 title: Project Setup
-project: java
+project: clojure
 ---
 
 To setup your app, you need a [boxfile.yml](https://docs.nanobox.io/app-config/boxfile/) and to determine what your app needs.
 
 ## What Does Your App Need?
-Simple enough. What does your app need? Most Java apps will need a web server and some type of database. On Nanobox, these are referred to as "app components". There are three types of components:
+Simple enough. What does your app need? Most Clojure apps will need a web server and some type of database. On Nanobox, these are referred to as "app components". There are three types of components:
 
 - ***web:***  
-  Web components include the Java runtime environment and have ports exposed to the external network making them publicly accessible.
+  Web components include the Clojure runtime environment and have ports exposed to the external network making them publicly accessible.
 
 - ***worker:***  
-  Worker components include the Java runtime environment, but are meant for running background processes and do not connect with the external network.
+  Worker components include the Clojure runtime environment, but are meant for running background processes and do not connect with the external network.
 
 - ***data:***  
   Data components handle application data. They can range anywhere in function from a database to a job queue.
@@ -28,11 +28,11 @@ type.uid
 web.site
 ```
 
-If your app were to need a Java web component and a PostgreSQL database, your boxfile.yml would include something like the following:
+If your app were to need a Clojure web component and a PostgreSQL database, your boxfile.yml would include something like the following:
 
 ```yaml
 web.site:
-  start: 'java -jar target/app.jar'
+  start: 'java -jar target/uberjar/clojure-app-0.1.0-SNAPSHOT-standalone.jar'
 
 data.postgres:
   image: nanobox/postgresql
@@ -50,14 +50,14 @@ When using Nanobox, projects are meant to be both portable and secure. For your 
 When data components are provisioned, we generate unique connection credentials for the service. If the same codebase is used for two separate apps, the database connection credentials will be different for each each app. This encourages the recommended security practices of not hard-coding connection credentials in your codebase.
 
 ### Boxfile & Connection Example
-The following `boxfile.yml` specifies a Java web service with a PostgreSQL database:
+The following `boxfile.yml` specifies a Clojure web service with a PostgreSQL database:
 
 ```yaml
 code.build:
-  engine: java
+  engine: clojure
 
 web.site:
-  start: 'java -jar target/app.jar'
+  start: 'java -jar target/uberjar/clojure-app-0.1.0-SNAPSHOT-standalone.jar'
 
 data.db:
   image: nanobox/postgresql
@@ -65,12 +65,14 @@ data.db:
 
 The following database config uses the [auto-generated environment variables](https://docs.nanobox.io/app-config/environment-variables/#auto-generated-environment-variables) to populate the connection credentials.
 
-```java
-db_driver   = org.postgresql.Driver
-db_host     = System.getenv("DATA_DB_HOST")
-db_name     = System.getenv("DATA_DB_NAME")
-db_username = System.getenv("DATA_DB_USER")
-db_password = System.getenv("DATA_DB_PASS")
+```clojure
+(def pg-db {:dbtype "postgresql"
+            :dbname (System/getenv "DATA_DB_NAME")
+            :host (System/getenv "DATA_DB_HOST")
+            :user (System/getenv "DATA_DB_USER")
+            :password (System/getenv "DATA_DB_PASS")
+            :ssl true
+            :sslfactory "org.postgresql.ssl.NonValidatingFactory"})
 ```
 
 By using the environment variables to populate connection credentials, this codebase would work out-of-the-box when deployed to a Nanobox app. It also keeps you have having to commit sensitive information to your codebase. For more information about environment variables, view the [Environment Variables documentation](https://docs.nanobox.io/app-config/environment-variables/).

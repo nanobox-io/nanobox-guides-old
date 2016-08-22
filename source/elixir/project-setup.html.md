@@ -35,7 +35,7 @@ web.site:
   start: 'mix web.server'
 
 data.postgres:
-  image: postgresql
+  image: nanobox/postgresql
 ```
 
 #### Web & Worker Components
@@ -60,7 +60,7 @@ web.site:
   start: 'mix web.server'
 
 data.db:
-  image: postgresql
+  image: nanobox/postgresql
 ```
 
 The following database config uses the [auto-generated environment variables](https://docs.nanobox.io/app-config/environment-variables/#auto-generated-environment-variables) to populate the connection credentials.

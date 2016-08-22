@@ -5,3 +5,5 @@ root: '/mysql/'
 articles:
   - name: 'Getting Started'
     path: ''
+  - name: 'confguring'
+    path: 'configuring'

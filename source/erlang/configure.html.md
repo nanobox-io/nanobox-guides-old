@@ -64,7 +64,7 @@ code.build:
 ```
 
 ## Configure Your Web Server
-Whatever web server you decided to use with your Scala app is up to you. Just be sure the necessary config files are included in your project.
+Whatever web server you decided to use with your Erlang app is up to you. Just be sure the necessary config files are included in your project.
 
 #### Your Web Server Must Listen on Port 8080
 In your web server configuration file, make sure the server listens on port 8080 for HTTP/HTTPS requests. All HTTP/HTTPS requests are forwarded to port 8080. This cannot be changed.
@@ -78,4 +78,4 @@ web.site:
 ```
 
 ## Other boxfile.yml Options
-There are many other configuration options available in the boxfile.yml that are not unique to the Scala engine. These are all covered in the [boxfile.yml documentation](https://docs.nanobox.io/app-config/boxfile/).
+There are many other configuration options available in the boxfile.yml that are not unique to the Erlang engine. These are all covered in the [boxfile.yml documentation](https://docs.nanobox.io/app-config/boxfile/).

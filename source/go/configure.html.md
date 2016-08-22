@@ -89,4 +89,4 @@ web.site:
 ```
 
 ## Other boxfile.yml Options
-There are many other configuration options available in the boxfile.yml that are not unique to the Scala engine. These are all covered in the [boxfile.yml documentation](https://docs.nanobox.io/app-config/boxfile/).
+There are many other configuration options available in the boxfile.yml that are not unique to the Go engine. These are all covered in the [boxfile.yml documentation](https://docs.nanobox.io/app-config/boxfile/).
