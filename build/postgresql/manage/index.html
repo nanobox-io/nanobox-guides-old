@@ -102,11 +102,11 @@
         </div>
         <div class='guide-content'>
           <h1>Managing Data</h1>
-          <p>Nanobox exposes connections for your PostgreSQL database through which you can access and manage your data using your client of choice.</p>
+          <p>Nanobox exposes connections to your PostgreSQL database through which you can access and manage your data using your client of choice.</p>
           
           <h2 id="managing-local-data">Managing Local Data</h2>
           
-          <p>When working in a local <a href="https://new-nanobox-docs.gopagoda.io/local-dev/dev-sim/">dev or sim platform</a>, your PostgreSQL db is given it&#39;s own virtual IP and port that you can connect to using your client of choice. To view these credentials, use the Nanobox CLI&#39;s <code>info</code> command. It displays information about components in each respective platform.</p>
+          <p>When working in a local <a href="https://docs.nanobox.io/local-dev/dev-sim/">dev or sim platform</a>, your PostgreSQL db is given it&#39;s own virtual IP and port that you can connect to using your client of choice. To view these credentials, use the Nanobox CLI&#39;s <code>info</code> command. It displays information about components in each respective platform.</p>
           
           <h4 id="viewing-credentials-in-dev">Viewing Credentials in dev</h4>
           <pre class="highlight shell"><code><span class="gp">$ </span>nanobox dev info&#x000A;&#x000A;??? info output&#x000A;</code></pre>
@@ -123,7 +123,7 @@
           </ol>
           
           <h4 id="opening-a-tunnel-to-postgres">Opening a Tunnel to Postgres</h4>
-          <pre class="highlight plaintext"><code>$ nanobox tunnel -p 5432 data.db&#x000A;</code></pre>
+          <pre class="highlight shell"><code><span class="gp">$ </span>nanobox tunnel -p 5432 data.db&#x000A;</code></pre>
           <p>The tunnel command will output the credentials necessary to connect to your production Postgres database. You can then use your client of choice to manage your production data.</p>
           <div id='pagination'>
             <a name="Configuring PostgreSQL" class="prev" href="/postgresql/configure/"><svg enable-background='new 0 0 23 23' id='left-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>

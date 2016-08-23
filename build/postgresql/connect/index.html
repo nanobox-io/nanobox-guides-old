@@ -108,7 +108,7 @@
           
           <h2 id="auto-generated-environment-variables">Auto-Generated Environment Variables</h2>
           
-          <p>Secure connections to your PostreSQL db require a host, port, name, user, and password. Whenever your data component is provisioned, Nanobox automatically generates an environment variable for the host, name, user, and password.</p>
+          <p>Secure connections to your PostgreSQL db require a host, port, name, user, and password. Whenever your data component is provisioned, Nanobox automatically generates an environment variable for the host, name, user, and password.</p>
           
           <p><em>The port will always be the default Postgres port, <code>5432</code>.</em></p>
           
@@ -117,7 +117,7 @@
           <p>Environment variable names/keys are generated using the ID of the Postgres component in your boxfile.yml - data.db, data.whatever, etc. Letters are capitalized and special characters are replaced with underscores. For example:</p>
           <pre class="highlight yaml"><code><span class="s">data.db       =&gt; DATA_DB</span>&#x000A;<span class="s">data.postgres =&gt; DATA_POSTGRES</span>&#x000A;<span class="s">data.cthulu   =&gt; DATA_CTHULU</span>&#x000A;</code></pre>
           <p>Using this convention, environment variables for each required credential are generated.</p>
-          <pre class="highlight yaml"><code><span class="c1"># Component ID</span>&#x000A;<span class="s">data.db</span>&#x000A;&#x000A;<span class="c1"># Auto-Generated Environment Variables</span>&#x000A;<span class="s">DATA_DB_HOST</span>&#x000A;<span class="s">DATA_DB_USER</span>&#x000A;<span class="s">DATA_DB_PASS</span>&#x000A;<span class="s">DATA_DB_NAME</span>&#x000A;</code></pre>
+          <pre class="highlight yaml"><code><span class="c1"># Component ID</span>&#x000A;<span class="s">data.db</span>&#x000A;&#x000A;<span class="c1"># Auto-Generated Environment Variables</span>&#x000A;<span class="s">DATA_DB_HOST</span>&#x000A;<span class="s">DATA_DB_USER</span>&#x000A;<span class="s">DATA_DB_PASS</span>&#x000A;<span class="s">DATA_DB_NAME</span>&#x000A;</code></pre><pre class="highlight yaml"><code><span class="c1"># Component ID</span>&#x000A;<span class="s">data.postgres</span>&#x000A;&#x000A;<span class="c1"># Auto-Generated Environment Variables</span>&#x000A;<span class="s">DATA_POSTGRES_HOST</span>&#x000A;<span class="s">DATA_POSTGRES_USER</span>&#x000A;<span class="s">DATA_POSTGRES_PASS</span>&#x000A;<span class="s">DATA_POSTGRES_NAME</span>&#x000A;</code></pre>
           <div id='pagination'>
             <a name="Getting Started" class="prev" href="/postgresql/"><svg enable-background='new 0 0 23 23' id='left-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
               <polyline fill='none' points='&#x000A;		10.6,20.4 1.7,11.5 10.6,2.6 	' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF'></polyline>

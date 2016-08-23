@@ -3,10 +3,10 @@ title: Managing Data
 project: postgresql
 ---
 
-Nanobox exposes connections for your PostgreSQL database through which you can access and manage your data using your client of choice.
+Nanobox exposes connections to your PostgreSQL database through which you can access and manage your data using your client of choice.
 
 ## Managing Local Data
-When working in a local [dev or sim platform](https://new-nanobox-docs.gopagoda.io/local-dev/dev-sim/), your PostgreSQL db is given it's own virtual IP and port that you can connect to using your client of choice. To view these credentials, use the Nanobox CLI's `info` command. It displays information about components in each respective platform.
+When working in a local [dev or sim platform](https://docs.nanobox.io/local-dev/dev-sim/), your PostgreSQL db is given it's own virtual IP and port that you can connect to using your client of choice. To view these credentials, use the Nanobox CLI's `info` command. It displays information about components in each respective platform.
 
 #### Viewing Credentials in dev
 ```bash
@@ -30,7 +30,7 @@ To establish a secure remote connection to your production database, use the Nan
 3. Your are authorized to access the component.
 
 #### Opening a Tunnel to Postgres
-```
+```bash
 $ nanobox tunnel -p 5432 data.db
 ```
 

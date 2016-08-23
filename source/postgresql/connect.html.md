@@ -8,7 +8,7 @@ When using Nanobox, projects are meant to be both portable and secure. In order 
 When data components are provisioned, Nanobox generates unique connection credentials for the service. These connection credentials are different for each environment your app is deployed into (dev, sim, and production). Using environment variables allows your code to be portable and secure, keeping connection credentials out of your codebase.
 
 ## Auto-Generated Environment Variables
-Secure connections to your PostreSQL db require a host, port, name, user, and password. Whenever your data component is provisioned, Nanobox automatically generates an environment variable for the host, name, user, and password.
+Secure connections to your PostgreSQL db require a host, port, name, user, and password. Whenever your data component is provisioned, Nanobox automatically generates an environment variable for the host, name, user, and password.
 
 *The port will always be the default Postgres port, `5432`.*
 
@@ -32,4 +32,14 @@ DATA_DB_HOST
 DATA_DB_USER
 DATA_DB_PASS
 DATA_DB_NAME
+```
+```yaml
+# Component ID
+data.postgres
+
+# Auto-Generated Environment Variables
+DATA_POSTGRES_HOST
+DATA_POSTGRES_USER
+DATA_POSTGRES_PASS
+DATA_POSTGRES_NAME
 ```

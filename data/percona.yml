@@ -1,7 +1,0 @@
-name: 'Percona'
-icon: 'percona.svg'
-root: '/percona/'
-
-articles:
-  - name: 'Getting Started'
-    path: ''

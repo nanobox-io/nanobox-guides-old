@@ -58,8 +58,6 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
-    middleman-breadcrumbs (0.3.3)
-      middleman (>= 3.3.5)
     middleman-core (3.3.12)
       activesupport (~> 4.1.0)
       bundler (~> 1.1)
@@ -132,7 +130,6 @@ PLATFORMS
 DEPENDENCIES
   celluloid (= 0.16.0)
   middleman (~> 3.3.12)
-  middleman-breadcrumbs
   middleman-livereload (~> 3.1.0)
   middleman-syntax
   redcarpet

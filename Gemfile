@@ -19,8 +19,5 @@ gem 'redcarpet'
 # Syntax Highlighting
 gem 'middleman-syntax'
 
-# Breadcrumbs
-gem 'middleman-breadcrumbs'
-
 # Locks the version of Celluloid
 gem 'celluloid', '0.16.0'

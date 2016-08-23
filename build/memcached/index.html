@@ -68,109 +68,85 @@
               </span>
               <a href="/memcached/">Getting Started</a>
             </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/memcached/connect/">Connecting to Memcached</a>
+            </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/memcached/configure/">Configuring Memcached</a>
+            </li>
+            <li>
+              <span>
+                <svg enable-background='new 0 0 14 14' space='preserve' version='1.1' viewbox='0 0 14 14' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                  <g class='nav-bullet'>
+                    <rect x='4.5' y='4.5'></rect>
+                  </g>
+                </svg>
+              </span>
+              <a href="/memcached/manage/">Managing Data</a>
+            </li>
           </ul>
         </div>
         <div class='guide-content'>
           <h1>Getting Started</h1>
-          <p>This is just paragraph text. <code>This is inline code</code> sit amet, consectetur adipiscing elit. <a href="#">This is an inline link</a> am ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.</p>
+          <p>Nanobox makes adding, configuring, and managing Memcached really simple. These guides will walk through creating, configuring and managing Memcached on Nanobox.</p>
           
-          <p>Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.</p>
+          <h2 id="add-a-memcached-data-component-to-your-boxfile-yml">Add a Memcached Data Component to Your boxfile.yml</h2>
           
-          <h2 id="h2-title">H2 Title</h2>
+          <p>When using Nanobox, all your app&#39;s needs and config options are defined in your <a href="https://docs.nanobox.io/app-config/boxfile/">boxfile.yml</a>, a yaml config file housed in the root of your project. Inside the boxfile.yml, you specify &quot;components&quot; - things such as web servers, workers, ands.</p>
           
-          <p>This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.</p>
+          <p>To add a Memcached to your app, add a data component to your boxfile.yml with the <code>image</code> set to <code>nanobox/memcached</code>.</p>
+          <pre class="highlight yaml"><code><span class="s">data.cache</span><span class="pi">:</span>&#x000A;  <span class="na">image</span><span class="pi">:</span> <span class="s">nanobox/memcached</span>&#x000A;</code></pre>
+          <p><em>For purposes of this guide, we&#39;ll use</em> <code>data.cache</code> <em>as the component ID.</em> &quot;<code>cache</code>&quot; <em>is a unique identifier and can be whatever you&#39;d like. More information about component IDs is available in the <a href="https://docs.nanobox.io/app-config/boxfile/#component-ids">boxfile.yml documentation</a>.</em></p>
           
-          <p>Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.</p>
+          <h4 id="helpful-links">Helpful Links</h4>
           
-          <h3 id="h3-title">H3 Title</h3>
+          <p><a href="https://docs.nanobox.io/app-config/boxfile/data/">Data Components</a><br>
+          <a href="https://docs.nanobox.io/images/">What is a Nanobox image?</a></p>
           
-          <p>This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.</p>
+          <h3 id="specify-config-options">Specify Config Options</h3>
           
-          <p>Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.</p>
+          <p>The Memcached image exposes configuration options in the boxfile.yml. These options are nested under the <code>config</code> section of your data component. For all the available configuration options, view the <a href="./configure/">configuration guide</a>.</p>
+          <pre class="highlight yaml"><code><span class="s">data.cache</span><span class="pi">:</span>&#x000A;  <span class="na">image</span><span class="pi">:</span> <span class="s">nanobox/memcached</span>&#x000A;  <span class="na">config</span><span class="pi">:</span>&#x000A;    <span class="na">version</span><span class="pi">:</span> <span class="s">1.4</span>&#x000A;</code></pre>
+          <h2 id="create-a-new-build">Create a New Build</h2>
           
-          <h4 id="h4-title">H4 Title</h4>
+          <p>With your Memcached component included in your boxfile.yml, you&#39;re ready to create a new build. In the build process, your app&#39;s code is compiled into a deployable build package. All the necessary information to provision Memcached is included in the package.</p>
+          <pre class="highlight shell"><code><span class="gp">$ </span>nanobox build&#x000A;</code></pre>
+          <h2 id="deploy-your-build">Deploy Your Build</h2>
           
-          <p>This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.</p>
+          <p>Once your build is ready, you can deploy it into your dev, sim, or production platform(s). In the deploy process, your Memcached node will be created. More information about dev and sim environments is available in the <a href="https://docs.nanobox.io/local-dev/dev-sim/">Local Development documentation</a>.</p>
           
-          <p>Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.</p>
+          <h3 id="deploying-to-dev-amp-sim">Deploying to Dev &amp; Sim</h3>
           
-          <h5 id="h5-title">H5 Title</h5>
+          <p>In order to deploy to dev and sim platforms, they must be running first. If they aren&#39;t running, each can be started using the <code>start</code> command.</p>
           
-          <p>This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.</p>
+          <h4 id="starting-amp-deploying-to-dev">Starting &amp; Deploying to Dev</h4>
+          <pre class="highlight shell"><code><span class="c"># Start your dev platform</span>&#x000A;<span class="gp">$ </span>nanobox dev start&#x000A;&#x000A;<span class="c"># Deploy to your dev platform</span>&#x000A;<span class="gp">$ </span>nanobox dev deploy&#x000A;</code></pre>
+          <h4 id="starting-amp-deploying-to-sim">Starting &amp; Deploying to Sim</h4>
+          <pre class="highlight shell"><code><span class="c"># Start your sim platform</span>&#x000A;<span class="gp">$ </span>nanobox sim start&#x000A;&#x000A;<span class="c"># Deploy to your sim platform</span>&#x000A;<span class="gp">$ </span>nanobox sim deploy&#x000A;</code></pre>
+          <h3 id="deploying-to-production">Deploying to Production</h3>
           
-          <p>Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.</p>
-          
-          <h6 id="h6-title">H6 Title</h6>
-          
-          <p>This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.</p>
-          
-          <p>Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.</p>
-          
-          <p>This is <em>italicized</em></p>
-          
-          <p>This is <strong>bold</strong></p>
-          
-          <p>This is <del>strikethrough</del></p>
-          
-          <p>This is text with <a href="https://pagodabox.io">an inline link</a></p>
-          
-          <ol>
-          <li>This is the 1st item in an ordered list</li>
-          <li>This is the 2nd item in an ordered list</li>
-          <li>This is the 3rd item in an ordered list</li>
-          </ol>
-          
-          <ul>
-          <li>This is an unordered list</li>
-          <li>This is an unordered list</li>
-          <li>This is an unordered list</li>
-          </ul>
-          
-          <p>Below is an image:</p>
-          
-          <p><img title="This is an image" alt="This is an Image" src="https://trello-attachments.s3.amazonaws.com/554b82df5e12ddf95313a8fe/381x198/e61e0a3ff391c11f24f10dfc8f88e770/upload_2015-05-07_at_9.26.24_am.png" /></p>
-          <pre class="highlight plaintext"><code>This is a code block using a &lt;pre&gt; tag&#x000A;</code></pre><pre class="highlight yaml"><code><span class="c1"># This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting</span>&#x000A;&#x000A;<span class="na">web1</span><span class="pi">:</span>&#x000A;  <span class="na">type</span><span class="pi">:</span> <span class="s">php</span>&#x000A;  <span class="na">version</span><span class="pi">:</span> <span class="s">5.6</span>&#x000A;</code></pre><pre class="highlight php"><code><span class="cp">&lt;?php</span> <span class="nb">phpinfo</span><span class="p">()</span>&#x000A;&#x000A;  <span class="k">if</span> <span class="p">(</span><span class="nx">App</span><span class="o">::</span><span class="na">environment</span><span class="p">(</span><span class="s1">'local'</span><span class="p">))</span> <span class="p">{</span>&#x000A;      <span class="c1">// The environment is local&#x000A;</span>  <span class="p">}</span>&#x000A;&#x000A;  <span class="k">if</span> <span class="p">(</span><span class="nx">App</span><span class="o">::</span><span class="na">environment</span><span class="p">(</span><span class="s1">'local'</span><span class="p">,</span> <span class="s1">'staging'</span><span class="p">))</span> <span class="p">{</span>&#x000A;      <span class="c1">// The environment is either local OR staging...&#x000A;</span>  <span class="p">}</span>&#x000A;<span class="cp">?&gt;</span>&#x000A;</code></pre>
-          <p>This is text with <code>inline code</code></p>
-          
-          <table><thead>
-          <tr>
-          <th style="text-align: left">Tables</th>
-          <th style="text-align: center">Are</th>
-          <th style="text-align: right">Cool</th>
-          </tr>
-          </thead><tbody>
-          <tr>
-          <td style="text-align: left">col 3 is</td>
-          <td style="text-align: center">right-aligned</td>
-          <td style="text-align: right">$1600</td>
-          </tr>
-          <tr>
-          <td style="text-align: left">col 2 is</td>
-          <td style="text-align: center">centered</td>
-          <td style="text-align: right">$12</td>
-          </tr>
-          <tr>
-          <td style="text-align: left"><a href="#">zebra stripes</a></td>
-          <td style="text-align: center">are neat</td>
-          <td style="text-align: right">$1</td>
-          </tr>
-          <tr>
-          <td style="text-align: left"><code>zebra stripes</code></td>
-          <td style="text-align: center">are neat</td>
-          <td style="text-align: right">$1</td>
-          </tr>
-          </tbody></table>
-          
-          <blockquote>
-          <p>This is blockquote that is very long and should wrap, but I guess we&#39;ll see, just because I don&#39;t know how wide this thing is.</p>
-          </blockquote>
-          
-          <p>Below is a horizontal rule</p>
-          
-          <hr>
-          
-          <p>Above is a horiztonal rule</p>
+          <p>To deploy to your production platform and create your Memcached node, run the following:</p>
+          <pre class="highlight shell"><code><span class="gp">$ </span>nanobox deploy&#x000A;</code></pre>
           <div id='pagination'>
+            <a name="Connecting to Memcached" class="next" href="/memcached/connect/"><svg enable-background='new 0 0 23 23' id='right-arrow' space='preserve' version='1.1' viewbox='0 0 23 23' x='0px' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' y='0px'>
+              <polyline fill='none' points='&#x000A;		12.7,2.6 21.7,11.5 12.7,20.4 	' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF'></polyline>
+              <line fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' stroke='#FFFFFF' x1='21.7' x2='1.7' y1='11.5' y2='11.5'></line>
+            </svg>
+            </a>
           </div>
         </div>
       </div>

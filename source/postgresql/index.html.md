@@ -40,7 +40,7 @@ $ nanobox build
 ```
 
 ## Deploy Your Build
-Once your build is ready, you can deploy it into your dev, sim, or production platform(s). In the deploy process your PostgreSQL database will be created. More information about dev and sim environments is available in the [Local Development documentation](https://new-nanobox-docs.gopagoda.io/local-dev/dev-sim/).
+Once your build is ready, you can deploy it into your dev, sim, or production platform(s). In the deploy process your PostgreSQL database will be created. More information about dev and sim environments is available in the [Local Development documentation](https://docs.nanobox.io/local-dev/dev-sim/).
 
 ### Deploying to Dev & Sim
 In order to deploy to dev and sim platforms, they must be running first. If they aren't running, each can be started using the `start` command.
@@ -66,6 +66,6 @@ $ nanobox sim deploy
 ### Deploying to Production
 To deploy to your production platform and create your PostgreSQL database, run the following:
 
-```
+```bash
 $ nanobox deploy
 ```
