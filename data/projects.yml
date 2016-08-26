@@ -139,7 +139,7 @@ languages:
 services:
   - name: 'PostgreSQL'
     icon: 'postgres.svg'
-    link: '/postgres/'
+    link: '/postgresql/'
     tags: 'postgresql'
   - name: 'MySQL'
     icon: 'mysql.svg'
