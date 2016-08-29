@@ -64,7 +64,8 @@
     }
   }
 
-  .guide-content      { margin-left: 2em; max-width: 70%; color: $base-txt; font-size: 18px; line-height: 1.75em;
+  .guide-content      { margin-left: 2em; max-width: 70%; color: $base-txt; font-size: 18px; line-height: 1.75em; @include opacity(0); @include transition(opacity .35s);
+    &.loaded          { @include opacity(1); }
     h2,h3,h4,h5,h6    { position: relative; margin-bottom: .5em; padding-top: 40px; line-height: 1.1em;
       a               { text-decoration: none; color: inherit;
         &:before      { content: '#'; position: absolute; left: -30px; font-size: 30px; font-weight: normal; color: $base-txt; @include opacity(0); @include transition(opacity .2s); }
