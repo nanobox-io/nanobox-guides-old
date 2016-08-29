@@ -1,0 +1,13 @@
+name: 'PostgreSQL'
+icon: 'postgres.svg'
+root: '/postgresql/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''
+  - name: 'Connecting to PostgreSQL'
+    path: 'connect/'
+  - name: 'Configuring PostgreSQL'
+    path: 'configure/'
+  - name: 'Managing Data'
+    path: 'manage/'

@@ -1,0 +1,19 @@
+// DEFINE PROJECT-SPECIFIC COLORS
+$proj-accent: #4375a0;
+$proj-link: #467eb1;
+$proj-link-hover: #205280;
+$proj-nav-hl: #ec5134;
+
+$proj-bkg-fill: #436386;
+$proj-bkg-svg: url('/images/header-bkgs/postgres.svg');
+
+$proj-footer-lt: #4375a0;
+$proj-footer-dk: #2e5d86;
+$proj-footer-txt: #c9dae8;
+
+// SYNTAX HIGHLIGHTING (Optional)
+// Themes can be found in /source/stylesheets/syntax-hl
+@import 'syntax-hl/friendly';
+
+// GLOBAL PROJECT STYLES
+@import 'project-global';

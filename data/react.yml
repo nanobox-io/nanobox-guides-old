@@ -1,0 +1,7 @@
+name: 'React'
+icon: 'react.svg'
+root: '/react/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

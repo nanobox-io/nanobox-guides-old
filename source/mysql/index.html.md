@@ -3,94 +3,72 @@ title: Getting Started
 project: mysql
 ---
 
-This is just paragraph text. `This is inline code` sit amet, consectetur adipiscing elit. [This is an inline link](#) am ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
+Nanobox makes adding, configuring, and managing a MySQL database really simple. These guides will walk through creating, configuring and managing your MySQL database on Nanobox.
 
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
+## Add a MySQL Data Component to Your boxfile.yml
+When using Nanobox, all your app's needs and config options are defined in your [boxfile.yml](https://docs.nanobox.io/app-config/boxfile/), a yaml config file housed in the root of your project. Inside the boxfile.yml, you specify "components" - things such as web servers, workers, and databases.
 
-## H2 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-### H3 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-#### H4 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-##### H5 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-###### H6 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-This is *italicized*
-
-This is **bold**
-
-This is ~~strikethrough~~
-
-This is text with [an inline link](https://pagodabox.io)
-
-1. This is the 1st item in an ordered list
-2. This is the 2nd item in an ordered list
-3. This is the 3rd item in an ordered list
-
-
-* This is an unordered list
-* This is an unordered list
-* This is an unordered list
-
-Below is an image:
-
-![This is an Image](https://trello-attachments.s3.amazonaws.com/554b82df5e12ddf95313a8fe/381x198/e61e0a3ff391c11f24f10dfc8f88e770/upload_2015-05-07_at_9.26.24_am.png "This is an image")
-
-```
-This is a code block using a <pre> tag
-```
+To add a MySQL database to your app, add a data component to your boxfile.yml with the `image` set to `nanobox/mysql`.
 
 ```yaml
-# This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting
-
-web1:
-  type: php
-  version: 5.6
+data.db:
+  image: nanobox/mysql
 ```
 
-```php
-<?php phpinfo()
+*For purposes of this guide, we'll use* `data.db` *as the component ID.* "`db`" *is a unique identifier and can be whatever you'd like. More information about component IDs is available in the [boxfile.yml documentation](https://docs.nanobox.io/app-config/boxfile/#component-ids).*
 
-  if (App::environment('local')) {
-      // The environment is local
-  }
 
-  if (App::environment('local', 'staging')) {
-      // The environment is either local OR staging...
-  }
-?>
+#### Helpful Links
+[Data Components](https://docs.nanobox.io/app-config/boxfile/data/)  
+[What is a Nanobox image?](https://docs.nanobox.io/images/)
+
+### Specify Config Options
+The MySQL image exposes configuration options in the boxfile.yml. These options are nested under the `config` section of your data component. For all the available configuration options, view the [configuration guide](./configure/).
+
+```yaml
+data.db:
+  image: nanobox/mysql
+  config:
+    version: 5.6
+    plugins:
+      - federated
+      - audit_log
 ```
 
-This is text with `inline code`
+## Create a New Build
+With your MySQL component included in your boxfile.yml, you're ready to create a new build. In the build process, your app's code is compiled into a deployable build package. All the necessary information to provision your MySQL db is included in the package.
 
-| Tables             | Are           | Cool  |
-|:-------------------|:-------------:| -----:|
-| col 3 is           | right-aligned | $1600 |
-| col 2 is           | centered      |   $12 |
-| [zebra stripes](#) | are neat      |    $1 |
-| `zebra stripes`    | are neat      |    $1 |
+```bash
+$ nanobox build
+```
 
-> This is blockquote that is very long and should wrap, but I guess we'll see, just because I don't know how wide this thing is.
+## Deploy Your Build
+Once your build is ready, you can deploy it into your dev, sim, or production platform(s). In the deploy process your MySQL database will be created. More information about dev and sim environments is available in the [Local Development documentation](https://docs.nanobox.io/local-dev/dev-sim/).
 
-Below is a horizontal rule
+### Deploying to Dev & Sim
+In order to deploy to dev and sim platforms, they must be running first. If they aren't running, each can be started using the `start` command.
 
----
+#### Starting & Deploying to Dev
+```bash
+# Start your dev platform
+$ nanobox dev start
 
-Above is a horiztonal rule
+# Deploy to your dev platform
+$ nanobox dev deploy
+```
+
+#### Starting & Deploying to Sim
+```bash
+# Start your sim platform
+$ nanobox sim start
+
+# Deploy to your sim platform
+$ nanobox sim deploy
+```
+
+### Deploying to Production
+To deploy to your production platform and create your MySQL database, run the following:
+
+```bash
+$ nanobox deploy
+```

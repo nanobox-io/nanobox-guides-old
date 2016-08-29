@@ -3,50 +3,17 @@ $proj-accent: #c12e35;
 $proj-link: #4392da;
 $proj-link-hover: #11528e;
 $proj-nav-hl: #c12e35;
+
 $proj-bkg-fill: #84251c;
+$proj-bkg-svg: url('/images/header-bkgs/rails.svg');
 
-// SET THE HEADER BACKGROUND IMAGE
-#header             { background: url('/images/header-bkgs/rails.svg'); background-color: $proj-bkg-fill;}
+$proj-footer-lt: #c12e35;
+$proj-footer-dk: #84251c;
+$proj-footer-txt: #efd9db;
 
-// THE FOLLOWING APPLY ALL THE PROJECT-SPECIFIC COLORS
-.guide              {
-  #version-btn      { background: $proj-accent; }
-  #contents         {
-    li              {
-      &.active      {
-        & > a,
-        & > a:hover { color: $proj-nav-hl !important; }
-        & > span .nav-bullet rect,
-        & > span .nav-btn-circle path { fill: $proj-nav-hl !important; }
-      }
-      &.buried > span .nav-btn-circle path { fill: $proj-nav-hl !important; }
-      a:hover       { color: $proj-link !important; }
-    }
-    .nav-btn-circle path { fill: $proj-accent; }
-  }
+// SYNTAX HIGHLIGHTING (Optional)
+// Themes can be found in /source/stylesheets/syntax-hl
+@import 'syntax-hl/github';
 
-  .guide-content    {
-    h1              { color: $proj-accent; }
-    h2 a            {  }
-    h3 a            { color: $proj-accent; }
-    h4 a            {  }
-    h5 a            { color: $proj-accent; }
-    h6 a            {  }
-    p,li,td         {
-      a             { color: $proj-link;
-        &:hover     { color: $proj-link-hover; }
-      }
-      code          { color: $proj-accent; }
-    }
-    blockquote      { border-color: $proj-accent; }
-    table           {
-      th            { background-color: $proj-accent; }
-    }
-
-    // SYNTAX HIGHLIGHTING (Optional)
-    // Themes can be found in /source/stylesheets/syntax-hl
-
-    @import 'syntax-hl/github';
-
-  }
-}
+// GLOBAL PROJECT STYLES
+@import 'project-global';

@@ -64,9 +64,6 @@ set :partials_dir, 'partials'
 # Syntax Highlighting
 activate :syntax
 
-# Breatcrumbs
-activate :breadcrumbs
-
 # Pretty URLs
 activate :directory_indexes
 

@@ -14,24 +14,21 @@ body                        { position: relative; min-height: 100%; display: fle
 
 a                           { @include transition(color .2s); }
 
-#footer                     { margin-top: 3em; text-align: center; color: $footer-txt; background: $footer-bkg;
+#footer                     { margin-top: 3em; text-align: center; color: $default-footer-txt; background: $default-footer-bkg;
   p                         { width: 100%; line-height: 1.4em;
     &.made-with-love        { padding: 5em 0 0; margin: 0; font-size: 1.2em; }
     &.license               { padding: 0 0 7em; margin: 0; font-size: .8em; font-style: italic; }
-    &.contribute            { padding: 2em; margin: 0; background-color: $footer-bkg-dark; @include box-sizing; font-size: .95em; }
+    &.contribute            { padding: 2em; margin: 0; background-color: $default-footer-bkg-dark; @include box-sizing; font-size: .95em; }
   }
-  a                         { text-decoration: none; color: $footer-txt; border-bottom: 1px dotted $footer-txt;
-    &:hover                 { color: $footer-link; }
-  }
+  a                         { text-decoration: none; color: $default-footer-txt; border-bottom: 1px dotted $default-footer-txt; }
   span                      { vertical-align: middle; }
-  svg#heart                 { width: 15px; fill: $footer-txt; }
+  svg#heart                 { width: 15px; fill: $default-footer-txt; }
   ul                        { margin-top: 2em; padding: 0; list-style: none;
-    li                      { display: inline-block; padding: .25em 1em; border-right: 1px dotted $footer-txt; font-size: .8em; text-transform: uppercase;
+    li                      { display: inline-block; padding: .25em 1em; border-right: 1px dotted $default-footer-txt; font-size: .8em; text-transform: uppercase;
       &:last-child          { border: none; }
       a                     { border: none; }
     }
   }
-
 }
 
 @import 'home-page';

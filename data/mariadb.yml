@@ -1,7 +1,0 @@
-name: 'MariaDB'
-icon: 'mariadb.svg'
-root: '/mariadb/'
-
-articles:
-  - name: 'Getting Started'
-    path: ''

@@ -1,5 +1,5 @@
 .home                       {
-  #header                   { background: url('/images/header-bkgs/home.svg'); background-color: $footer-bkg; background-size: cover;
+  #header                   { background: url('/images/header-bkgs/home.svg'); background-color: $default-footer-bkg; background-size: cover;
     h1                      { padding: 1em 2em 2.5em; margin: 0 auto; max-width: 20em; color: #fff; font-size: 2em; text-align: center; font-weight: normal; }
     span                    { display: inline-block; }
     #nbg-logo-link          { color: #fff; @include opacity(.4); text-decoration: none; @include transition(opacity .2s);

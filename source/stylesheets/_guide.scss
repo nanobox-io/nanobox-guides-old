@@ -19,7 +19,7 @@
 
   #left-nav           { width: 25%; padding: 0; margin: 0;
     #version-select   { width: 5em; position: relative;
-      #version-btn    { position: relative; width: 100%; padding: .85em 1em; border: none; @include border-radius(.4em); color: #fff; font-weight: bold; text-align: left;
+      #version-btn    { position: relative; width: 100%; padding: .85em 1em; border: none; @include border-radius(4px); color: #fff; font-weight: bold; text-align: left;
         &:after       { content: '\25BC'; position: absolute; right: 1em; }
         &:focus       { outline: 0; }
       }
@@ -29,7 +29,7 @@
           a           { display: block; border-width: 0 1px 1px; border-style: solid; border-color: $bkg-grey-d2; padding: .75em 1em; background: #fff; color: $base-txt; text-align: center; text-decoration: none; @include transition(background-color .25s);
             &:hover   { background-color: $bkg-grey-l1; }
           }
-          &:last-child a{ @include border-radius(0 0 .4em .4em); }
+          &:last-child a{ @include border-radius(0 0 4px 4px); }
         }
       }
     }
@@ -64,7 +64,8 @@
     }
   }
 
-  .guide-content      { margin-left: 2em; max-width: 70%; color: $base-txt; font-size: 18px; line-height: 1.75em;
+  .guide-content      { margin-left: 2em; max-width: 70%; color: $base-txt; font-size: 18px; line-height: 1.75em; @include opacity(0); @include transition(opacity .35s);
+    &.loaded          { @include opacity(1); }
     h2,h3,h4,h5,h6    { position: relative; margin-bottom: .5em; padding-top: 40px; line-height: 1.1em;
       a               { text-decoration: none; color: inherit;
         &:before      { content: '#'; position: absolute; left: -30px; font-size: 30px; font-weight: normal; color: $base-txt; @include opacity(0); @include transition(opacity .2s); }
@@ -73,7 +74,7 @@
     }
     h1                { font-size: 3.5em; line-height: 1.1em; }
     h2                { font-size: 2.5em; }
-    h3                { font-size: 2em; }
+    h3                { font-size: 1.85em; }
     h4                { font-size: 1.2em; font-style: italic; }
     h5                { font-size: .95em; text-transform: uppercase; letter-spacing: 1px; }
     h6                { font-size: .95em; font-style: italic; text-transform: uppercase; letter-spacing: 1px; @include opacity(.65); }
@@ -82,9 +83,11 @@
       ul, ol          { padding-left: 1.25em; }
     }
     code              { font-family: monaco, Consolas, "Lucida Console", monospace; }
-    pre               { margin-bottom: 2em; padding: 2em; white-space: pre; word-wrap: normal; overflow: scroll; background: #fff; font-family: monaco, Consolas, "Lucida Console", monospace; font-size: .8em; line-height: 1.5em; @include border-radius(.3em); }
+    pre               { margin-bottom: 2em; padding: 2em; white-space: pre; word-wrap: normal; overflow: scroll;  font-family: monaco, Consolas, "Lucida Console", monospace; font-size: .8em; line-height: 1.5em; @include border-radius(.3em); }
     p,li,td           {
-      a               { text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; }
+      a               { text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted;
+        code          { font-style: normal; border-width: 1px; border-style: dotted; }
+      }
       code            { padding: .4em .6em; background: #fff; font-size: .8em; @include border-radius(.3em); }
     }
     li pre            { font-size: 1em; }
@@ -112,8 +115,31 @@
       }
     }
 
-    // SYNTAX HIGHLIGHTING
-    @import 'syntax-hl/default';
+    #pagination       { position: relative; width: 100%; padding-top: 2.5em; margin: 4em 0 3em; border-top: 1px solid $bkg-grey-d1;
+      a               { position: absolute; padding: 1em; display: inline-block; line-height: 0; @include border-radius(4px);
+        &:before      { content: attr(name); position: absolute; top: .9em; padding: 1em .8em; font-size: .9em; white-space: nowrap; z-index: -1; color: #fff; @include opacity(0); @include border-radius(5px); @include transition(all .3s); }
+        &:after       { content: ''; position: absolute; top: 1.2em; width: 0; height: 0; z-index: -1; border-style: solid; @include opacity(0); @include transition(all .3s); }
+        &.prev        { left: 0;
+          &:before    { left: 3em; }
+          &:after     { left: 2.3em; border-width: .5em .5em .5em 0; }
+        }
+        &.next        { right: 0;
+          &:before    { right: 3em; }
+          &:after     { right: 2.3em; border-width: .5em 0 .5em .5em; }
+        }
+        &:hover       {
+          &.prev      {
+            &:before  { @include opacity(1); left: 4.3em; }
+            &:after   { @include opacity(1); left: 3.6em; }
+          }
+          &.next      {
+            &:before  { @include opacity(1); right: 4.3em; }
+            &:after   { @include opacity(1); right: 3.6em}
+          }
+        }
+      }
+      svg             { width: 1.5em; height: 1.5em; }
+    }
   }
 
 }

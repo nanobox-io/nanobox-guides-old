@@ -1,19 +1,19 @@
 pre.highlight { background-color: #ffffff;
-  .c  { color: #0099FF; font-style: italic } /* Comment */
+  .c  { color: #b1c1cc; font-style: italic } /* Comment */
   .err { color: #AA0000; background-color: #FFAAAA } /* Error */
   .k  { color: #006699; font-weight: bold } /* Keyword */
   .o  { color: #555555 } /* Operator */
-  .cm { color: #0099FF; font-style: italic } /* Comment.Multiline */
+  .cm { color: #b1c1cc; font-style: italic } /* Comment.Multiline */
   .cp { color: #009999 } /* Comment.Preproc */
-  .c1 { color: #0099FF; font-style: italic } /* Comment.Single */
-  .cs { color: #0099FF; font-weight: bold; font-style: italic } /* Comment.Special */
+  .c1 { color: #b1c1cc; font-style: italic } /* Comment.Single */
+  .cs { color: #b1c1cc; font-weight: bold; font-style: italic } /* Comment.Special */
   .gd { background-color: #FFCCCC; border: 1px solid #CC0000 } /* Generic.Deleted */
   .ge { font-style: italic } /* Generic.Emph */
   .gr { color: #FF0000 } /* Generic.Error */
   .gh { color: #003300; font-weight: bold } /* Generic.Heading */
   .gi { background-color: #CCFFCC; border: 1px solid #00CC00 } /* Generic.Inserted */
   .go { color: #AAAAAA } /* Generic.Output */
-  .gp { color: #000099; font-weight: bold } /* Generic.Prompt */
+  .gp { color: #6A6AdA; font-weight: bold } /* Generic.Prompt */
   .gs { font-weight: bold } /* Generic.Strong */
   .gu { color: #003300; font-weight: bold } /* Generic.Subheading */
   .gt { color: #99CC66 } /* Generic.Traceback */
@@ -53,7 +53,7 @@ pre.highlight { background-color: #ffffff;
   .sx { color: #CC3300 } /* Literal.String.Other */
   .sr { color: #33AAAA } /* Literal.String.Regex */
   .s1 { color: #CC3300 } /* Literal.String.Single */
-  .ss { color: #FFCC33 } /* Literal.String.Symbol */
+  .ss { color: #330099 } /* Literal.String.Symbol */
   .bp { color: #336666 } /* Name.Builtin.Pseudo */
   .vc { color: #003333 } /* Name.Variable.Class */
   .vg { color: #003333 } /* Name.Variable.Global */

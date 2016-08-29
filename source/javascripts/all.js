@@ -78,6 +78,12 @@ $(document).ready(function() {
     });
   });
 
+  ////////////////// CONTENT FADE-IN ///////////////////
+
+  setTimeout(function() {
+    $('.guide-content').addClass('loaded');
+  }, 10);
+
   //////////////// OPEN ACTIVE CATEGORY ////////////////
 
   $('#contents li.active').addClass('open')
