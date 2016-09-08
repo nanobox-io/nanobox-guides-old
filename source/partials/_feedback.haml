@@ -1,0 +1,7 @@
+- project = current_page.data.project
+
+#feedback
+  .options
+    %a.no{ data: {mp_response: 'no', mp_project: data[project].name, mp_path: current_page.url, mp_title: current_page.data.title || data[project].name+' on Nanobox'  }} No
+    %a.yes{ data: {mp_response: 'yes', mp_project: data[project].name, mp_path: current_page.url, mp_title: current_page.data.title || data[project].name+' on Nanobox' }} Yes
+  %p#reach-out Reach out to #{ link_to 'help@nanobox.io', 'mailto:help@nanobox.io' } and we'll try to help.

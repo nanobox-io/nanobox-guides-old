@@ -1,0 +1,33 @@
+@import 'mixins';
+
+$grey-1: #777;
+$grey-2: #c0c4c5;
+$grey-3: #d5d9dc;
+$lt-green-0: #4AAA88;
+$lt-green-1: #43C4A6;
+$pink-1: #EF3F65;
+$blue-1: #2a8eba;
+
+#feedback             { position: relative; margin-top: 2.5em; padding: .7em 1em; border: 1px dashed $grey-2; color: $grey-1; font-style: italic; @include border-radius(.5em);
+  &:before            { content: 'Was this information helpful?'; }
+  #reach-out          { display: none; margin: 0 0 .4em; line-height: 1.5em;
+    &.show            { display: block; }
+  }
+  .options            { position: absolute; right: .5em; top: .5em;
+    a                 { display: inline-block; padding: .25em .75em; min-width: 3em; cursor: pointer; font-size: .85em; text-transform: uppercase; font-style: normal; font-weight: bold; text-align: center; border: none; color: white; background: $blue-1; @include border-radius(3px); @include transition(all .2s);
+      &.yes           { color: $lt-green-0; background: $grey-3;
+        &:hover       { color: #fff; background: $lt-green-1; }
+      }
+      &.no            { color: $pink-1; background: $grey-3;
+        &:hover       { color: #fff; background: $pink-1; }
+      }
+    }
+  }
+  &.submitted         {
+    &:before          { content: 'Thank you for your feedback.'; }
+    .options          {
+      a               { display: none; }
+      &:before        { content: '\2713'; display: block; padding: .3em .5em .7em; width: 1em; height: 1em; text-align: center; font-style: normal; color: #fff; background: $lt-green-1; @include border-radius(50%); }
+    }
+  }
+}
