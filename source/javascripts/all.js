@@ -89,7 +89,7 @@ $(document).ready(function() {
     "</ul>"
 
   if (is.mobile()) {
-    $(ToC).insertAfter("h1");
+    $(ToC).insertAfter(".guide-content > h1");
     $(".table-of-contents").hide();
   } else {
     $(".table-of-contents").append(ToC);
