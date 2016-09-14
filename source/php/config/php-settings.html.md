@@ -3,38 +3,7 @@ title: PHP Settings
 project: php
 ---
 
-### PHP Settings
 The following settings are typically configured in the php.ini. When using Nanobox, these are configured in the boxfile.yml.
-
-- [runtime](#runtime)
-- [extensions](#extensions)
-- [zend_extensions](#zend_extensions)
-- [short\_open\_tag](#short_open_tag)
-- [zlib\_output\_compression](#zlib_output_compression)
-- [allow\_url\_fopen](#allow_url_fopen)
-- [disable_functions](#disable_functions)
-- [expose_php](#expose_php)
-- [max\_execution\_time](#max_execution_time)
-- [max\_input\_time](#max_input_time)
-- [memory_limit](#memory_limit)
-- [error_reporting](#error_reporting)
-- [display_errors](#display_errors)
-- [register_globals](#register_globals)
-- [register\_argc\_argv](#register_argc_argv)
-- [post\_max\_size](#post_max_size)
-- [upload\_max\_filesize](#upload_max_filesize)
-- [file_uploads](#file_uploads)
-- [max\_file\_uploads](#max_file_uploads)
-- [max\_input\_vars](#max_input_vars)
-- [default_mimetype](#default_mimetype)
-- [default_locale](#default_locale)
-- [browscap](#browscap)
-- [session\_save\_handler](#session_save_handler)
-- [session\_save\_path](#session_save_path)
-- [session_length](#session_length)
-- [session_autostart](#session_autostart)
-- [date_timezone](#date_timezone)
-- [iconv\_internal\_encoding](#iconv_internal_encoding)
 
 ### runtime
 Specifies which PHP runtime and version to use. The following runtimes are available:
@@ -172,7 +141,7 @@ code.build:
   config:
     register_argc_argv: 'Off'
 ```
-### post_max_size
+### post\_max\_size
 Sets the [`post_max_size` PHP setting](http://www.php.net/manual/en/ini.core.php#ini.post-max-size).
 
 ```yaml

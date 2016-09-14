@@ -1,6 +1,7 @@
 //= require_tree .
 //= require _jquery-3.0.0.min.js
 //= require _home-page.js
+//= require _is.min.js
 
 ////////////// SHOW/HIDE VERSION DROPDOWN //////////////
 
@@ -58,10 +59,41 @@ $(document).ready(function() {
 
   ////////////// ADD LINKS TO ALL HEADINGS //////////////
 
-  $(".guide-content h2,h3,h4,h5,h6").each(function() {
+  $(".guide-content h2, .guide-content h3, .guide-content h4, .guide-content h5, .guide-content h6").each(function() {
     var link = "<a href=\"#" + $(this).attr("id") + "\"></a>"
     $(this).wrapInner( link );
   })
+
+  ////////////////// BUILD IN-PAGE TOC //////////////////
+
+  var ToC =
+    "<ul class='toc'>";
+
+  $(".guide-content h2, .guide-content h3, .guide-content h4").each(function() {
+    var el = $(this);
+    var title = el.text();
+    var link = "#" + el.attr("id");
+
+    var item =
+      "<li class='" + $(this).prop('nodeName').toLowerCase() + "'>" +
+        "<a href='" + link + "'>" +
+          title +
+        "</a>" +
+      "</li>";
+
+    ToC += item;
+
+  })
+
+  ToC +=
+    "</ul>"
+
+  if (is.mobile()) {
+    $(ToC).insertAfter("h1");
+    $(".table-of-contents").hide();
+  } else {
+    $(".table-of-contents").append(ToC);
+  }
 
   //////////////////// SMOOTH SCROLL ////////////////////
 
@@ -81,7 +113,7 @@ $(document).ready(function() {
   ////////////////// CONTENT FADE-IN ///////////////////
 
   setTimeout(function() {
-    $('.guide-content').addClass('loaded');
+    $('.guide-content, .table-of-contents').addClass('loaded');
   }, 10);
 
   //////////////// OPEN ACTIVE CATEGORY ////////////////

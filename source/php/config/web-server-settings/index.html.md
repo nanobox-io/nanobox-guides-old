@@ -5,9 +5,6 @@ project: php
 
 The following setting is used to select which web server to use in your application.
 
-- [webserver](#webserver)
-- [document_root](#document_root)
-
 ### webserver
 The following web servers are available:
 

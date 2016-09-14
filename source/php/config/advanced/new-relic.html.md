@@ -5,26 +5,6 @@ project: php
 
 The following settings are used to configure the [PHP New Relic Agent](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration).
 
-- [newrelic\_capture\_params](#newrelic_capture_params)
-- [newrelic\_ignored\_params](#newrelic_ignored_params)
-- [newrelic_loglevel](#newrelic_loglevel)
-- [newrelic_framework](#newrelic_framework)
-- [newrelic\_framework\_drupal\_modules](#newrelic_framework_drupal_modules)
-- [newrelic\_browser\_monitoring\_auto\_instrument](#newrelic_browser_monitoring_auto_instrument)
-- [newrelic\_transaction\_tracer\_enabled](#newrelic_transaction_tracer_enabled)
-- [newrelic\_transaction\_tracer\_detail](#newrelic_transaction_tracer_detail)
-- [newrelic\_transaction\_tracer\_record\_sql](#newrelic_transaction_tracer_record_sql)
-- [newrelic\_transaction\_tracer\_threshold](#newrelic_transaction_tracer_threshold)
-- [newrelic\_transaction\_tracer\_stack\_trace\_threshold](#newrelic_transaction_tracer_stack_trace_threshold)
-- [newrelic\_transaction\_tracer\_explain\_threshold](#newrelic_transaction_tracer_explain_threshold)
-- [newrelic\_transaction\_tracer\_slow\_sql](#newrelic_transaction_tracer_slow_sql)
-- [newrelic\_transaction\_tracer\_custom](#newrelic_transaction_tracer_custom)
-- [newrelic\_error\_collector\_enabled](#newrelic_error_collector_enabled)
-- [newrelic\_error\_collector\_record\_database\_errors](#newrelic_error_collector_record_database_errors)
-- [newrelic\_webtransaction\_name\_files](#newrelic_webtransaction_name_files)
-- [newrelic\_webtransaction\_name\_functions](#newrelic_webtransaction_name_functions)
-- [newrelic\_webtransaction\_name\_remove\_trailing\_path](#newrelic_webtransaction_name_remove_trailing_path)
-
 ### newrelic\_capture\_params
 Sets the [`newrelic.capture_params` setting](https://docs.newrelic.com/docs/agents/php-agent/configuration/php-agent-configuration#inivar-capture_params).
 

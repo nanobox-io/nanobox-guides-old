@@ -5,18 +5,6 @@ project: php
 
 The following settings are used to configure the OPcache PHP byte-code caching engine.
 
-- [opcache\_memory\_consumption](#opcache_memory_consumption)
-- [opcache\_validate\_timestamps](#opcache_validate_timestamps)
-- [opcache\_revalidate\_freq](#opcache_revalidate_freq)
-- [opcache\_revalidate\_path](#opcache_revalidate_path)
-- [opcache\_save\_comments](#opcache_save_comments)
-- [opcache\_load\_comments](#opcache_load_comments)
-- [opcache\_enable\_file\_override](#opcache_enable_file_override)
-- [opcache\_optimization\_level](#opcache_optimization_level)
-- [opcache\_inherited\_hack](#opcache_inherited_hack)
-- [opcache\_dups\_fix](#opcache_dups_fix)
-- [opcache\_blacklist\_filename](#opcache_blacklist_filename)
-
 ### opcache\_memory\_consumption
 Sets the [`opcache.memory_consumption` PHP setting](http://php.net/manual/en/opcache.configuration.php#ini.opcache.memory-consumption).
 

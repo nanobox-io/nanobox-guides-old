@@ -5,11 +5,6 @@ project: php
 
 The following settings are used to configure the XCache PHP byte-code caching engine.
 
-- [xcache_size](#xcache_size)
-- [xcache\_var\_size](#xcache_var_size)
-- [xcache\_admin\_user](#xcache_admin_user)
-- [xcache\_admin\_pass](#xcache_admin_pass)
-
 ### xcache_size
 Sets the [`xcache.size` setting](http://xcache.lighttpd.net/wiki/XcacheIni#XCacheCacher).
 

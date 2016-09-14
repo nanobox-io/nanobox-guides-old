@@ -5,10 +5,6 @@ project: php
 
 These settings are used to configure nginx. They only apply when using `nginx` as your `webserver`.
 
-- [nginx\_document\_root](#nginx_document_root)
-- [nginx\_index\_list](#nginx_index_list)
-- [nginx\_default\_gateway](#nginx_default_gateway)
-
 ### nginx\_document\_root
 The public root of your web application. For instance, if you like to house your app in `/public` for security or organizational purposes, you can specify that here. The default is the `/`.
 
