@@ -94,13 +94,13 @@ Your web component will run WordPress and make it accessible over the public net
 Each component in your boxfile.yml has an ID. The ID tells Nanobox what type of component to create as well as a unique identifier. In this case, we'll use `web.wp`. `web` tells Nanobox to create a web component and `wp` is the unique identifier.
 
 ### start
-Each web component requires one or more start commands. These tell Nanobox what commands to run to start the web server and php process. By default, the PHP engine uses Apache and PHP-FPM. The following commands start each of those services.
+Each web component requires one or more start commands. These tell Nanobox what commands to run to start the web server and php interpreter. By default, the PHP engine uses Apache and PHP-FPM. The following commands start each of those services.
 
 ```yaml
 web.wp:
   start:
-    - /data/sbin/php-fpm -y /data/etc/php/php-fpm.conf -c /data/etc/php/php.ini
-    - /data/sbin/httpd -DNO_DETACH
+    fpm: /data/sbin/php-fpm -y /data/etc/php/php-fpm.conf -c /data/etc/php/php.ini
+    apache: /data/sbin/httpd -DNO_DETACH
 ```
 
 Other web servers and php interpreters are available and require different start commands. More information about these is provided in the following PHP guides:

@@ -1,11 +1,11 @@
 !!!
 %html
   %head
-    = partial 'head-shared'
     %title= current_page.data.title || 'Nanobox Guides'
     %link{ :href => 'images/favicon.png', :rel => 'icon', :type => 'image/png' }
     = stylesheet_link_tag 'styles'
     = javascript_include_tag  'all'
+    = partial 'head-shared'   
 
   %body.home
     = yield
