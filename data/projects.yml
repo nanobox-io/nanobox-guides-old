@@ -122,11 +122,11 @@ languages:
 #     link: '/hugo/'
 #     tags: 'golang, hugo'
 
-# cms:
-#   - name: 'WordPress'
-#     icon: 'wordpress.svg'
-#     link: '/wordpress/'
-#     tags: 'php, wordpress'
+cms:
+  - name: 'WordPress'
+    icon: 'wordpress.svg'
+    link: '/wordpress/'
+    tags: 'php, wordpress'
 #   - name: 'Magento'
 #     icon: 'magento.svg'
 #     link: '/magento/'

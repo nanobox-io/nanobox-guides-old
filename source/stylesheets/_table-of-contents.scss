@@ -4,8 +4,8 @@
   li                  { margin: .4em 0;
     &:before          { content: '•'; margin: 0 .75em 0 -.75em; position: absolute; }
   }
-  .h2 ~ .h3           { padding-left: 1em }
-  .h3 ~ .h4           { padding-left: 2em }
+  .h2 ~ .h3           { padding-left: 1em; }
+  .h3 ~ .h4           { padding-left: 2em; }
   a                   { text-decoration: none; color: $base-txt; }
 }
 
