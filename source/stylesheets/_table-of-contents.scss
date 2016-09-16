@@ -1,0 +1,19 @@
+.table-of-contents    { margin-top: 2em; max-width: 250px; font-size: 14px; overflow: scroll; @include opacity(0); @include transition(opacity .2s);
+  &.loaded            { @include opacity(1); }
+  ul                  { list-style: none; padding-left: .75em; position: relative; }
+  li                  { margin: .4em 0;
+    &:before          { content: '•'; margin: 0 .75em 0 -.75em; position: absolute; }
+  }
+  .h2 ~ .h3           { padding-left: 1em; }
+  .h3 ~ .h4           { padding-left: 2em; }
+  a                   { text-decoration: none; color: $base-txt; }
+}
+
+.guide-content ul.toc { margin: 0 0 2.5em 1em; list-style: none; font-size: 13px;
+  li                  { margin: .2em 0; line-height: 1.5em;
+    &:before          { content: '•'; margin: 0 .75em 0 -.75em; position: absolute; }
+  }
+  .h2 ~ .h3           { padding-left: 1em }
+  .h3 ~ .h4           { padding-left: 2em }
+  a                   { text-decoration: none; border: none; }
+}

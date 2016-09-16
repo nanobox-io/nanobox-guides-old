@@ -1,96 +1,148 @@
 ---
-title: Getting Started
+title: Setting Up WordPress
 project: wordpress
 ---
 
-This is just paragraph text. `This is inline code` sit amet, consectetur adipiscing elit. [This is an inline link](#) am ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
+## Install Nanobox
+If you haven't already, [download and install Nanobox](https://nanobox.io/download). Nanobox enables you to create virtualized, local development environments identical to production environments deployed through Nanobox.
 
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
+## Download WordPress
+If you don't already have a WordPress codebase, you can download and use a fresh one. Downloads are available through the [WordPress Downloads page](https://wordpress.org/download/) or from [WordPress' Github repo](https://github.com/wordpress/wordpress).
 
-## H2 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-### H3 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-#### H4 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-##### H5 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-###### H6 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-This is *italicized*
-
-This is **bold**
-
-This is ~~strikethrough~~
-
-This is text with [an inline link](https://pagodabox.io)
-
-1. This is the 1st item in an ordered list
-2. This is the 2nd item in an ordered list
-3. This is the 3rd item in an ordered list
-
-
-* This is an unordered list
-* This is an unordered list
-* This is an unordered list
-
-Below is an image:
-
-![This is an Image](https://trello-attachments.s3.amazonaws.com/554b82df5e12ddf95313a8fe/381x198/e61e0a3ff391c11f24f10dfc8f88e770/upload_2015-05-07_at_9.26.24_am.png "This is an image")
-
-```
-This is a code block using a <pre> tag
-```
+## Create a boxfile.yml for Your WordPress App
+The [boxfile.yml](https://docs.nanobox.io/app-config/boxfile/) is a yaml config file used to specify the components and configuration need for you app. It should be placed in the root of your WordPress project. Below is a basic WordPress boxfile.yml.
 
 ```yaml
-# This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting
+code.build:
+  engine: php
+  config:
+    runtime: php-7.0
+    extensions:
+      - gd
+      - mysqli
+      - curl
+      - zlib
+    apache_modules:
+      - deflate
 
-web1:
-  type: php
-  version: 5.6
+web.wp:
+  start:
+    fpm: /data/sbin/php-fpm -y /data/etc/php/php-fpm.conf -c /data/etc/php/php.ini
+    apache: /data/sbin/httpd -DNO_DETACH
+  log_watch:
+    apache[access]: /data/var/log/apache/access.log
+    apache[error]: /data/var/log/apache/error.log
+    php[error]: /data/var/log/php/php_error.log
+    php[fpm]: /data/var/log/php/php_fpm.log
+  network_dirs:
+    data.storage:
+      - wp-content/uploads/
+
+data.db:
+  image: nanobox/mysql
+
+data.storage:
+  image: nanobox/unfs
 ```
 
-```php
-<?php phpinfo()
+For a detailed explanation of each of the WordPress boxfile.yml config settings, view the [WordPress boxfile.yml Explained guide](advanced/boxfile-explained/).
 
-  if (App::environment('local')) {
-      // The environment is local
-  }
 
-  if (App::environment('local', 'staging')) {
-      // The environment is either local OR staging...
-  }
-?>
+## Update Your wp-config.php
+There are a few changes you'll need to make to your `wp-config.php` to allow WordPress to connect to its database and run securely.
+
+### Database Connection Credentials
+In order for WordPress to connect to its database, you'll need to update the database credentials. To allow WordPress to connect to the database once deployed into any Nanobox environment (dev, sim, production), you should use [environment variables](https://docs.nanobox.io/app-config/environment-variables/) to populate the credentials.
+
+Nanobox automatically generates environment variables for connection credentials based on the ID of your data component. With an ID of `data.db`, environment variable keys will be created with `DATA_DB_` and the credential title. Below is what the db config will should look like:
+
+```php?start_inline=1
+/** The name of the database for WordPress */
+define('DB_NAME', 'gonano');
+
+/** MySQL database username */
+define('DB_USER', $_ENV['DATA_DB_USER']);
+
+/** MySQL database password */
+define('DB_PASSWORD', $_ENV['DATA_DB_PASS']);
+
+/** MySQL hostname */
+define('DB_HOST', $_ENV['DATA_DB_HOST']);
 ```
 
-This is text with `inline code`
+**Note:** *Databases created on Nanobox will always have the name "gonano".*
 
-| Tables             | Are           | Cool  |
-|:-------------------|:-------------:| -----:|
-| col 3 is           | right-aligned | $1600 |
-| col 2 is           | centered      |   $12 |
-| [zebra stripes](#) | are neat      |    $1 |
-| `zebra stripes`    | are neat      |    $1 |
+### Generate Auth Keys & Salts
+If you're working from a fresh WordPress install, you'll need to generate unique auth keys and salts. WordPress uses these to securely create sessions. The easiest way to generate these is go to [WordPress' Secret Key & Salt API](https://api.wordpress.org/secret-key/1.1/salt/).
 
-> This is blockquote that is very long and should wrap, but I guess we'll see, just because I don't know how wide this thing is.
+```php?start_inline=1
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
+```
 
-Below is a horizontal rule
+## Run WordPress in Dev
+With your boxfile.yml in place and your wp-config.php updated, you're ready to generate a build and deploy WordPress into your local dev environment. Run the following command in the root of your WordPress directory:
 
----
+```bash
+$ nanobox dev deploy
+```
 
-Above is a horiztonal rule
+This will generate a new build, start your dev environment, deploy the build into your dev environment, and provision your database and storage service. This will also mount your local codebase into the Nanobox virtual machine so that code changes will be reflected in your running dev app.
+
+### Create a DNS Alias for Your Dev App
+The `nanobox dev dns add` command allows you to create a DNS alias for your dev app. It will add an entry in your local hosts file that will route all requests to the specified domain to your local dev app.
+
+```bash
+$ nanobox dev dns add your-domain.dev
+```
+
+### Start Apache & PHP-FPM
+<!-- When deploying into a dev environment, you'll need to manually start Apache and PHP-FPM before your app will be accessible. There's two possible ways to do this:
+
+#### nanobox dev run
+The `nanobox dev run` command will run all your web's [start commands specified in your boxfile.yml](./advanced/boxfile-explained/#start). Run the command from the root of your WordPress app:
+
+```bash
+$ nanobox dev run
+``` -->
+
+#### Console In & Run Start Commands
+Another option is to console into your dev environment and manually run the start commands specified in your boxfile.yml. The `nanobox dev console` command will drop you into an interactive console inside your dev app where you can then start Apache and PHP-FPM. You'll want to create a separate console for each.
+
+```bash
+# Console into your dev app
+$ nanobox dev console
+
+# Start Apache
+$ /data/sbin/httpd -DNO_DETACH
+```
+
+In a new terminal window, create a second console and start PHP-FPM:
+
+```bash
+# Console into your dev app
+$ nanobox dev console
+
+# Start PHP-FPM
+$ /data/sbin/php-fpm -y /data/etc/php/php-fpm.conf -c /data/etc/php/php.ini
+```
+
+### Import Data & Uploads
+If you're using a fresh WordPress install, you don't need to do this, but if you're porting an existing WordPress app over to Nanobox, you'll likely have data and uploads that need to be imported into your dev environment. Instructions are provided in these guides:
+
+[Importing Data](data-managment/import/)  
+[Importing Uploads](uploads-management/import/)
+
+### Visit Your App
+With Apache and PHP-FPM, running, you should now be able to access your dev WordPress site at either the domain you added as a DNS alias or the IP shown in your console output. Just be sure to append `:8080` to the domain. This is the port on which your dev app is listening.
+
+**Example:** `your-domain.dev:8080`
+
+### Craft Some Code
+Now you're ready to craft some code. Any changes made to your local codebase will be reflected in your running app. You can [install plugins and themes](plugins-themes/) or make some tweaks to WordPress.

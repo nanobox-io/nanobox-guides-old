@@ -5,11 +5,6 @@ project: php
 
 The following settings are used to configure the PHP Mongo driver.
 
-- [mongo\_native\_long](#mongo_native_long)
-- [mongo\_allow\_empty\_keys](#mongo_allow_empty_keys)
-- [mongo\_cmd](#mongo_cmd)
-- [mongo\_long\_as\_object](#mongo_long_as_object)
-
 ### mongo\_native\_long
 Sets the [`mongo.native_long` PHP setting](http://php.net/manual/en/mongo.configuration.php#ini.mongo.native-long).
 

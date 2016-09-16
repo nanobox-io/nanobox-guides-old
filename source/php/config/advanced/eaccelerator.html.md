@@ -5,10 +5,6 @@ project: php
 
 The following settings are used to configure eAccelerator, a PHP byte-code caching engine available in PHP versions 5.3 and 5.4.
 
-- [eaccelerator\_shm\_max](#eaccelerator_shm_max)
-- [eaccelerator\_shm\_size](#eaccelerator_shm_size)
-- [eaccelerator_filter](#eaccelerator_filter)
-
 ### eaccelerator\_shm\_max
 Sets the [`eaccelerator.shm_max` setting](https://github.com/eaccelerator/eaccelerator/wiki/Settings#eacceleratorshm_max).
 

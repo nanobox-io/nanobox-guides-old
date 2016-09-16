@@ -3,23 +3,7 @@ title: Apache Settings
 project: php
 ---
 
-### Apache Settings
 The following settings are used to configure Apache. These only apply when using `apache` as your `webserver`.
-
-- [apache\_document\_root](#apache_document_root)
-- [apache\_index\_list](#apache_index_list)
-- [apache\_default\_gateway](#apache_default_gateway)
-- [apache\_php\_interpreter](#apache_php_interpreter)
-- [apache_modules](#apache_modules)
-- [apache\_max\_spares](#apache_max_spares)
-- [apache\_max\_clients](#apache_max_clients)
-- [apache\_server\_limit](#apache_server_limit)
-- [apache\_max\_requests](#apache_max_requests)
-- [apache\_static\_expire](#apache_static_expire)
-- [apache\_log\_level](#apache_log_level)
-- [apache\_access\_log](#apache_access_log)
-
-
 
 ### apache\_document\_root
 The public root of your web application. For instance, if you like to house your app in `/public` for security or organizational purposes, you can specify that here. The default is the `/`.

@@ -45,6 +45,10 @@
       }
     }
   }
+
+  .table-of-contents{
+    a:hover         { color: $proj-link; }
+  }
 }
 
 #footer             { color: $proj-footer-txt; background: $proj-footer-lt;

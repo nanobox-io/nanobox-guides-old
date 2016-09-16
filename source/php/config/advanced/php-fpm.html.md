@@ -5,11 +5,6 @@ project: php
 
 These settings only apply when using `php_fpm` as your `apache_php_interpreter`.
 
-- [php\_fpm\_events\_mechanism](#php_fpm_events_mechanism)
-- [php\_fpm\_max\_children](#php_fpm_max_children)
-- [php\_fpm\_max\_spare\_servers](#php_fpm_max_spare_servers)
-- [php\_fpm\_max\_requests](#php_fpm_max_requests)
-
 ### php\_fpm\_events\_mechanism
 Sets `events.mechanism` setting in the `php-fpm.conf` which specifies the events mechanism FPM will use. More information is available in [PHP's documentation](http://php.net/manual/en/install.fpm.configuration.php#events-mechanism).
 

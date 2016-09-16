@@ -15,9 +15,9 @@
     }
   }
 
-  .wrapper            { display: flex; position: relative; padding: 2em; max-width: 1020px; }
+  .wrapper            { display: flex; position: relative; padding: 2em; max-width: 1400px; }
 
-  #left-nav           { width: 25%; padding: 0; margin: 0;
+  #left-nav           { width: 230px; padding: 0; margin: 0;
     #version-select   { width: 5em; position: relative;
       #version-btn    { position: relative; width: 100%; padding: .85em 1em; border: none; @include border-radius(4px); color: #fff; font-weight: bold; text-align: left;
         &:after       { content: '\25BC'; position: absolute; right: 1em; }
@@ -45,9 +45,9 @@
       }
     }
 
-    ul#contents       { list-style: none; padding: 0; max-height: 50em; overflow: hidden; @include user-select; @include transition(max-height .2s);
-      ul              { height: 0; overflow: hidden; list-style: none; padding-left: 1em; margin-left: .4em; border-left: 1px solid $bkg-grey-d1; }
-      li              { line-height: 1.65em;
+    ul#contents       { list-style: none; padding-left: 1.5em; max-height: 50em; overflow: hidden; @include user-select; @include transition(max-height .2s);
+      ul              { height: 0; overflow: hidden; list-style: none; padding-left: 2.4em; margin-left: -1.15em; border-left: 1px solid $bkg-grey-d1; }
+      li              { margin: .55em 0; line-height: 1.15em;
         a             { text-decoration: none; color: $base-txt; @include transition(color .2s) }
         &.open        {
           & > span .nav-btn-vert line { stroke-width: 0; }
@@ -55,7 +55,7 @@
         }
         &.active      { }
       }
-      span            { margin-right: .3em; vertical-align: middle; }
+      span            { margin: 0 .3em 0 -1.5em; vertical-align: middle; }
       svg             { width: 14px; }
       .nav-bullet rect{ fill: $base-txt-lt; height: 5px; width: 5px; x: 4.5; y: 4.5; }
       .nav-toggle     { cursor: pointer;
@@ -64,13 +64,14 @@
     }
   }
 
-  .guide-content      { margin-left: 2em; max-width: 70%; color: $base-txt; font-size: 18px; line-height: 1.75em; @include opacity(0); @include transition(opacity .35s);
+  .guide-content      { margin: 0 3em 0 2em; max-width: 720px; min-width: 50%; color: $base-txt; font-size: 18px; line-height: 1.75em; @include opacity(0); @include transition(opacity .35s);
     &.loaded          { @include opacity(1); }
     h2,h3,h4,h5,h6    { position: relative; margin-bottom: .5em; padding-top: 40px; line-height: 1.1em;
       a               { text-decoration: none; color: inherit;
         &:before      { content: '#'; position: absolute; left: -30px; font-size: 30px; font-weight: normal; color: $base-txt; @include opacity(0); @include transition(opacity .2s); }
         &:hover:before{ @include opacity(.35); }
       }
+      & + pre         { margin: 1em 0 4em; }
     }
     h1                { font-size: 3.5em; line-height: 1.1em; }
     h2                { font-size: 2.5em; }
@@ -83,12 +84,12 @@
       ul, ol          { padding-left: 1.25em; }
     }
     code              { font-family: monaco, Consolas, "Lucida Console", monospace; }
-    pre               { margin-bottom: 2em; padding: 2em; white-space: pre; word-wrap: normal; overflow: scroll;  font-family: monaco, Consolas, "Lucida Console", monospace; font-size: .8em; line-height: 1.5em; @include border-radius(.3em); }
+    pre               { margin: 3.5em 0 4em; padding: 2em; white-space: pre; word-wrap: normal; overflow: scroll;  font-family: monaco, Consolas, "Lucida Console", monospace; font-size: .8em; line-height: 1.5em; @include border-radius(.3em); }
     p,li,td           {
       a               { text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted;
         code          { font-style: normal; border-width: 1px; border-style: dotted; }
       }
-      code            { padding: .4em .6em; background: #fff; font-size: .8em; @include border-radius(.3em); }
+      code            { padding: .4em .6em; background: #fff; font-size: .8em; white-space: nowrap; @include border-radius(.3em); }
     }
     li pre            { font-size: 1em; }
     img               { max-width: 100%; @include border-radius(.4em); @include box-shadow(); }

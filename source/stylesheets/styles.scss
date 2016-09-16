@@ -35,4 +35,8 @@ a                           { @include transition(color .2s); }
 
 @import 'guide';
 
+@import 'feedback';
+
+@import 'table-of-contents';
+
 @import 'media-queries';

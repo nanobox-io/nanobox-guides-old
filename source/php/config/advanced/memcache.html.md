@@ -5,8 +5,6 @@ project: php
 
 The following settings are used to configure the PHP Memcache driver.
 
-- [memcache\_chunk\_size](#memcache_chunk_size)
-- [memcache\_hash\_strategy](#memcache_hash_strategy)
 
 ### memcache\_chunk\_size
 Sets the [`memcache.chunk_size` PHP setting](http://php.net/manual/en/memcache.ini.php#ini.memcache.chunk-size).
