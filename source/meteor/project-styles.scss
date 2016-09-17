@@ -1,0 +1,19 @@
+// DEFINE PROJECT-SPECIFIC COLORS
+$proj-accent: #e04e4b;
+$proj-link: #e04e4b;
+$proj-link-hover: #bd3835;
+$proj-nav-hl: #e04e4b;
+
+$proj-bkg-fill: #2c2a2a;
+$proj-bkg-svg: url('/images/header-bkgs/meteor.svg');
+
+$proj-footer-lt: #353333;
+$proj-footer-dk: #2c2a2a;
+$proj-footer-txt: #fff;
+
+// SYNTAX HIGHLIGHTING (Optional)
+// Themes can be found in /source/stylesheets/syntax-hl
+@import 'syntax-hl/pastie';
+
+// GLOBAL PROJECT STYLES
+@import 'project-global';
