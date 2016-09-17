@@ -1,0 +1,7 @@
+name: 'Meteor'
+icon: 'meteor.svg'
+root: '/meteor/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

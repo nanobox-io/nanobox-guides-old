@@ -10,29 +10,29 @@ layout: home
 #page-body
   .wrapper
     %input#project-search{ :placeholder => 'Search'}
-    - if data.projects.languages
+    - if data._projects.languages
       .category
         %h2#languages Languages
         .flex-container
-          - data.projects.languages.each do |proj|
+          - data._projects.languages.each do |proj|
             = partial 'project-item', :locals => { 'proj' => proj }
-    - if data.projects.frameworks
+    - if data._projects.frameworks
       .category
         %h2#frameworks Frameworks
         .flex-container
-          - data.projects.frameworks.each do |proj|
+          - data._projects.frameworks.each do |proj|
             = partial 'project-item', :locals => { 'proj' => proj }
-    - if data.projects.cms
+    - if data._projects.cms
       .category
         %h2#cms CMSs
         .flex-container
-          - data.projects.cms.each do |proj|
+          - data._projects.cms.each do |proj|
             = partial 'project-item', :locals => { 'proj' => proj }
-    - if data.projects.services
+    - if data._projects.services
       .category
         %h2#services Services
         .flex-container
-          - data.projects.services.each do |proj|
+          - data._projects.services.each do |proj|
             = partial 'project-item', :locals => { 'proj' => proj }
     #no-results
       = partial 'svgs/obiwan'
