@@ -3,5 +3,5 @@ icon: 'rails.svg'
 root: '/rails/'
 
 articles:
-  - name: 'Getting Started'
+  - name: 'Rails: Getting Started'
     path: ''

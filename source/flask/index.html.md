@@ -3,7 +3,7 @@ title: "Flask: Getting Started"
 project: "flask"
 ---
 
-This guide will walk you through getting a simple Flask app up and running on nanobox. This guide was used in the creation of the [nanobox-flask](https://github.com/nanobox-quickstarts/nanobox-flask) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on github.
+This guide will walk you through getting a simple Flask app up and running on nanobox. This guide was used to create the [nanobox-flask](https://github.com/nanobox-quickstarts/nanobox-flask) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on github.
 
 The guide is broken down into three steps:
 

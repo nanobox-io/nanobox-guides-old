@@ -3,5 +3,5 @@ icon: 'sinatra.svg'
 root: '/sinatra/'
 
 articles:
-  - name: 'Getting Started'
+  - name: 'Sinatra: Getting Started'
     path: ''

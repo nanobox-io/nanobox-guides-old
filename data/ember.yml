@@ -1,0 +1,7 @@
+name: 'Ember'
+icon: 'ember.svg'
+root: '/ember/'
+
+articles:
+  - name: 'Ember: Getting Started'
+    path: ''

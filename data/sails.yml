@@ -1,0 +1,7 @@
+name: 'Sails'
+icon: 'sails.svg'
+root: '/sails/'
+
+articles:
+  - name: 'Sails: Getting Started'
+    path: ''

@@ -3,5 +3,5 @@ icon: 'django.svg'
 root: '/django/'
 
 articles:
-  - name: 'Getting Started'
+  - name: 'Django: Getting Started'
     path: ''
