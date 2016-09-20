@@ -1,5 +1,5 @@
 ---
-title: Sails.js: Getting Started
+title: 'Sails.js: Getting Started'
 project: sailsjs
 ---
 

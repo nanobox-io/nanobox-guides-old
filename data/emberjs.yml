@@ -1,0 +1,7 @@
+name: 'Ember.js'
+icon: 'emberjs.svg'
+root: '/emberjs/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

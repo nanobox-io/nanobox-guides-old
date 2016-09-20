@@ -86,12 +86,12 @@ frameworks:
     tags: 'ruby, middleman'
 
   - name: 'Sails'
-    icon: 'react.svg'
+    icon: 'sailsjs.svg'
     link: '/sailsjs/'
     tags: 'nodejs, node.js, sails.js, sailsjs, javascript'
 
   - name: 'Ember'
-    icon: 'react.svg'
+    icon: 'emberjs.svg'
     link: '/emberjs/'
     tags: 'nodejs, node.js, ember.js, emberjs, javascript'
 

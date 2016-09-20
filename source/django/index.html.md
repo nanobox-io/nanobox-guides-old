@@ -1,5 +1,5 @@
 ---
-title: Django: Getting Started
+title: 'Django: Getting Started'
 project: django
 ---
 

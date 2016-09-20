@@ -1,0 +1,7 @@
+name: 'Sails.js'
+icon: 'sailsjs.svg'
+root: '/sailsjs/'
+
+articles:
+  - name: 'Getting Started'
+    path: ''

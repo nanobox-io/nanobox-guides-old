@@ -78,7 +78,6 @@ If you're working with an existing Laravel project, you can skip to [starting PH
 
 #### Install Laravel
 ```bash
-
 # console into the dev environment
 nanobox dev console
 

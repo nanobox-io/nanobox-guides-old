@@ -66,7 +66,7 @@
 
   .guide-content      { margin: 0 3em 0 2em; max-width: 720px; min-width: 50%; color: $base-txt; font-size: 18px; line-height: 1.75em; @include opacity(0); @include transition(opacity .35s);
     &.loaded          { @include opacity(1); }
-    h2,h3,h4,h5,h6    { position: relative; margin: 1em 0 0.5em; line-height: 1.1em;
+    h2,h3,h4,h5,h6    { position: relative; margin: 1.25em 0 0.5em; line-height: 1.1em;
       a               { text-decoration: none; color: inherit;
         &:before      { content: '#'; position: absolute; left: -30px; font-size: 30px; font-weight: normal; color: $base-txt; @include opacity(0); @include transition(opacity .2s); }
         &:hover:before{ @include opacity(.35); }
@@ -84,7 +84,7 @@
       ul, ol          { padding-left: 1.25em; }
     }
     code              { font-family: monaco, Consolas, "Lucida Console", monospace; }
-    pre               { margin: 1em 0 2em; padding: 1em; white-space: pre; word-wrap: normal; overflow: auto;  font-family: monaco, Consolas, "Lucida Console", monospace; font-size: .8em; line-height: 1.5em; @include border-radius(.3em); }
+    pre               { margin: 1.5em 0 2em; padding: 1.5em; white-space: pre; word-wrap: normal; overflow: auto;  font-family: monaco, Consolas, "Lucida Console", monospace; font-size: .8em; line-height: 1.5em; @include border-radius(.3em); }
     p,li,td           {
       a               { text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted;
         code          { font-style: normal; border-width: 1px; border-style: dotted; }

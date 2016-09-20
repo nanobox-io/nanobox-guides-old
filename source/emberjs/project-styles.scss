@@ -1,19 +1,19 @@
 // DEFINE PROJECT-SPECIFIC COLORS
-$proj-accent: #6b7684;
+$proj-accent: #e14b31;
 $proj-link: #4881b5;
 $proj-link-hover: #315a7f;
-$proj-nav-hl: #b94242;
+$proj-nav-hl: #e14b31;
 
-$proj-bkg-fill: #6b7684;
-$proj-bkg-svg: url('/images/header-bkgs/flask.svg');
+$proj-bkg-fill: #e14b31;
+$proj-bkg-svg: url('/images/header-bkgs/emberjs.svg');
 
-$proj-footer-lt: #868686;
-$proj-footer-dk: #585858;
-$proj-footer-txt: #e8e8e8;
+$proj-footer-lt: #f16b47;
+$proj-footer-dk: #c14320;
+$proj-footer-txt: #fff;
 
 // SYNTAX HIGHLIGHTING (Optional)
 // Themes can be found in /source/stylesheets/syntax-hl
-@import 'syntax-hl/friendly';
+@import 'syntax-hl/manni';
 
 // GLOBAL PROJECT STYLES
 @import 'project-global';
