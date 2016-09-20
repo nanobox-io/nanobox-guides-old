@@ -3,16 +3,19 @@ title: "Flask: Getting Started"
 project: "flask"
 ---
 
-This guide will walk you through getting a simple Flask app up and running on nanobox. This guide was used in the creation of the [nanobox-flask](https://github.com/nanobox-quickstarts/nanobox-flask) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on github.
+This guide will walk you through getting a simple Flask app up and running on nanobox. This guide was used to create the [nanobox-flask](https://github.com/nanobox-quickstarts/nanobox-flask) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on github.
 
 The guide is broken down into three steps:
 
-1. Setting up your project.
-2. Creating your application.
-3. Running the application on nanobox.
+1. Project Setup
+2. Application Configuration
+3. Up and Running
 
-## Setting up your project
-If you don't already have a project create one in a directory of your choice:
+## Project Setup
+If you already have a project you'd like to use on nanobox simply [add a boxfile.yml](#add-a-boxfile-yml) and continue with this guide, otherwise you'll need to follow the next steps to create a new project.
+
+#### Create a project
+Decide where you want your project to live and create a folder there
 
 ```bash
 mkdir nanobox-flask
@@ -24,7 +27,8 @@ Add a `requirements.txt` at the root of the project that contains the following:
 Flask
 ```
 
-Once you have a project add a `boxfile.yml` at the project root that contains the following:
+#### Add a boxfile.yml
+Create a `boxfile.yml` at the root of your project that contains the following:
 
 ```yaml
 code.build:
@@ -33,29 +37,35 @@ code.build:
   engine: "python"
 ```
 
-## Create your application
-At the root of the project create a file named `myapp.rb` with the following:
+## Application Config
+If you already have an application you'd like to run on nanobox you'll simply need to [make it accessible to the host](#make-it-accessible), otherwise follow the steps below to create an application.
 
-```ruby
-# myapp.rb
-require "flask"
+#### Create an Application
+At the root of the project create a file named `hello.py` with the following:
 
-# nanobox configuration; most apps bind to localhost by default, however we need
-# to allow connections from the host into the container
-set :bind, "0.0.0.0"
-set :port, "8080"
+```python
+from flask import Flask
+app = Flask(__name__)
 
-#
-get "/" do
-  "Hello nanobox!"
-end
+@app.route("/")
+def hello():
+    return "Hello nanobox!"
+
+if __name__ == "__main__":
+    app.run()
+```
+
+#### Make it Accessible
+Most frameworks by default will bind to localhost, however we need to allow connections from the host into your container. To do this we need to tell flask to bind to all available IP's
+
+```python
+app.run(host='0.0.0.0', port=8080)
 ```
 
 ## Up and Running
-With the application created the last thing to do is run it on nanobox. From the project directory run the following commands:
+With the application configured the last thing to do is run it on nanobox. From the project directory run the following commands:
 
-``` bash
-
+```bash
 # build the code
 nanobox build
 
@@ -72,7 +82,7 @@ nanobox dev console
 python hello.py
 ```
 
-Visit the app from your favorite browser at: `flask.nanobox.dev:8080`
+Visit the app from your favorite browser at `flask.nanobox.dev:8080`
 
 ## Now what?
 Now that you have an application running on nanobox whats next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!

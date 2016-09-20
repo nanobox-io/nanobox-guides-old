@@ -89,7 +89,7 @@
       a               { text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted;
         code          { font-style: normal; border-width: 1px; border-style: dotted; }
       }
-      code            { padding: .25em .5em; background: #fff; font-size: .8em; white-space: nowrap; @include border-radius(.3em); }
+      code            { padding: .25em .75em; background: #fff; font-size: .8em; white-space: nowrap; @include border-radius(.3em); }
     }
     li pre            { font-size: 1em; }
     img               { max-width: 100%; @include border-radius(.4em); @include box-shadow(); }

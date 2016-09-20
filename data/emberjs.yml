@@ -3,5 +3,5 @@ icon: 'emberjs.svg'
 root: '/emberjs/'
 
 articles:
-  - name: 'Getting Started'
+  - name: 'Ember.js: Getting Started'
     path: ''

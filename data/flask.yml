@@ -3,5 +3,5 @@ icon: 'flask.svg'
 root: '/flask/'
 
 articles:
-  - name: 'Getting Started'
+  - name: 'Flask: Getting Started'
     path: ''

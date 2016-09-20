@@ -14,11 +14,11 @@ body                        { position: relative; min-height: 100%; display: fle
 
 a                           { @include transition(color .2s); }
 
-#footer                     { margin-top: 3em; text-align: center; color: $default-footer-txt; background: $default-footer-bkg;
+#footer                     { text-align: center; color: $default-footer-txt; background: $default-footer-bkg;
   p                         { width: 100%; line-height: 1.4em;
-    &.made-with-love        { padding: 5em 0 0; margin: 0; font-size: 1.2em; }
-    &.license               { padding: 0 0 7em; margin: 0; font-size: .8em; font-style: italic; }
-    &.contribute            { padding: 2em; margin: 0; background-color: $default-footer-bkg-dark; @include box-sizing; font-size: .95em; }
+    &.made-with-love        { padding: 3em 0 0; margin: 0; font-size: 1.2em; }
+    &.license               { padding: 0 0 4em; margin: 0; font-size: .8em; font-style: italic; }
+    &.contribute            { padding: 1.5em; margin: 0; background-color: $default-footer-bkg-dark; @include box-sizing; font-size: .95em; }
   }
   a                         { text-decoration: none; color: $default-footer-txt; border-bottom: 1px dotted $default-footer-txt; }
   span                      { vertical-align: middle; }
