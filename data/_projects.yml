@@ -12,7 +12,7 @@ languages:
   - name: 'Node.js'
     icon: 'nodejs.svg'
     link: '/nodejs/'
-    tags: 'nodejs, node.js'
+    tags: 'nodejs, node.js, javascript'
 
   - name: 'Python'
     icon: 'python.svg'
@@ -88,12 +88,12 @@ frameworks:
   - name: 'Sails'
     icon: 'react.svg'
     link: '/sailsjs/'
-    tags: 'nodejs, node.js, sails.js, sailsjs'
+    tags: 'nodejs, node.js, sails.js, sailsjs, javascript'
 
   - name: 'Ember'
     icon: 'react.svg'
     link: '/emberjs/'
-    tags: 'nodejs, node.js, ember.js, emberjs'
+    tags: 'nodejs, node.js, ember.js, emberjs, javascript'
 
   - name: 'Laravel'
     icon: 'laravel.svg'
@@ -126,7 +126,7 @@ frameworks:
   - name: 'Express'
     icon: 'express.svg'
     link: '/expressjs/'
-    tags: 'nodejs, node.js, express.js, expressjs'
+    tags: 'nodejs, node.js, express.js, expressjs, javascript'
 #   - name: 'Vue.js'
 #     icon: 'vue.svg'
 #     link: '/vue/'
