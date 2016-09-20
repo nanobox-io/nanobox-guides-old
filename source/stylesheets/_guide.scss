@@ -66,30 +66,30 @@
 
   .guide-content      { margin: 0 3em 0 2em; max-width: 720px; min-width: 50%; color: $base-txt; font-size: 18px; line-height: 1.75em; @include opacity(0); @include transition(opacity .35s);
     &.loaded          { @include opacity(1); }
-    h2,h3,h4,h5,h6    { position: relative; margin-bottom: .5em; padding-top: 40px; line-height: 1.1em;
+    h2,h3,h4,h5,h6    { position: relative; margin: 1em 0 0.5em; line-height: 1.1em;
       a               { text-decoration: none; color: inherit;
         &:before      { content: '#'; position: absolute; left: -30px; font-size: 30px; font-weight: normal; color: $base-txt; @include opacity(0); @include transition(opacity .2s); }
         &:hover:before{ @include opacity(.35); }
       }
       & + pre         { margin: 1em 0 4em; }
     }
-    h1                { font-size: 3.5em; line-height: 1.1em; }
-    h2                { font-size: 2.5em; }
-    h3                { font-size: 1.85em; }
-    h4                { font-size: 1.2em; font-style: italic; }
-    h5                { font-size: .95em; text-transform: uppercase; letter-spacing: 1px; }
-    h6                { font-size: .95em; font-style: italic; text-transform: uppercase; letter-spacing: 1px; @include opacity(.65); }
-    p                 { margin: 0 0 1.75em; font-size: 1em; }
+    h1                { margin:0.25em 0 0.5em; font-size: 3em; line-height: 1.1em; }
+    h2                { font-size: 2.25em; }
+    h3                { font-size: 1.75em; }
+    h4                { font-size: 1.25em; font-style: italic; }
+    h5                { font-size: 1em; text-transform: uppercase; letter-spacing: 1px; }
+    h6                { font-size: 1em; font-style: italic; text-transform: uppercase; letter-spacing: 1px; @include opacity(.65); }
+    p                 { margin: 0 0 1em; font-size: 1em; }
     ul, ol            { padding-left: 0; margin-left: 1.25em;
       ul, ol          { padding-left: 1.25em; }
     }
     code              { font-family: monaco, Consolas, "Lucida Console", monospace; }
-    pre               { margin: 3.5em 0 4em; padding: 2em; white-space: pre; word-wrap: normal; overflow: scroll;  font-family: monaco, Consolas, "Lucida Console", monospace; font-size: .8em; line-height: 1.5em; @include border-radius(.3em); }
+    pre               { margin: 1em 0 2em; padding: 1em; white-space: pre; word-wrap: normal; overflow: auto;  font-family: monaco, Consolas, "Lucida Console", monospace; font-size: .8em; line-height: 1.5em; @include border-radius(.3em); }
     p,li,td           {
       a               { text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted;
         code          { font-style: normal; border-width: 1px; border-style: dotted; }
       }
-      code            { padding: .4em .6em; background: #fff; font-size: .8em; white-space: nowrap; @include border-radius(.3em); }
+      code            { padding: .25em .5em; background: #fff; font-size: .8em; white-space: nowrap; @include border-radius(.3em); }
     }
     li pre            { font-size: 1em; }
     img               { max-width: 100%; @include border-radius(.4em); @include box-shadow(); }

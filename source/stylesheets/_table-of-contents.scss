@@ -1,4 +1,4 @@
-.table-of-contents    { margin-top: 2em; max-width: 250px; font-size: 14px; overflow: scroll; @include opacity(0); @include transition(opacity .2s);
+.table-of-contents    { margin-top: 2em; max-width: 250px; font-size: 14px; overflow:auto; @include opacity(0); @include transition(opacity .2s);
   &.loaded            { @include opacity(1); }
   ul                  { list-style: none; padding-left: .75em; position: relative; }
   li                  { margin: .4em 0;

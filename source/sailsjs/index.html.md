@@ -1,9 +1,9 @@
 ---
-title: Django: Getting Started
-project: django
+title: Sails.js: Getting Started
+project: sailsjs
 ---
 
-# Django: Getting Started
+# Sails.js: Getting Started
 
 1. Create a `boxfile.yml` at the root of your project with the following:
   ```yaml

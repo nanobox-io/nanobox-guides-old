@@ -96,7 +96,7 @@ $(document).ready(function() {
   }
 
   //////////////////// SMOOTH SCROLL ////////////////////
-
+  var topBuffer = 20;
   $('a[href^="#"]').on('click',function (e) {
     e.preventDefault();
 
@@ -104,8 +104,8 @@ $(document).ready(function() {
     var $target = $(target);
 
     $('html, body').stop().animate({
-      'scrollTop': $target.offset().top
-    }, 400, 'swing', function () {
+      'scrollTop': ($target.offset().top - topBuffer)
+    }, 250, 'swing', function () {
       window.location.hash = target;
     });
   });

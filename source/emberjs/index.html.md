@@ -1,9 +1,9 @@
 ---
-title: Django: Getting Started
-project: django
+title: Ember.js: Getting Started
+project: emberjs
 ---
 
-# Django: Getting Started
+# Ember.js: Getting Started
 
 1. Create a `boxfile.yml` at the root of your project with the following:
   ```yaml
