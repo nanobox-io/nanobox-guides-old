@@ -1,96 +1,91 @@
 ---
-title: Getting Started
-project: sinatra
+title: "Sinatra: Getting Started"
+project: "sinatra"
 ---
 
-This is just paragraph text. `This is inline code` sit amet, consectetur adipiscing elit. [This is an inline link](#) am ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
+This guide will walk you through getting a simple Sinatra app up and running on nanobox. This guide was used in the creation of the [nanobox-sinatra](https://github.com/nanobox-quickstarts/nanobox-sinatra) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on github.
 
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
+The guide is broken down into three steps:
 
-## H2 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
+1. Setting up your project.
+2. Create your application.
+3. Run the application on nanobox.
 
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
+## Setting up your project
+If you already have a project you'd like to use on nanobox simply <a href="#adding-a-boxfile-yml">add a boxfile.yml</a> and continue with this guide, otherwise you'll need to follow the next steps to create a new project.
 
-### H3 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
+#### Creating a project
+Decide where you want your project to live and create a folder there
 
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-#### H4 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-##### H5 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-###### H6 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-This is *italicized*
-
-This is **bold**
-
-This is ~~strikethrough~~
-
-This is text with [an inline link](https://pagodabox.io)
-
-1. This is the 1st item in an ordered list
-2. This is the 2nd item in an ordered list
-3. This is the 3rd item in an ordered list
-
-
-* This is an unordered list
-* This is an unordered list
-* This is an unordered list
-
-Below is an image:
-
-![This is an Image](https://trello-attachments.s3.amazonaws.com/554b82df5e12ddf95313a8fe/381x198/e61e0a3ff391c11f24f10dfc8f88e770/upload_2015-05-07_at_9.26.24_am.png "This is an image")
-
+```bash
+# create your project
+mkdir nanobox-sinatra
 ```
-This is a code block using a <pre> tag
+
+Create a `Gemfile` at the root of the project that contains the following:
+
+```ruby
+source "https://rubygems.org"
+
+#
+gem "sinatra"
 ```
+
+#### Adding a boxfile.yml
+Create a `boxfile.yml` at the root of your project that contains the following:
 
 ```yaml
-# This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting
+code.build:
 
-web1:
-  type: php
-  version: 5.6
+  # because we're using sinatra we need to tell nanobox that we need ruby in our container
+  engine: "ruby"
 ```
 
-```php
-<?php phpinfo()
+## Create your application
+At the root of the project create a file named `myapp.rb` with the following:
 
-  if (App::environment('local')) {
-      // The environment is local
-  }
+```ruby
+# myapp.rb
+require "sinatra"
 
-  if (App::environment('local', 'staging')) {
-      // The environment is either local OR staging...
-  }
-?>
+# nanobox configuration; most apps bind to localhost by default, however we need
+# to allow connections from the host into the container
+set :bind, "0.0.0.0"
+set :port, "8080"
+
+#
+get "/" do
+  "Hello nanobox!"
+end
 ```
 
-This is text with `inline code`
+## Up and Running
+With the application created the last thing to do is run it on nanobox. From the project directory run the following commands:
 
-| Tables             | Are           | Cool  |
-|:-------------------|:-------------:| -----:|
-| col 3 is           | right-aligned | $1600 |
-| col 2 is           | centered      |   $12 |
-| [zebra stripes](#) | are neat      |    $1 |
-| `zebra stripes`    | are neat      |    $1 |
+``` bash
 
-> This is blockquote that is very long and should wrap, but I guess we'll see, just because I don't know how wide this thing is.
+# build the code
+nanobox build
 
-Below is a horizontal rule
+# start the dev environment
+nanobox dev start
 
----
+# add a convenient way to access your app from the browser
+nanobox dev dns add sinatra.nanobox.dev
 
-Above is a horiztonal rule
+# console into the dev environment
+nanobox dev console
+
+# run the app
+bundle exec ruby myapp.rb
+```
+
+Visit the app from your favorite browser at: `sinatra.nanobox.dev:8080`
+
+## Now what?
+Now that you have an application running on nanobox whats next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
+
+* Connecting to a database
+* Adding components
+* Preparing for production
+* Launching your app

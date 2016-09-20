@@ -1,0 +1,19 @@
+// DEFINE PROJECT-SPECIFIC COLORS
+$proj-accent: #376598;
+$proj-link: #2989e0;
+$proj-link-hover: #376598;
+$proj-nav-hl: #2989e0;
+
+$proj-bkg-fill: #204867;
+$proj-bkg-svg: url('/images/header-bkgs/rust.svg');
+
+$proj-footer-lt: #376598;
+$proj-footer-dk: #204867;
+$proj-footer-txt: #c7d6e6;
+
+// SYNTAX HIGHLIGHTING (Optional)
+// Themes can be found in /source/stylesheets/syntax-hl
+@import 'syntax-hl/github';
+
+// GLOBAL PROJECT STYLES
+@import 'project-global';

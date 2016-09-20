@@ -1,0 +1,19 @@
+// DEFINE PROJECT-SPECIFIC COLORS
+$proj-accent: #6b7684;
+$proj-link: #4881b5;
+$proj-link-hover: #315a7f;
+$proj-nav-hl: #b94242;
+
+$proj-bkg-fill: #6b7684;
+$proj-bkg-svg: url('/images/header-bkgs/flask.svg');
+
+$proj-footer-lt: #868686;
+$proj-footer-dk: #585858;
+$proj-footer-txt: #e8e8e8;
+
+// SYNTAX HIGHLIGHTING (Optional)
+// Themes can be found in /source/stylesheets/syntax-hl
+@import 'syntax-hl/friendly';
+
+// GLOBAL PROJECT STYLES
+@import 'project-global';
