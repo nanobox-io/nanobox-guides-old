@@ -27,10 +27,10 @@ Once the gems are loaded, start middleman server:
 $ bundle exec middleman server
 ```
 
-Before accessing the guides in your browser, add the 'guides.nanobox.dev' DNS alias to your dev app:
+Before accessing the guides in your browser, open a new terminal and add the 'guides.nanobox.dev' DNS alias to your dev app:
 
 ```bash
 $ nanobox dev dns add guides.nanobox.dev
 ```
 
-Ok, now you can access the running guides at guides.nanobox.dev:4567 in your browser. Changes to the guides will auto-refresh the browser.
+Ok, now you can access the running guides at `guides.nanobox.dev:4567` in your browser. Changes to the guides will auto-refresh the browser.

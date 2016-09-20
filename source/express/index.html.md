@@ -1,96 +1,78 @@
 ---
 title: Getting Started
-project: express
+project: expressjs
 ---
 
-This is just paragraph text. `This is inline code` sit amet, consectetur adipiscing elit. [This is an inline link](#) am ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
+## Install Nanobox
+If you haven't already, you'll need to install Nanobox. Installations instructions are available in the [Installation doc](https://docs.nanobox.io/getting-started/install-nanobox/) or you can just download the Nanobox installers from the [Nanobox downloads](https://nanobox.io/download/) page.
 
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
+## Create App Directory & Add a boxfile.yml
+Create a new directory for your app, cd into the new directory and create a file named `boxfile.yml`. The boxfile.yml specifies how Nanobox should build and configure your app's environment.
 
-## H2 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-### H3 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-#### H4 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-##### H5 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-###### H6 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-This is *italicized*
-
-This is **bold**
-
-This is ~~strikethrough~~
-
-This is text with [an inline link](https://pagodabox.io)
-
-1. This is the 1st item in an ordered list
-2. This is the 2nd item in an ordered list
-3. This is the 3rd item in an ordered list
-
-
-* This is an unordered list
-* This is an unordered list
-* This is an unordered list
-
-Below is an image:
-
-![This is an Image](https://trello-attachments.s3.amazonaws.com/554b82df5e12ddf95313a8fe/381x198/e61e0a3ff391c11f24f10dfc8f88e770/upload_2015-05-07_at_9.26.24_am.png "This is an image")
-
+```bash
+$ mkdir my-app
+$ cd my-app
+$ touch boxfile.yml
 ```
-This is a code block using a <pre> tag
-```
+
+### Specify the Node.js Engine
+In your `code.build` section of your boxfile.yml, specify your engine as `nodejs`. Engines build and configure your code runtime on Nanobox. The Node.js engine will install node and npm in your Nanobox environment(s).
 
 ```yaml
-# This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting
-
-web1:
-  type: php
-  version: 5.6
+code.build:
+  engine: nodejs
 ```
 
-```php
-<?php phpinfo()
+## Setup Your Dev Environment
+With your boxfile.yml in place, you're ready setup your dev environment.
 
-  if (App::environment('local')) {
-      // The environment is local
-  }
+### Create a Build
+You'll first need to create a deployable build package that includes the runtimes necessary to run your app. With this being an brand new project, pass the `--skip-compile` flag to keep the Node.js engine from running its compile script (`npm install`) during the build, giving you a bare development environment.
 
-  if (App::environment('local', 'staging')) {
-      // The environment is either local OR staging...
-  }
-?>
+*If you're working with an existing app and want packages to be loaded in the build, you can omit the* `--skip-compile` *flag.*
+
+
+```bash
+$ nanobox build --skip-compile
 ```
 
-This is text with `inline code`
+### Start, Deploy, & Console In
+With the build ready, you can start your local dev environment, deploy the build into it, then console in. The Nanobox CLI has functionality in place that will detect prerequisite commands, so running the following will do all this for you.
 
-| Tables             | Are           | Cool  |
-|:-------------------|:-------------:| -----:|
-| col 3 is           | right-aligned | $1600 |
-| col 2 is           | centered      |   $12 |
-| [zebra stripes](#) | are neat      |    $1 |
-| `zebra stripes`    | are neat      |    $1 |
+```bash
+$ nanobox dev console
+```
 
-> This is blockquote that is very long and should wrap, but I guess we'll see, just because I don't know how wide this thing is.
+## Install Express
+Now that you're consoled into your your local dev environment, you can install Express. Use npm to init a new app. The "entry point" simply needs to be the file that will start your app.
 
-Below is a horizontal rule
+```bash
+$ npm init
+$ entry point (app.js)
+```
 
----
+Add the `express` package and save it to your `package.json` with the `--save` flag.
 
-Above is a horiztonal rule
+```bash
+$ npm install express --save
+```
+
+### Add Your app.js
+
+Create your entry point file.
+Modify your app to listen on `0.0.0.0:8080`.
+
+```js
+var express = require('express');
+var app = express();
+
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
+
+app.listen(8080, function () {
+  console.log('Example app listening on port 8080!');
+});
+```
+
+### Start Your App & Craft Some Code

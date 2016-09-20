@@ -1,6 +1,6 @@
 name: 'Express'
 icon: 'express.svg'
-root: '/express/'
+root: '/expressjs/'
 
 articles:
   - name: 'Getting Started'
