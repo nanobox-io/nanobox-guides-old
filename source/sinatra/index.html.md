@@ -7,14 +7,14 @@ This guide will walk you through getting a simple Sinatra app up and running on 
 
 The guide is broken down into three steps:
 
-1. Setting up your project.
-2. Configuring your application.
-3. Running the application on nanobox.
+1. Project Setup
+2. Application Config
+3. Up and Running
 
-## Setting up your project
-If you already have a project you'd like to use on nanobox simply [add a boxfile.yml](#adding-a-boxfile-yml) and continue with this guide, otherwise you'll need to follow the next steps to create a new project.
+## Project Setup
+If you already have a project you'd like to use on nanobox simply [add a boxfile.yml](#add-a-boxfile-yml) and continue with this guide, otherwise you'll need to follow the next steps to create a new project.
 
-#### Creating a project
+#### Create a project
 Decide where you want your project to live and create a folder there
 
 ```bash
@@ -30,7 +30,7 @@ source "https://rubygems.org"
 gem "sinatra"
 ```
 
-#### Adding a boxfile.yml
+#### Add a boxfile.yml
 Create a `boxfile.yml` at the root of your project that contains the following:
 
 ```yaml
@@ -40,10 +40,10 @@ code.build:
   engine: "ruby"
 ```
 
-## Configuring your application
-If you already have an application you'd like to run on nanobox you'll simply need to [make it accessible to the host](#makeing-it-accessible), otherwise follow the steps below to create an application.
+## Application Config
+If you already have an application you'd like to run on nanobox you'll simply need to [make it accessible to the host](#make-it-accessible), otherwise follow the steps below to create an application.
 
-#### Creating an application
+#### Create an Application
 At the root of the project create a file named `myapp.rb` with the following:
 
 ```ruby
@@ -55,7 +55,7 @@ get "/" do
 end
 ```
 
-#### Makeing it accessible
+#### Make it Accessible
 Most frameworks by default will bind to localhost, however we need to allow connections from the host into your container. To do this we need to tell sinatra to bind to all available IP's
 
 ```ruby

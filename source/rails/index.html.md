@@ -7,11 +7,14 @@ This guide will walk you through getting a simple Rails app up and running on na
 
 The guide is broken down into three steps:
 
-1. Create your project.
-2. Create your application.
-3. Run the application on nanobox.
+1. Project Setup
+2. Application Config
+3. Up and Running
 
-## Setup your project
+## Project Setup
+If you already have a project you'd like to use on nanobox simply [add a boxfile.yml](#add-a-boxfile-yml) and continue with this guide, otherwise you'll need to follow the next steps to create a new project.
+
+#### Create a project
 Decide where you want your project to live and create a folder there
 
 ```bash
@@ -19,6 +22,7 @@ Decide where you want your project to live and create a folder there
 mkdir nanobox-rails
 ```
 
+#### Add a boxfile.yml
 Create a `boxfile.yml` at the root of your project that contains the following:
 
 ```yaml
@@ -28,8 +32,11 @@ code.build:
   engine: "ruby"
 ```
 
-## Create your application
-Part of what makes nanobox so useful is you don't have to have rails installed on your local machine to utilize it. We're going to have you create a development environment in which you will generate your rails application.
+## Application Config
+If you already have an application you'd like to run on nanobox you'll simply need to [make it accessible to the host](#make-it-accessible), otherwise follow the steps below to create an application.
+
+#### Create an Application
+Part of what makes nanobox so useful is you don't have to have rails installed on your local machine to utilize it. We're going to create a development environment in which you will generate your rails application.
 
 First we need to get a development environment running:
 
@@ -43,21 +50,19 @@ nanobox dev start
 # console into the dev environment
 nanobox dev console
 
-# bundle install to get rails into the environment
+# install rails so we can use it to generate our application
 gem install rails
 
 # generate our new rails application
-rails new nanobox-rails
+rails new .
 ```
 
-## Up and Running
-With the application created there are a few modifications we need to make before we can run it.
+#### Make it Accessible
+Most frameworks by default will bind to localhost, however we need to allow connections from the host into your container. To do this we need to tell rails to bind to all available IP's
 
-To allow host access to the container we need to tell the application to bind to all available IP's (0.0.0.0) and we want to listen on port 8080. To do this we need to add the following code to the applications `config/boot.rb` file:
+In your applications `config/boot.rb` add the following:
 
 ```ruby
-# nanobox configuration; most apps bind to localhost by default, however we need
-# to allow connections from the host into the container
 require 'rails/commands/server'
 module Rails
   class Server
@@ -69,9 +74,15 @@ module Rails
 end
 ```
 
-With that in place, lets start our application and check it out! From the project root run the following commands:
+## Up and Running
+With the application configured the last thing to do is run it on nanobox. From the project directory run the following commands:
 
-``` bash
+```bash
+# build the code
+nanobox build
+
+# start the dev environment
+nanobox dev start
 
 # add a convenient way to access your app from the browser
 nanobox dev dns add rails.nanobox.dev
