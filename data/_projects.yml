@@ -99,6 +99,7 @@ frameworks:
     icon: 'laravel.svg'
     link: '/laravel/'
     tags: 'php, laravel'
+
 #   - name: 'Symfony'
 #     icon: 'symfony.svg'
 #     link: '/symfony/'
@@ -115,14 +116,16 @@ frameworks:
 #     icon: 'react.svg'
 #     link: '/react/'
 #     tags: 'nodejs, node.js, react.js, reactjs'
-#   - name: 'Angular'
-#     icon: 'angular.svg'
-#     link: '/angular/'
-#     tags: 'nodejs, node.js, angularjs, angular.js'
+
+  - name: 'Angular'
+    icon: 'angularjs.svg'
+    link: '/angularjs/'
+    tags: 'nodejs, node.js, angularjs, angular.js'
 #   - name: 'Meteor'
 #     icon: 'meteor.svg'
 #     link: '/meteor/'
 #     tags: 'meteorjs, meteor.js, node.js, nodejs'
+
   - name: 'Express'
     icon: 'express.svg'
     link: '/expressjs/'
@@ -146,10 +149,11 @@ frameworks:
 #     icon: 'pyramid.svg'
 #     link: '/pyramid/'
 #     tags: 'python, pyramid'
-#   - name: 'Hugo'
-#     icon: 'hugo.svg'
-#     link: '/hugo/'
-#     tags: 'golang, hugo'
+
+  - name: 'Hugo'
+    icon: 'hugo.svg'
+    link: '/hugo/'
+    tags: 'golang, hugo'
 
 cms:
   - name: 'WordPress'

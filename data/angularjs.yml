@@ -1,0 +1,7 @@
+name: 'Angular'
+icon: 'angularjs.svg'
+root: '/angularjs/'
+
+articles:
+  - name: 'Angular: Getting Started'
+    path: ''
