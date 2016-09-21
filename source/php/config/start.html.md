@@ -14,8 +14,8 @@ The following start commands and log\_watches should be used if your [`apache_ph
 ```yaml
 web.site:
   start:
-    fpm: /data/sbin/php-fpm -y /data/etc/php/php-fpm.conf -c /data/etc/php/php.ini
-    apache: /data/sbin/httpd -DNO_DETACH
+    fpm: start-php
+    apache: start-apache
   log_watch:
     apache[access]: /data/var/log/apache/access.log
     apache[error]: /data/var/log/apache/error.log
@@ -28,7 +28,7 @@ The following start commands and log\_watches should be used if your [`apache_ph
 
 ```yaml
 web.site:
-  start: /data/sbin/httpd -DNO_DETACH
+  start: start-apache
   log_watch:
     apache[access]: /data/var/log/apache/access.log
     apache[error]: /data/var/log/apache/error.log
@@ -41,7 +41,7 @@ The following start commands and log\_watches should be used when your [`webserv
 ```yaml
 web.site:
   start:
-    fpm: /data/sbin/php-fpm -y /data/etc/php/php-fpm.conf -c /data/etc/php/php.ini
+    fpm: start-php
     nginx: /data/sbin/nginx
   log_watch:
     nginx[access]: /data/var/log/nginx/access.log
@@ -55,7 +55,7 @@ The following start command and log\_watches should be used when your [`webserve
 
 ```yaml
 web.site:
-  start: /data/bin/php -S 0.0.0.0:8080 -c /data/etc/php/php.ini -t {{code_dir}}{{document_root}}/
+  start: start-php
   log_watch:
     php[access]: /data/var/log/php/access.log
     php[error]: /data/var/log/php/php_error.log

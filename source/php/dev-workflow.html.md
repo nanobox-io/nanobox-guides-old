@@ -23,7 +23,7 @@ Once consoled in, you can run dependency managers such as [Composer](https://get
 #### Starting Web/Worker Processes
 ```bash
 # Manually starting web/worker processes
-$ /data/sbin/httpd -DNO_DETACH
+$ start-apache
 $ php workers/jobs.php
 
 # Starting all web/worker processes

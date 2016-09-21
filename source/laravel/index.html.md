@@ -3,7 +3,7 @@ title: 'Laravel: Getting Started'
 project: laravel
 ---
 
-This guide will walk you through getting a simple Laravel app up and running on Nanobox. This guide was used in the creation of the [nanobox-laravel](https://github.com/nanobox-quickstarts/nanobox-laravel) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on github.
+This guide will walk you through getting a simple Laravel app up and running on Nanobox. This guide was used in the creation of the [nanobox-laravel](https://github.com/nanobox-quickstarts/nanobox-laravel) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
 
 ## Setup Your Project
 If you don't have an existing project, create a new project directory.
@@ -49,8 +49,8 @@ web.laravel:
 
   # commands to start PHP-FPM and Apache
   start:
-    fpm: /data/sbin/php-fpm -y /data/etc/php/php-fpm.conf -c /data/etc/php/php.ini
-    apache: /data/sbin/httpd -DNO_DETACH
+    fpm: start-php
+    apache: start-apache
 
   # pipes log output in your app's log-stream
   log_watch:
@@ -58,6 +58,7 @@ web.laravel:
     apache[error]: /data/var/log/apache/error.log
     php[error]: /data/var/log/php/php_error.log
     php[fpm]: /data/var/log/php/php_fpm.log
+    laravel[error]: /app/storage/logs/laravel.log
 ```
 
 ## Up and Running

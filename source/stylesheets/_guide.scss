@@ -116,7 +116,7 @@
       }
     }
 
-    #pagination       { position: relative; width: 100%; padding-top: 2.5em; margin: 4em 0 3em; border-top: 1px solid $bkg-grey-d1;
+    #pagination       { position: relative; width: 100%; padding-top: 2.5em; margin: 4em 0 4.25em; border-top: 1px solid $bkg-grey-d1;
       a               { position: absolute; padding: 1em; display: inline-block; line-height: 0; @include border-radius(4px);
         &:before      { content: attr(name); position: absolute; top: .9em; padding: 1em .8em; font-size: .9em; white-space: nowrap; z-index: -1; color: #fff; @include opacity(0); @include border-radius(5px); @include transition(all .3s); }
         &:after       { content: ''; position: absolute; top: 1.2em; width: 0; height: 0; z-index: -1; border-style: solid; @include opacity(0); @include transition(all .3s); }

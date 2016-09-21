@@ -26,10 +26,7 @@ When using WordPress in dev, you can manage plugins the same way you normally wo
 ![Install Plugins](/wordpress/img/wp-plugins.png)
 
 ## Build & Deploy into Sim & Production
-Once plugins are installed/updated in dev, you can generate a new build and deploy into `sim` for testing, then into production. The following guides walk through each:
-
-[Simulate a Full WordPress Deploy](/wordpress/test-in-sim)  
-[Deploy WordPress to Production](/wordpress/deploy-to-production)
+Once plugins are installed/updated in dev, you can generate a new build and deploy into `sim` for testing, then into production. The [Deploy WordPress](/wordpress/deploy-wordpress) guide walks through each.
 
 ### Active Plugins in Each Environment
 When you deploy a build to sim or production updated with new plugins, you'll need to go into your WP admin panel in each environment and activate the plugin.

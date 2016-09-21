@@ -1,16 +1,17 @@
 ---
-title: Setting Up WordPress
+title: 'WordPress: Getting Started'
 project: wordpress
 ---
 
-## Install Nanobox
-If you haven't already, [download and install Nanobox](https://nanobox.io/download). Nanobox enables you to create virtualized, local development environments identical to production environments deployed through Nanobox.
+This guide will walk you through getting a WordPress app up and running on Nanobox. This guide was used in the creation of the [nanobox-wordpress](https://github.com/nanobox-quickstarts/nanobox-wordpress) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
 
-## Download WordPress
+## Setup Your WordPress Project
 If you don't already have a WordPress codebase, you can download and use a fresh one. Downloads are available through the [WordPress Downloads page](https://wordpress.org/download/) or from [WordPress' Github repo](https://github.com/wordpress/wordpress).
 
-## Create a boxfile.yml for Your WordPress App
-The [boxfile.yml](https://docs.nanobox.io/app-config/boxfile/) is a yaml config file used to specify the components and configuration need for you app. It should be placed in the root of your WordPress project. Below is a basic WordPress boxfile.yml.
+### Add a boxfile.yml
+In the root directory of your WordPress project, create a `boxfile.yml`. The [boxfile.yml](https://docs.nanobox.io/app-config/boxfile/) is a yaml config file used to specify the components and configuration need for you app. For WordPress, the boxfile should contain the following:
+
+*For a detailed explanation of each of the WordPress boxfile.yml config settings, view the [WordPress boxfile.yml Explained guide](advanced/boxfile-explained/).*
 
 ```yaml
 code.build:
@@ -22,13 +23,11 @@ code.build:
       - mysqli
       - curl
       - zlib
-    apache_modules:
-      - deflate
 
 web.wp:
   start:
-    fpm: /data/sbin/php-fpm -y /data/etc/php/php-fpm.conf -c /data/etc/php/php.ini
-    apache: /data/sbin/httpd -DNO_DETACH
+    fpm: start-php
+    apache: start-apache
   log_watch:
     apache[access]: /data/var/log/apache/access.log
     apache[error]: /data/var/log/apache/error.log
@@ -48,13 +47,10 @@ data.storage:
 For a detailed explanation of each of the WordPress boxfile.yml config settings, view the [WordPress boxfile.yml Explained guide](advanced/boxfile-explained/).
 
 
-## Update Your wp-config.php
-There are a few changes you'll need to make to your `wp-config.php` to allow WordPress to connect to its database and run securely.
+### Update Database Connection in wp-config.php
+In order for WordPress to connect to its database, you'll need your database connection credentials to use environment variables that will be automatically generated when your app is built and deployed.
 
-### Database Connection Credentials
-In order for WordPress to connect to its database, you'll need to update the database credentials. To allow WordPress to connect to the database once deployed into any Nanobox environment (dev, sim, production), you should use [environment variables](https://docs.nanobox.io/app-config/environment-variables/) to populate the credentials.
-
-Nanobox automatically generates environment variables for connection credentials based on the ID of your data component. With an ID of `data.db`, environment variable keys will be created with `DATA_DB_` and the credential title. Below is what the db config will should look like:
+These environment variables are generated using ID of your database component. With an ID of `data.db`, environment variable keys will be created with `DATA_DB_` and the credential title. Below is what the db config will should look like:
 
 ```php?start_inline=1
 /** The name of the database for WordPress */
@@ -72,77 +68,48 @@ define('DB_HOST', $_ENV['DATA_DB_HOST']);
 
 **Note:** *Databases created on Nanobox will always have the name "gonano".*
 
-### Generate Auth Keys & Salts
-If you're working from a fresh WordPress install, you'll need to generate unique auth keys and salts. WordPress uses these to securely create sessions. The easiest way to generate these is go to [WordPress' Secret Key & Salt API](https://api.wordpress.org/secret-key/1.1/salt/).
+### Setup Auth Keys & Salts
+WordPress uses authentication keys and salts to securely create sessions. If these don't exist, WordPress will automatically create and reference them in the database, so they don't need to be defined when developing locally.
+
+However, for security purposes, auth keys and salts should be explicitly defined in a production environment, but never committed to your codebase. Instead, you can use environment variables. Replace the auth key and salts definitions in your wp-config.php with the following:
 
 ```php?start_inline=1
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('AUTH_KEY',         $_ENV['AUTH_KEY']         ?: '');
+define('SECURE_AUTH_KEY',  $_ENV['SECURE_AUTH_KEY']  ?: '');
+define('LOGGED_IN_KEY',    $_ENV['LOGGED_IN_KEY']    ?: '');
+define('NONCE_KEY',        $_ENV['NONCE_KEY']        ?: '');
+define('AUTH_SALT',        $_ENV['AUTH_SALT']        ?: '');
+define('SECURE_AUTH_SALT', $_ENV['SECURE_AUTH_SALT'] ?: '');
+define('LOGGED_IN_SALT',   $_ENV['LOGGED_IN_SALT']   ?: '');
+define('NONCE_SALT',       $_ENV['NONCE_SALT']       ?: '');
 ```
 
-## Run WordPress in Dev
-With your boxfile.yml in place and your wp-config.php updated, you're ready to generate a build and deploy WordPress into your local dev environment. Run the following command in the root of your WordPress directory:
+When you [deploy Wordpress](/wordpress/deploy-wordpress/), you can define these variables in your live environment.
+
+## Up and Running
+With your boxfile.yml in place and your wp-config.php updated, you're ready to get WordPress up and running in your dev environment.
+
 
 ```bash
-$ nanobox dev deploy
+# build the code
+nanobox build
+
+# start the dev environment and deploy your build
+nanobox dev deploy
+
+# add a convenient way to access your app from the browser
+nanobox dev dns add wordpress.nanobox.dev
+
+# start PHP-FPM and Apache
+nanobox dev run
 ```
 
-This will generate a new build, start your dev environment, deploy the build into your dev environment, and provision your database and storage service. This will also mount your local codebase into the Nanobox virtual machine so that code changes will be reflected in your running dev app.
+You can visit your running WordPress app at `wordpress.nanobox.dev:8080`.
 
-### Create a DNS Alias for Your Dev App
-The `nanobox dev dns add` command allows you to create a DNS alias for your dev app. It will add an entry in your local hosts file that will route all requests to the specified domain to your local dev app.
+## Now What?
+Now that you have WordPress running on Nanobox, what's next? Hopefully the topics below will help you get started with the next steps of your development!
 
-```bash
-$ nanobox dev dns add your-domain.dev
-```
-
-### Start Apache & PHP-FPM
-<!-- When deploying into a dev environment, you'll need to manually start Apache and PHP-FPM before your app will be accessible. There's two possible ways to do this:
-
-#### nanobox dev run
-The `nanobox dev run` command will run all your web's [start commands specified in your boxfile.yml](./advanced/boxfile-explained/#start). Run the command from the root of your WordPress app:
-
-```bash
-$ nanobox dev run
-``` -->
-
-#### Console In & Run Start Commands
-Another option is to console into your dev environment and manually run the start commands specified in your boxfile.yml. The `nanobox dev console` command will drop you into an interactive console inside your dev app where you can then start Apache and PHP-FPM. You'll want to create a separate console for each.
-
-```bash
-# Console into your dev app
-$ nanobox dev console
-
-# Start Apache
-$ /data/sbin/httpd -DNO_DETACH
-```
-
-In a new terminal window, create a second console and start PHP-FPM:
-
-```bash
-# Console into your dev app
-$ nanobox dev console
-
-# Start PHP-FPM
-$ /data/sbin/php-fpm -y /data/etc/php/php-fpm.conf -c /data/etc/php/php.ini
-```
-
-### Import Data & Uploads
-If you're using a fresh WordPress install, you don't need to do this, but if you're porting an existing WordPress app over to Nanobox, you'll likely have data and uploads that need to be imported into your dev environment. Instructions are provided in these guides:
-
-[Importing Data](data-managment/import/)  
-[Importing Uploads](uploads-management/import/)
-
-### Visit Your App
-With Apache and PHP-FPM, running, you should now be able to access your dev WordPress site at either the domain you added as a DNS alias or the IP shown in your console output. Just be sure to append `:8080` to the domain. This is the port on which your dev app is listening.
-
-**Example:** `your-domain.dev:8080`
-
-### Craft Some Code
-Now you're ready to craft some code. Any changes made to your local codebase will be reflected in your running app. You can [install plugins and themes](plugins-themes/) or make some tweaks to WordPress.
+[Importing Data](data-storage-management/importing-data/)  
+[Importing Uploads](data-storage-management/importing-uploads/)  
+[Installing & Updating Plugins & Themes](plugins-themes/)  
+[Deploying Wordpress](deploy-wordpress/)

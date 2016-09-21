@@ -60,20 +60,16 @@ $ mysql -h 192.168.99.65 -P 3306 -u nanobox -pPAsSw0Rd gonano < path/to/data_dum
 ## Importing Data into a Production Database
 To ensure data security, databases in production Nanobox apps are accessible only through secure tunnels established through the Nanobox CLI's `tunnel` command. These tunnels bind to and listen on a local port. To establish a secure tunnel run the `tunnel` command, passing in your your MySQL data component as the tunnel endpoint.
 
-```yaml
+```bash
 $ nanobox tunnel data.db
 ```
 
-When the secure tunnel is established, it will output the necessary connection credentials.
+To view your tunnel connection credentials, go to your dashboard and click the "Connect" button below your database component. *In a new app, your database will be nested under "App Components"*
 
-```bash
-
-...tunnel output...
-
-```
+![Tunnel Credentials](wordpress-tunnel-credentials.png)
 
 ### Connect to MySQL Using the Tunnel Credentials
-Use the credentials provided in the tunnel output to connect with your MySQL client of choice to import your data. These include but are not limited to the MySQL cli, Sequel Pro, MySQL Workbench, HeidiSQL, etc. The import process is different for each client, so you'll need to reference your client's documentation on importing data.
+Use the credentials provided in your dashboard and the port on which the tunnel is listening to connect with your MySQL client of choice to import your data. These include, but are not limited to, the MySQL CLI, Sequel Pro, MySQL Workbench, HeidiSQL, etc. The import process is different for each client, so you'll need to reference your client's documentation on importing data.
 
 Below is an example of importing data using the MySQL CLI.
 

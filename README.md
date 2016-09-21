@@ -6,31 +6,23 @@ These are the repo used to build the Nanobox guides for using popular languages,
 Clone this repo to your local machine. If you havent't already, [install Nanobox](https://docs.nanobox.io/getting-started/install-nanobox/). From inside the repo, run:
 
 ```bash
-$ nanobox build --skip-compile
+# build the code, but skip the compile process
+nanobox build --skip-compile
+
+# start your dev environment
+nanobox dev start
+
+# add a convenient way to access the dev guides from the browser
+nanobox dev dns add guides.nanobox.dev
+
+# console into the dev container
+nanobox dev console
+
+# install gems
+bundle install
+
+# start middleman server
+bundle exec middleman server
 ```
 
-Once the build is complete, start a dev container and console into with:
-
-```bash
-$ nanobox dev console
-```
-
-Inside the console, run:
-
-```bash
-$ bundle install
-```
-
-Once the gems are loaded, start middleman server:
-
-```bash
-$ bundle exec middleman server
-```
-
-Before accessing the guides in your browser, open a new terminal and add the 'guides.nanobox.dev' DNS alias to your dev app:
-
-```bash
-$ nanobox dev dns add guides.nanobox.dev
-```
-
-Ok, now you can access the running guides at `guides.nanobox.dev:4567` in your browser. Changes to the guides will auto-refresh the browser.
+With the Middleman server running, you can access the guides at `guides.nanobox.dev:4567` in your browser of choice. Changes to the guides will auto-refresh the browser.

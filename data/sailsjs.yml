@@ -3,5 +3,5 @@ icon: 'sailsjs.svg'
 root: '/sailsjs/'
 
 articles:
-  - name: 'Getting Started'
+  - name: 'Sails: Getting Started'
     path: ''

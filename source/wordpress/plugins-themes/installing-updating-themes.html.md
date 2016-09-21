@@ -26,10 +26,7 @@ When using WordPress in dev, you can manage themes the same way you normally wou
 ![Install Themes](/wordpress/img/wp-themes.png)
 
 ## Build & Deploy into Sim & Production
-Once themes are installed/updated in dev, you can generate a new build and deploy into `sim` for testing, then into production. The following guides walk through each:
-
-[Simulate a Full WordPress Deploy](/wordpress/test-in-sim)  
-[Deploy WordPress to Production](/wordpress/deploy-to-production)
+Once themes are installed/updated in dev, you can generate a new build and deploy into `sim` for testing, then into production. The [Deploy WordPress](/wordpress/deploy-wordpress) guide walks through each.
 
 ### Active Themes in Each Environment
 When you deploy a build to sim or production updated with a new theme, you'll need to go into your WP admin panel in each environment and activate the theme.

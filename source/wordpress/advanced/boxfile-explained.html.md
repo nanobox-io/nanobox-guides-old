@@ -20,8 +20,8 @@ code.build:
 
 web.wp:
   start:
-    fpm: /data/sbin/php-fpm -y /data/etc/php/php-fpm.conf -c /data/etc/php/php.ini
-    apache: /data/sbin/httpd -DNO_DETACH
+    fpm: start-php
+    apache: start-apache
   log_watch:
     apache[access]: /data/var/log/apache/access.log
     apache[error]: /data/var/log/apache/error.log
@@ -99,8 +99,8 @@ Each web component requires one or more start commands. These tell Nanobox what 
 ```yaml
 web.wp:
   start:
-    fpm: /data/sbin/php-fpm -y /data/etc/php/php-fpm.conf -c /data/etc/php/php.ini
-    apache: /data/sbin/httpd -DNO_DETACH
+    fpm: start-php
+    apache: start-apache
 ```
 
 Other web servers and php interpreters are available and require different start commands. More information about these is provided in the following PHP guides:

@@ -3,12 +3,10 @@ icon: 'wordpress.svg'
 root: '/wordpress/'
 
 articles:
-  - name: 'Setting Up WordPress'
+  - name: 'Getting Started'
     path: ''
-  - name: 'Simulate a Full WordPress Deploy'
-    path: 'test-in-sim/'
-  - name: 'Deploy WordPress to Production'
-    path: 'deploy-to-production/'
+  - name: 'Deploy WordPress'
+    path: 'deploy-wordpress/'
   - name: 'WordPress Plugins & Themes'
     path: 'plugins-themes/'
     articles:

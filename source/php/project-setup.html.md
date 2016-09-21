@@ -33,8 +33,8 @@ If your app were to need a web server and a MySQL database, your boxfile.yml wou
 ```yaml
 web.site:
   start:
-    fpm: /data/sbin/php-fpm -y /data/etc/php/php-fpm.conf -c /data/etc/php/php.ini
-    apache: /data/sbin/httpd -DNO_DETACH
+    fpm: start-php
+    apache: start-apache
 
 data.mysql:
   image: 'mysql'
@@ -62,8 +62,8 @@ code.build:
 
 web.site:
   start:
-    fpm: /data/sbin/php-fpm -y /data/etc/php/php-fpm.conf -c /data/etc/php/php.ini
-    apache: /data/sbin/httpd -DNO_DETACH
+    fpm: start-php
+    apache: start-apache
 
 data.db:
   image: mysql
