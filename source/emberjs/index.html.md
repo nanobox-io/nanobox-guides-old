@@ -3,7 +3,7 @@ title: "Ember: Getting Started"
 project: "emberjs"
 ---
 
-This guide will walk you through getting a simple Ember app up and running on nanobox. This guide was used to create the [nanobox-emberjs](https://github.com/nanobox-quickstarts/nanobox-emberjs) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on github.
+This guide will walk you through getting a simple Ember app up and running with nanobox. This guide was used to create the [nanobox-emberjs](https://github.com/nanobox-quickstarts/nanobox-emberjs) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on github.
 
 The guide is broken down into three steps:
 
@@ -12,7 +12,7 @@ The guide is broken down into three steps:
 3. Up and Running
 
 ## Project Setup
-If you already have a project you'd like to use on nanobox simply [add a boxfile.yml](#add-a-boxfile-yml) and continue with this guide, otherwise you'll need to follow the next steps to create a new project.
+If you already have a project you'd like to use with nanobox simply [add a boxfile.yml](#add-a-boxfile-yml) and continue with this guide, otherwise you'll need to follow the next steps to create a new project.
 
 #### Create a project
 Decide where you want your project to live and create a folder there
@@ -32,7 +32,7 @@ code.build:
 ```
 
 ## Application Config
-If you already have an application you'd like to run on nanobox you'll simply need to [make it accessible to the host](#make-it-accessible), otherwise follow the steps below to create an application.
+If you already have an application you'd like to run with nanobox you'll simply need to [make it accessible to the host](#make-it-accessible), otherwise follow the steps below to create an application.
 
 #### Create an Application
 Part of what makes nanobox so useful is you don't have to have ember, or nodejs installed on your local machine to utilize them. We're going to create a development environment in which you will generate your ember application.
@@ -70,17 +70,17 @@ cp -a /tmp/tmp-app/* .
 #### Make it Accessible
 Most frameworks by default will bind to localhost, however we need to allow connections from the host into your container. To do this we need to tell ember to bind to all available IP's
 
-In your applications `.ember-cli` add the following (create this file if you don't already have one):
+In your applications `.ember-cli` add the following (create this file at the project root if you don't already have one):
 
 ```javascript
 {
-  "port" : 8080,
-  "host" : "0.0.0.0"
+  "host" : "0.0.0.0",
+  "port" : 8080
 }
 ```
 
 ## Up and Running
-With the application configured the last thing to do is run it on nanobox. From the project directory run the following commands:
+With the application configured the last thing to do is run it with nanobox. From the project directory run the following commands:
 
 ```bash
 # build the code
@@ -102,7 +102,7 @@ ember server
 Visit the app from your favorite browser at `ember.nanobox.dev:8080`
 
 ## Now what?
-Now that you have an application running on nanobox whats next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
+Now that you have an application running with nanobox whats next? Think about what else your application might need and hopefully the topics below will help you get started with the next steps of your development!
 
 * Connecting to a database
 * Adding components

@@ -1,7 +1,0 @@
-name: 'Angular'
-icon: 'angular.svg'
-root: '/angular/'
-
-articles:
-  - name: 'Getting Started'
-    path: ''

@@ -1,7 +1,7 @@
-name: 'Ember.js'
+name: 'Ember'
 icon: 'emberjs.svg'
 root: '/emberjs/'
 
 articles:
-  - name: 'Ember.js: Getting Started'
+  - name: 'Ember: Getting Started'
     path: ''
