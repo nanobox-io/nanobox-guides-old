@@ -149,10 +149,11 @@ frameworks:
 #     icon: 'pyramid.svg'
 #     link: '/pyramid/'
 #     tags: 'python, pyramid'
-#   - name: 'Hugo'
-#     icon: 'hugo.svg'
-#     link: '/hugo/'
-#     tags: 'golang, hugo'
+
+  - name: 'Hugo'
+    icon: 'hugo.svg'
+    link: '/hugo/'
+    tags: 'golang, hugo'
 
 cms:
   - name: 'WordPress'

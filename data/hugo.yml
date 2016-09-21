@@ -3,5 +3,5 @@ icon: 'hugo.svg'
 root: '/hugo/'
 
 articles:
-  - name: 'Getting Started'
+  - name: 'Hugo: Getting Started'
     path: ''
