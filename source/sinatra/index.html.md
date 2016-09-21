@@ -3,7 +3,7 @@ title: "Sinatra: Getting Started"
 project: "sinatra"
 ---
 
-This guide will walk you through getting a simple Sinatra app up and running with nanobox. This guide was used to create the [nanobox-sinatra](https://github.com/nanobox-quickstarts/nanobox-sinatra) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on github.
+This guide will walk you through getting a simple Sinatra app up and running with nanobox. This guide was used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-sinatra" target="\_blank">nanobox-sinatra</a> app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 
 The guide is broken down into three steps:
 

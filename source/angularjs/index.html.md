@@ -3,7 +3,7 @@ title: "Angular: Getting Started"
 project: "angularjs"
 ---
 
-This guide will walk you through getting a simple Angular app up and running with nanobox. This guide was used to create the [nanobox-angularjs](https://github.com/nanobox-quickstarts/nanobox-angularjs) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on github.
+This guide will walk you through getting a simple Angular app up and running with nanobox. This guide was used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-angularjs" target="\_blank">nanobox-angularjs</a> app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 
 The guide is broken down into three steps:
 
@@ -37,7 +37,7 @@ If you already have an application you'd like to run with nanobox you'll simply 
 #### Create an Application
 Part of what makes nanobox so useful is you don't have to have angular, or nodejs installed on your local machine to utilize them. We're going to create a development environment in which you will generate your angular application.
 
-Angular requires some initial configuration before being able to create the application. Follow the steps outlined [here](https://angular.io/docs/ts/latest/quickstart.html#!#add-config-files) to create the necessary configuration files before continuing.
+Angular requires some initial configuration before being able to create the application. Follow the steps outlined <a href="https://angular.io/docs/ts/latest/quickstart.html#!#add-config-files" target="\_blank">here</a> to create the necessary configuration files before continuing.
 
 Once you've got all the configuration in place we need to get a development environment running:
 
@@ -63,7 +63,7 @@ npm run typings install
 
 With the application configured; due to the complexity of setting up a simple Angular application it is recommended that you follow their guide steps 2 - 5. Once complete return here to get your app running with nanobox.
 
-**NOTE:** We've also created a [nanobox-angularjs](https://github.com/nanobox-quickstarts/nanobox-angularjs) quickstart that was created following their guide which can be used to quickly launch an Angular app with nanobox.
+**NOTE:** We've also created a <a href="https://github.com/nanobox-quickstarts/nanobox-angularjs" target="\_blank">nanobox-angularjs</a> quickstart that was created following their guide which can be used to quickly launch an Angular app with nanobox.
 
 #### Make it Accessible
 Most frameworks by default will bind to localhost, however we need to allow connections from the host into your container. To do this we need to tell angular to bind to all available IP's

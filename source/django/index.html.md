@@ -3,7 +3,7 @@ title: 'Django: Getting Started'
 project: django
 ---
 
-This guide will walk you through getting a simple Django app up and running with nanobox. This guide was used to create the [nanobox-django](https://github.com/nanobox-quickstarts/nanobox-django) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on github.
+This guide will walk you through getting a simple Django app up and running with nanobox. This guide was used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-django" target="\_blank">nanobox-django</a> app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 
 The guide is broken down into three steps:
 

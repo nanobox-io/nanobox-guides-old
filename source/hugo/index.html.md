@@ -3,7 +3,7 @@ title: "Hugo: Getting Started"
 project: "hugo"
 ---
 
-This guide will walk you through getting a simple Hugo app up and running with nanobox. This guide was used to create the [nanobox-hugo](https://github.com/nanobox-quickstarts/nanobox-hugo) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on github.
+This guide will walk you through getting a simple Hugo app up and running with nanobox. This guide was used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-hugo" target="\_blank">nanobox-hugo</a> app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 
 The guide is broken down into three steps:
 

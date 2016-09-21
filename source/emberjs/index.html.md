@@ -3,7 +3,7 @@ title: "Ember: Getting Started"
 project: "emberjs"
 ---
 
-This guide will walk you through getting a simple Ember app up and running with nanobox. This guide was used to create the [nanobox-emberjs](https://github.com/nanobox-quickstarts/nanobox-emberjs) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on github.
+This guide will walk you through getting a simple Ember app up and running with nanobox. This guide was used to create the <a href="https://github.com/nanobox-quickstarts/nanobox-emberjs" target="\_blank">nanobox-emberjs</a> app found under <a href="https://github.com/nanobox-quickstarts" target="\_blank">nanobox-quickstarts</a> on github.
 
 The guide is broken down into three steps:
 
