@@ -1,0 +1,19 @@
+// DEFINE PROJECT-SPECIFIC COLORS
+$proj-accent: #f04c5c;
+$proj-link: #4183C4;
+$proj-link-hover: #4183C4;
+$proj-nav-hl: #f04c5c;
+
+$proj-bkg-fill: #9ecdeb;
+$proj-bkg-svg: url('/images/header-bkgs/beego.svg');
+
+$proj-footer-lt: #64a7d3;
+$proj-footer-dk: #3e81ad;
+$proj-footer-txt: #d6e7f9;
+
+// SYNTAX HIGHLIGHTING (Optional)
+// Themes can be found in /source/stylesheets/syntax-hl
+@import 'syntax-hl/github';
+
+// GLOBAL PROJECT STYLES
+@import 'project-global';

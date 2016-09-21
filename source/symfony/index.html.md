@@ -13,13 +13,18 @@ In the root directory of your WordPress project, create a `boxfile.yml`. The [bo
 
 ```yaml
 code.build:
-  # the php engine provides the php runtime and associated executables
   engine: php
   config:
-    # tells nanobox to use php 7.0
     runtime: php-7.0
-    # enables php extensions
+    webserver: builtin
     extensions:
+      # required by symfony installer
+      - zlib
+      - ctype
+      - iconv
+      - session
+      - tokenizer
+      - simplesml
       # required by composer
       - phar
       - filter
@@ -28,18 +33,11 @@ code.build:
       - zip
       - dom
 
-# creates a web component in sim and production environments
 web.symfony:
-  # starts PHP-FPM and Apache
-  start:
-    fpm: start-php
-    apache: start-apache
-  # pipes log output into your app's log stream
+  start: start-php
   log_watch:
-    apache[access]: /data/var/log/apache/access.log
-    apache[error]: /data/var/log/apache/error.log
+    php[access]: /data/var/log/php/access.log
     php[error]: /data/var/log/php/php_error.log
-    php[fpm]: /data/var/log/php/php_fpm.log
 ```
 
 ## Install Symfony
@@ -48,6 +46,11 @@ nanobox build --skip-compile
 
 nanobox dev console
 
+sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
+
+sudo chmod a+x /usr/local/bin/symfony
+
+symfony new tmp-app
 ```
 
 ## Up and Running

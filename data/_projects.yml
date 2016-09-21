@@ -155,6 +155,11 @@ frameworks:
     link: '/hugo/'
     tags: 'golang, hugo'
 
+  - name: 'Beego'
+    icon: 'beego.svg'
+    link: '/beego/'
+    tags: 'golang, beego'
+
 cms:
   - name: 'WordPress'
     icon: 'wordpress.svg'

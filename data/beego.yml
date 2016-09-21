@@ -1,0 +1,7 @@
+name: 'Beego'
+icon: 'beego.svg'
+root: '/beego/'
+
+articles:
+  - name: 'Beego: Getting Started'
+    path: ''
