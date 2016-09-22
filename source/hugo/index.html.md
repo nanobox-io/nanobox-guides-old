@@ -32,7 +32,7 @@ code.build:
 
   # we need to tell go where our package is located; since we want to use this projects codebase we specify "."
   config:
-    package: "."
+    package: "nanobox-beego"
 ```
 
 ## Application Config
