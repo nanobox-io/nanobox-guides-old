@@ -85,10 +85,10 @@ frameworks:
     link: '/rails/'
     tags: 'ruby, rails, ror'
 
-  - name: 'Django'
-    icon: 'django.svg'
-    link: '/django/'
-    tags: 'python, django'
+  # - name: 'Django'
+  #   icon: 'django.svg'
+  #   link: '/django/'
+  #   tags: 'python, django'
 
   - name: 'Laravel'
     icon: 'laravel.svg'
@@ -189,11 +189,17 @@ frameworks:
   #   link: '/vue/'
   #   tags: 'nodejs, node.js, vuejs, vue.js'
 
-cms:
+  # Remove this once we have more CMSs
   - name: 'WordPress'
     icon: 'wordpress.svg'
     link: '/wordpress/'
     tags: 'php, wordpress, cms'
+
+# cms:
+#  - name: 'WordPress'
+#    icon: 'wordpress.svg'
+#    link: '/wordpress/'
+#    tags: 'php, wordpress, cms'
 
   # - name: 'Magento'
   #   icon: 'magento.svg'
