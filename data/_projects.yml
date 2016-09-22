@@ -4,171 +4,202 @@ languages:
     link: '/ruby/'
     tags: 'ruby'
 
-  - name: 'PHP'
-    icon: 'php.svg'
-    link: '/php/'
-    tags: 'php'
-
   - name: 'Node.js'
     icon: 'nodejs.svg'
     link: '/nodejs/'
     tags: 'nodejs, node.js, javascript'
 
+  - name: 'Go'
+    icon: 'go.svg'
+    link: '/go/'
+    tags: 'go, golang'
+
   - name: 'Python'
     icon: 'python.svg'
     link: '/python/'
     tags: 'python'
+
+  - name: 'PHP'
+    icon: 'php.svg'
+    link: '/php/'
+    tags: 'php'
+
+  # - name: 'Elixir'
+  #   icon: 'elixir.svg'
+  #   link: '/elixir/'
+  #   tags: 'elixir'
+
   # - name: 'Scala'
   #   icon: 'scala.svg'
   #   link: '/scala/'
   #   tags: 'scala'
 
-  - name: 'Go'
-    icon: 'go.svg'
-    link: '/go/'
-    tags: 'go, golang'
-  # - name: 'Elixir'
-  #   icon: 'elixir.svg'
-  #   link: '/elixir/'
-  #   tags: 'elixir'
   # - name: 'Java'
   #   icon: 'java.svg'
   #   link: '/java/'
   #   tags: 'java'
+
   # - name: 'Erlang'
   #   icon: 'erlang.svg'
   #   link: '/erlang/'
   #   tags: 'erlang'
+
   # - name: 'Clojure'
   #   icon: 'clojure.svg'
   #   link: '/clojure/'
   #   tags: 'clojure'
+
   # - name: 'Lua'
   #   icon: 'lua.svg'
   #   link: '/lua/'
   #   tags: 'lua'
+
   # - name: 'C / C++'
   #   icon: 'c.svg'
   #   link: '/c/'
   #   tags: 'c++'
+
   # - name: 'Rust'
   #   icon: 'rust.svg'
   #   link: '/rust/'
   #   tags: 'rust'
+
   # - name: 'Perl'
   #   icon: 'perl.svg'
   #   link: '/perl/'
   #   tags: 'perl'
+
   # - name: 'Lisp'
   #   icon: 'lisp.svg'
   #   link: '/lisp/'
   #   tags: 'lisp'
 
 frameworks:
-  - name: 'Rails'
-    icon: 'rails.svg'
-    link: '/rails/'
-    tags: 'ruby, rails, ror'
-
-#   - name: 'Rack'
-#     icon: 'rack.svg'
-#     link: '/rack/'
-#     tags: 'ruby, rack'
-
-  - name: 'Sinatra'
-    icon: 'sinatra.svg'
-    link: '/sinatra/'
-    tags: 'ruby, sinatra'
-
-  - name: 'Middleman'
-    icon: 'middleman.svg'
-    link: '/middleman/'
-    tags: 'ruby, middleman'
-
-  - name: 'Sails'
-    icon: 'sailsjs.svg'
-    link: '/sailsjs/'
-    tags: 'nodejs, node.js, sails.js, sailsjs, javascript'
-
-  - name: 'Ember'
-    icon: 'emberjs.svg'
-    link: '/emberjs/'
-    tags: 'nodejs, node.js, ember.js, emberjs, javascript'
-
-  - name: 'Laravel'
-    icon: 'laravel.svg'
-    link: '/laravel/'
-    tags: 'php, laravel'
-
-#   - name: 'Symfony'
-#     icon: 'symfony.svg'
-#     link: '/symfony/'
-#     tags: 'php, symfony'
-  - name: 'CodeIgniter'
-    icon: 'codeigniter.svg'
-    link: '/codeigniter/'
-    tags: 'php, codeigniter, ci'
-#   - name: 'CakePHP'
-#     icon: 'cakephp.svg'
-#     link: '/cakephp/'
-#     tags: 'cakephp'
-#   - name: 'React'
-#     icon: 'react.svg'
-#     link: '/react/'
-#     tags: 'nodejs, node.js, react.js, reactjs'
-
   - name: 'Angular'
     icon: 'angularjs.svg'
     link: '/angularjs/'
     tags: 'nodejs, node.js, angularjs, angular.js'
-#   - name: 'Meteor'
-#     icon: 'meteor.svg'
-#     link: '/meteor/'
-#     tags: 'meteorjs, meteor.js, node.js, nodejs'
 
-  - name: 'Express'
-    icon: 'express.svg'
-    link: '/expressjs/'
-    tags: 'nodejs, node.js, express.js, expressjs, javascript'
-#   - name: 'Vue.js'
-#     icon: 'vue.svg'
-#     link: '/vue/'
-#     tags: 'nodejs, node.js, vuejs, vue.js'
+  - name: 'Rails'
+    icon: 'rails.svg'
+    link: '/rails/'
+    tags: 'ruby, rails, ror'
 
   - name: 'Django'
     icon: 'django.svg'
     link: '/django/'
     tags: 'python, django'
 
+  - name: 'Laravel'
+    icon: 'laravel.svg'
+    link: '/laravel/'
+    tags: 'php, laravel'
+
+  # - name: 'Meteor'
+  #   icon: 'meteor.svg'
+  #   link: '/meteor/'
+  #   tags: 'meteorjs, meteor.js, node.js, nodejs'
+
+  # spring
+
+  - name: 'Express'
+    icon: 'express.svg'
+    link: '/expressjs/'
+    tags: 'nodejs, node.js, express.js, expressjs, javascript'
+
+  - name: 'CodeIgniter'
+    icon: 'codeigniter.svg'
+    link: '/codeigniter/'
+    tags: 'php, codeigniter, ci'
+
+  # - name: 'Symfony'
+  #   icon: 'symfony.svg'
+  #   link: '/symfony/'
+  #   tags: 'php, symfony'
+
+  - name: 'Ember'
+    icon: 'emberjs.svg'
+    link: '/emberjs/'
+    tags: 'nodejs, node.js, ember.js, emberjs, javascript'
+
   - name: 'Flask'
     icon: 'flask.svg'
     link: '/flask/'
     tags: 'python, flask'
 
-#   - name: 'Pyramid'
-#     icon: 'pyramid.svg'
-#     link: '/pyramid/'
-#     tags: 'python, pyramid'
+  # - name: 'CakePHP'
+  #   icon: 'cakephp.svg'
+  #   link: '/cakephp/'
+  #   tags: 'cakephp'
+
+  # ZF2
+
+  - name: 'Sails'
+    icon: 'sailsjs.svg'
+    link: '/sailsjs/'
+    tags: 'nodejs, node.js, sails.js, sailsjs, javascript'
+
+  # Yii
+
+  # tornado
+
+  - name: 'Sinatra'
+    icon: 'sinatra.svg'
+    link: '/sinatra/'
+    tags: 'ruby, sinatra'
+
+  # Grails
+
+  # Phoenix
+
+  # Aurelia
+
+  # - name: 'Pyramid'
+  #   icon: 'pyramid.svg'
+  #   link: '/pyramid/'
+  #   tags: 'python, pyramid'
+
+  - name: 'Middleman'
+    icon: 'middleman.svg'
+    link: '/middleman/'
+    tags: 'ruby, middleman, static'
 
   - name: 'Hugo'
     icon: 'hugo.svg'
     link: '/hugo/'
-    tags: 'golang, hugo'
+    tags: 'golang, hugo, static'
 
   - name: 'Beego'
     icon: 'beego.svg'
     link: '/beego/'
-    tags: 'golang, beego'
+    tags: 'golang, beego, static'
+
+  # - name: 'Rack'
+  #   icon: 'rack.svg'
+  #   link: '/rack/'
+  #   tags: 'ruby, rack'
+
+  # - name: 'React'
+  #   icon: 'react.svg'
+  #   link: '/react/'
+  #   tags: 'nodejs, node.js, react.js, reactjs'
+
+  # - name: 'Vue.js'
+  #   icon: 'vue.svg'
+  #   link: '/vue/'
+  #   tags: 'nodejs, node.js, vuejs, vue.js'
 
 cms:
   - name: 'WordPress'
     icon: 'wordpress.svg'
     link: '/wordpress/'
-    tags: 'php, wordpress'
+    tags: 'php, wordpress, cms'
+
   # - name: 'Magento'
   #   icon: 'magento.svg'
   #   link: '/magento/'
   #   tags: 'php, magento'
+
   # - name: 'Locomotive'
   #   icon: 'locomotive.svg'
   #   link: '/locomotive/'
@@ -189,10 +220,12 @@ services:
     icon: 'mongodb.svg'
     link: '/mongodb/'
     tags: 'mongodb'
+
   # - name: 'CouchDB'
   #   icon: 'couchdb.svg'
   #   link: '/couchdb/'
   #   tags: 'couchdb'
+
   - name: 'Redis'
     icon: 'redis.svg'
     link: '/redis/'
