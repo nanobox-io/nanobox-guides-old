@@ -1,96 +1,59 @@
 ---
-title: Getting Started
+title: 'Middleman: Getting Started'
 project: middleman
 ---
 
-This is just paragraph text. `This is inline code` sit amet, consectetur adipiscing elit. [This is an inline link](#) am ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
+This guide will walk you through getting a simple Middleman app up and running with Nanobox. This guide was used to create the [nanobox-middleman](https://github.com/nanobox-quickstarts/nanobox-middleman) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
 
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-## H2 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-### H3 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-#### H4 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-##### H5 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-###### H6 Title
-This is just paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices maximus magna nec dapibus. Pellentesque mattis, ex egestas pulvinar cursus, diam sapien faucibus leo, et fringilla nisi odio ut metus. Aenean faucibus, lorem nec elementum ultrices, nunc nisl rutrum nunc, ut maximus nisl turpis ac ex.
-
-Nullam sit amet interdum lectus. Vivamus porttitor, arcu ac faucibus finibus, nibh eros ullamcorper diam, ut cursus turpis nisi vitae enim. Pellentesque consequat venenatis metus, quis dignissim odio semper eget. Proin auctor, quam vitae fringilla egestas, sapien ex fermentum nunc, vel pellentesque odio odio nec mauris.
-
-This is *italicized*
-
-This is **bold**
-
-This is ~~strikethrough~~
-
-This is text with [an inline link](https://pagodabox.io)
-
-1. This is the 1st item in an ordered list
-2. This is the 2nd item in an ordered list
-3. This is the 3rd item in an ordered list
-
-
-* This is an unordered list
-* This is an unordered list
-* This is an unordered list
-
-Below is an image:
-
-![This is an Image](https://trello-attachments.s3.amazonaws.com/554b82df5e12ddf95313a8fe/381x198/e61e0a3ff391c11f24f10dfc8f88e770/upload_2015-05-07_at_9.26.24_am.png "This is an image")
-
-```
-This is a code block using a <pre> tag
-```
+## Setup Your Middleman App
+If you don't already have a Middleman project, create an empty directory for your project and add a `boxfile.yml`. If you have an existing project, add a `boxfile.yml` in the root of your project. It should contain the following:
 
 ```yaml
-# This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting This is a code block with syntax highlighting
-
-web1:
-  type: php
-  version: 5.6
+code.build:
+  # tells nanobox to use the middleman engine, which provides
+  # a ruby runtime and middleman build tools
+  engine: middleman
 ```
 
-```php
-<?php phpinfo()
+## Up and Running
+With your boxfile.yml in place , you're ready to get Middleman up and running in your dev environment.
 
-  if (App::environment('local')) {
-      // The environment is local
-  }
+```bash
+# build your code without running a middleman build (compile)
+nanobox build --skip-compile
 
-  if (App::environment('local', 'staging')) {
-      // The environment is either local OR staging...
-  }
-?>
+# start your dev environment
+nanobox dev start
+
+# add a convenient way to access your app from the browser
+nanobox dev dns add middleman.nanobox.dev
+
+# console into your dev environment
+nanobox dev console
 ```
 
-This is text with `inline code`
+Once you're consoled in, if you don't have an existing Middleman project, you'll need to create one. If working with an existing codebase, you can [start the Middleman server](#start-middleman-server).
 
-| Tables             | Are           | Cool  |
-|:-------------------|:-------------:| -----:|
-| col 3 is           | right-aligned | $1600 |
-| col 2 is           | centered      |   $12 |
-| [zebra stripes](#) | are neat      |    $1 |
-| `zebra stripes`    | are neat      |    $1 |
+### Install Middleman & Create a New Project
+```bash
+# install the middleman gem
+# (--no-ri will skip installing docs for each gem, unless you want them)
+gem install middleman --no-ri
 
-> This is blockquote that is very long and should wrap, but I guess we'll see, just because I don't know how wide this thing is.
+# init a new middleman project
+middleman init
+```
 
-Below is a horizontal rule
+### Start Middleman Server
+```bash
+bundle exec middleman server
+```
 
----
+You can access your middleman site at `middleman.nanobox.dev:4567`.
 
-Above is a horiztonal rule
+## Now What?
+Now that you have Middleman running in Nanobox, what's next? Hopefully the topics below will help you get started with the next steps of your development!
+
+- Using Live-Reload
+- Deploying Middleman
+- Middleman Engine Config Options

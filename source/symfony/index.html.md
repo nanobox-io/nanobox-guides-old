@@ -3,7 +3,7 @@ title: 'Symfony: Getting Started'
 project: symfony
 ---
 
-This guide will walk you through getting a simple Symfony app up and running on Nanobox. This guide was used to create the [nanobox-symfony](https://github.com/nanobox-quickstarts/nanobox-symfony) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
+This guide will walk you through getting a simple Symfony app up and running with Nanobox. This guide was used to create the [nanobox-symfony](https://github.com/nanobox-quickstarts/nanobox-symfony) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
 
 ## Setup Your Symfony Project
 If you don't already have a Symfony codebase, ...
@@ -51,6 +51,10 @@ sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
 sudo chmod a+x /usr/local/bin/symfony
 
 symfony new tmp-app
+
+mv -v tmp-app/* .
+
+rm -rf tmp-app
 ```
 
 ## Up and Running

@@ -3,7 +3,7 @@ title: 'CodeIgniter: Getting Started'
 project: codeigniter
 ---
 
-This guide will walk you through getting a simple CodeIgniter app up and running on Nanobox. This guide was used to create the [nanobox-codeigniter](https://github.com/nanobox-quickstarts/nanobox-codeigniter) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
+This guide will walk you through getting a simple CodeIgniter app up and running with Nanobox. This guide was used to create the [nanobox-codeigniter](https://github.com/nanobox-quickstarts/nanobox-codeigniter) app found under [nanobox-quickstarts](https://github.com/nanobox-quickstarts) on Github.
 
 ## Setup Your CodeIgniter Project
 If you don't already have a CodeIgniter codebase, you can download and use a fresh one. Downloads are available through the [CodeIgniter Downloads page](http://www.codeigniter.com/user_guide/installation/downloads.html) or from [CodeIgniter's Github repo](https://github.com/bcit-ci/CodeIgniter).
