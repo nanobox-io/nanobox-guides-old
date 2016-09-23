@@ -43,7 +43,7 @@ Once you've got all the configuration in place we need to get a development envi
 
 ```bash
 # build the code
-nanobox build --skip-compile
+nanobox build
 
 # start the dev environment
 nanobox dev start

@@ -45,7 +45,7 @@ First we need to get a development environment running:
 
 ```bash
 # build the code
-nanobox build --skip-compile
+nanobox build
 
 # start the dev environment
 nanobox dev start
